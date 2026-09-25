@@ -48,3 +48,14 @@ No deployment was requested or performed. The static `dist/` folder is ready to 
 The 25 September 2026 review additionally checks shared IEEE branding on both pages, original logo/favicon assets, complete policy links, same-tab HTML links, minimum body/control type size, and high-contrast IEEE green/gold buttons. See [IEEE-DESIGN-REVIEW.md](IEEE-DESIGN-REVIEW.md) for the source mapping and full validation scope.
 
 Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home and mobile Sources states with all FAQs and both participation panels exposed. Texture/image contrast required separate checks, as documented in the review. This is not a full accessibility conformance certification.
+
+## Feedback update — 25 September 2026
+
+- `npm run check`, `node --check src/app.js`, and `git diff --check` pass.
+- Built 62 FAQs, 18 resource cards, five social links and four ambassador directory entries.
+- Chromium at 1440, 768, 390 and 320 CSS pixels: no horizontal document overflow; the updated home page has no JavaScript exceptions.
+- Verified removal of the announcement strip, two SVG play icons, registration deadline, two Google Maps links and personal email links.
+- All four directory copy buttons returned the expected complete registration ID through the browser clipboard.
+- FAQ search for AI returns the two new questions; clearing the search restores the normal list.
+- Reviewed the mobile hero and ambassador directory visually; verified sources-page personal contact links.
+- Source dates and AI guidance checked against the official current announcements. Existing detailed accessibility audit above records the previous revision; it is not a new full audit of this update.

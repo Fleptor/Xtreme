@@ -42,11 +42,12 @@ npm run check
 - Eight journey sections, with responsive desktop and mobile layouts.
 - Official vTools registration, the HTU hosting form, and BAU local coordination form, each with its own purpose.
 - BAU Ambassador ID **IEEEXTREME20SB08217** with a copy button and manual-copy fallback.
-- Belal Hamdan's linked YouTube registration tutorial.
+- Belal Hamdan's linked YouTube registration tutorial, corrected SVG play icons, and direct contact at belalhamdan@ieee.org.
+- Registration deadline, a sourced selection of university ambassador IDs with copy controls, AI guidance, and the supplied HTU Google Maps link.
 - Online/on-site participation tabs and guidance on finding and confirming proctors.
 - Separate HTU participation and local award requirements, including the exact all-female-team opening exception.
-- **58 sourced FAQs** in eight topics, with Arabic search, category filtering and progressive display.
-- **16 resources**, including practice, supported languages/browsers, memberships, rules, proctor guidance and certificates.
+- **62 sourced FAQs** in eight topics, with Arabic search, category filtering and progressive display.
+- **18 resources**, including practice, supported languages/browsers, memberships, rules, proctor guidance and certificates.
 - All five supplied Instagram accounts and the WhatsApp update reminder.
 - UTC-based countdown with active/ended states, downloadable calendar event, and a preparation checklist with optional browser saving; switching saving off clears its stored data.
 - Self-hosted Arabic fonts and artwork; no analytics, embedded social trackers or external runtime assets.
@@ -77,7 +78,7 @@ The FAQ is rendered at build time, so search engines and browsers without JavaSc
 
 Last reviewed **25 September 2026**. Keep official registration separate from local forms. Preserve the supplied ID and URLs unless the coordinator changes them. Current platform details come from the live CS Academy environment; do not treat older competition FAQ browser versions as independently current. HTU requirements come from the supplied host regulations, copied verbatim to `assets/htu-regulations.txt`.
 
-No FAQ entry asks readers to wait for 20.0 rules. Unverified deadlines, global prize amounts, transport, catering, AI permissions and event-specific equipment limits are not advertised. The official rules remain directly accessible.
+The official registration deadline is 17 October 2026. The announced 20.0 hybrid format includes AI-enabled challenges and AI-free traditional tracks; detailed 20.0 rules are still pending. This AI note is the user-requested exception to avoiding pending-rule FAQs. Unverified global prize amounts, transport, catering and equipment limits are not advertised. The official rules remain directly accessible.
 
 The jungle illustration is illustrative artwork, not a photograph of HTU. It was created with the built-in image generation tool; its complete prompt is in `references/hero-prompt.txt`. Cairo and Open Sans are self-hosted under the included SIL Open Font Licenses. The master logo and favicon come from IEEE's official asset downloads and remain subject to its toolkit agreement.
 

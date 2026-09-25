@@ -1,7 +1,7 @@
 import { readFile, writeFile, mkdir, cp } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-import { links, faqs, categories, resources, socials } from '../src/content.mjs';
+import { links, faqs, categories, resources, socials, ambassadors } from '../src/content.mjs';
 
 export const root = fileURLToPath(new URL('../', import.meta.url));
 export const dist = path.join(root, 'dist');
@@ -20,7 +20,8 @@ export async function build() {
   const resourceMarkup = resources.map(([num,title,description,key,category]) => `<a class="resource-card" href="${escape(links[key])}" data-resource-category="${category}" ${fileAttributes(key)}><span class="resource-number">${num} /</span><span class="resource-arrow" aria-hidden="true">↗</span><h3>${escape(title)}</h3><p>${escape(description)}${key === 'htuRules' ? ' (TXT، 2 KB، نافذة جديدة)' : ''}</p></a>`).join('\n');
   const instagram = '<svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>';
   const socialMarkup = socials.map(([title,description,handle,url]) => `<a class="social-card" href="${url}" ${external}><div class="social-icon-row">${instagram}<span aria-hidden="true">↗</span></div><h3>${escape(title)}</h3><p>${escape(description)}</p><span class="handle">@${handle}</span></a>`).join('\n');
-  const html = template.replace('{{FAQ}}', faqMarkup).replace('{{CATEGORIES}}',categoryMarkup).replace('{{RESOURCES}}',resourceMarkup).replace('{{SOCIALS}}',socialMarkup).replaceAll('{{FAQ_COUNT}}',String(faqs.length)).replace(/\{\{link:(\w+)\}\}/g,(_,key) => { if(!links[key]) throw new Error(`Unknown link ${key}`); return escape(links[key]); });
+  const ambassadorMarkup = ambassadors.map(([university,name,id,source],i) => `<article class="directory-card"><h4>${escape(university)}</h4><p>${escape(name)}</p><div class="copy-field"><input id="directory-id-${i}" value="${escape(id)}" readonly dir="ltr" spellcheck="false" aria-label="رقم سفير ${escape(university)}"><button data-copy-target="directory-id-${i}" aria-label="نسخ رقم سفير ${escape(university)}">نسخ</button></div><a class="text-link" href="${escape(source)}">${i === 0 ? 'تواصل مع بلال' : 'مصدر الرقم المنشور'} ↗</a></article>`).join('');
+  const html = template.replace('{{AMBASSADORS}}', ambassadorMarkup).replace('{{FAQ}}', faqMarkup).replace('{{CATEGORIES}}',categoryMarkup).replace('{{RESOURCES}}',resourceMarkup).replace('{{SOCIALS}}',socialMarkup).replaceAll('{{FAQ_COUNT}}',String(faqs.length)).replace(/\{\{link:(\w+)\}\}/g,(_,key) => { if(!links[key]) throw new Error(`Unknown link ${key}`); return escape(links[key]); });
   await writeFile(path.join(dist,'index.html'),html);
   await cp(path.join(root,'assets'),path.join(dist,'assets'),{recursive:true});
   for (const file of ['styles.css','ieee.css','app.js','shell.js']) await cp(path.join(root,'src',file),path.join(dist,file));

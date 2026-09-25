@@ -1,5 +1,9 @@
 export const links = {
   official: 'https://ieeextreme.org/',
+  contact: 'mailto:belalhamdan@ieee.org',
+  htuMap: 'https://maps.app.goo.gl/3FgQ18NEifYTSfV89',
+  deadline: 'https://www.linkedin.com/posts/ieeextreme_ieeextreme20-ieeextreme-codetothextreme-activity-7507657995397353472-nM6e',
+  aiAnnouncement: 'https://www.linkedin.com/posts/ieeextreme_ieeextreme20-ieeextreme-3200plus-activity-7509243612015149056-Fnb8',
   vtools: 'https://xtreme.vtools.ieee.org/',
   htu: 'http://forms.gle/j1x4JaKX4UtxLvB88',
   local: 'https://forms.gle/ibv1FKSZVbN1vduPA',
@@ -27,7 +31,7 @@ export const categories = [
 ];
 
 // Answers stay focused on established guidance and supplied local arrangements.
-// Edition-specific unknowns are intentionally not turned into FAQ entries.
+// AI is an explicit exception: explain the announced hybrid format and pending detailed 20.0 rules.
 export const faqs = [
   ['about', 'شو هي IEEEXtreme؟', 'تحدّي برمجة عالمي من IEEE: فرق طلابية تحل مسائل خلال 24 ساعة بإشراف مراقبين مؤهلين.', 'official'],
   ['about', 'متى IEEEXtreme 20.0؟', 'السبت 31 أكتوبر 2026. البداية العالمية الساعة 00:00 UTC، أي 3:00 فجرًا بتوقيت الأردن.', 'proctors'],
@@ -45,6 +49,7 @@ export const faqs = [
   ['team', 'كيف أحصل على عضوية IEEE؟', 'ابدأ من بوابة عضوية IEEE، ثم تأكّد من فئة عضويتك ورقمها في حسابك قبل التسجيل.', 'membership'],
 
   ['registration', 'وين التسجيل الرسمي للمسابقة؟', 'في IEEE vTools Xtreme. سجّل الدخول بحساب IEEE واتبع نموذج تسجيل الفريق.', 'vtools'],
+  ['registration', 'متى آخر موعد للتسجيل في المسابقة؟', 'آخر موعد للتسجيل الرسمي عبر vTools هو 17 أكتوبر 2026 (17-10-2026). هذا موعد تسجيل المسابقة؛ نموذج استضافة HTU منفصل.', 'deadline', 'إعلان IEEEXtreme الرسمي'],
   ['registration', 'شو أجهّز قبل التسجيل؟', 'اسم الفريق، بيانات الجامعة والأعضاء وأرقام عضويتهم، ومراقب مؤهل. جهّز رقم السفير لفرق BAU أيضًا.', 'registration'],
   ['registration', 'كيف أتعلّم خطوات التسجيل بالفيديو؟', 'شاهد شرح بلال حمدان لآلية التسجيل في IEEEXtreme 20.0 على YouTube.', 'tutorial', 'شرح السفير'],
   ['registration', 'شو رقم السفير لطلاب فرع BAU؟', 'استخدموا IEEEXTREME20SB08217 في خانة Ambassador ID أثناء تسجيل فريقكم على vTools. زر النسخ موجود بقسم التسجيل.', 'local', 'تنسيق فرع BAU'],
@@ -57,7 +62,7 @@ export const faqs = [
   ['proctor', 'مين هو الـProctor؟', 'مراقب من IEEE يتابع الالتزام بالقواعد وسير المنافسة وراحة الفريق؛ وجوده جزء أساسي من المشاركة.', 'proctors'],
   ['proctor', 'مين مؤهل يكون مراقب؟', 'عضو IEEE بفئة أعلى من Student وGraduate Student، ويجب أن يكون مسجلًا كمراقب للمسابقة.', 'eligibility'],
   ['proctor', 'هل طالب عضو في IEEE ممكن يراقب فريقنا؟', 'عضوية Student أو Graduate Student لا تؤهل صاحبها للعمل كمراقب.', 'eligibility'],
-  ['proctor', 'كيف نلاقي مراقب؟', 'ابدأ بمستشار الفرع أو عضو هيئة تدريس مؤهل أو IEEE Young Professionals. واطلب مساعدة الفرع في الوصول إليهم.', 'registration'],
+  ['proctor', 'كيف نلاقي مراقب؟', 'ابدأ بمستشار الفرع أو عضو هيئة تدريس مؤهل أو IEEE Young Professionals. وللمساعدة في الوصول إليهم، راسل بلال حمدان على belalhamdan@ieee.org.', 'registration'],
   ['proctor', 'ما لقينا مراقب محلي؛ في طريقة ثانية؟', 'استخدم شبكة IEEE Collabratec للبحث عن أعضاء مؤهلين، ونسّق ترتيبات المراقبة معهم مسبقًا.', 'network'],
   ['proctor', 'اخترنا مراقب على vTools؛ هل هيك خلصنا؟', 'تابعوا قبول الطلب: تصل للمراقب رسالة ليؤكد أو يرفض الإشراف على الفريق.', 'proctors'],
   ['proctor', 'ليش تأكيد المراقب مهم؟', 'وجود مراقب مؤكد يتابع الفريق مطلوب للاعتماد في الترتيب الرسمي والشهادات والجوائز.', 'faq'],
@@ -87,9 +92,12 @@ export const faqs = [
   ['practice', 'هل vTools هو مكان حل المسائل؟', 'vTools بوابة التسجيل. استخدم رابط التدريب للتحضير، وتعليمات المنظمين للوصول إلى المنافسة.', 'vtools'],
   ['practice', 'كيف أجهّز نفسي وفريقي؟', 'راجعوا أساسيات اللغة والتعقيد والبحث والفرز، ثم جرّبوا جلسة حل محددة الوقت وناقشوا أخطاءكم معًا.', 'practice', 'نصيحة تحضيرية'],
   ['practice', 'هل ممكن نشارك الحلول مع فريق ثاني؟', 'لا. حل المسائل مسؤولية فريقكم، ومشاركة الكود مع الفرق الأخرى أو طلب مساعدتها أثناء المنافسة مخالفة.', 'faq'],
+  ['practice', 'هل مسموح أستعين بالذكاء الاصطناعي AI؟', 'نعم، في التحديات المخصصة لذلك. إعلان IEEEXtreme 20.0 يوضح وجود تحديات تسمح بمساعدة AI ومسارات تقليدية تقيّد استخدامه. نحن بانتظار تحديث قواعد المشاركة لتفاصيل السماح والقيود؛ راجع القواعد وتعليمات التحدّي قبل الاستخدام.', 'aiAnnouncement', 'إعلان IEEEXtreme الرسمي عن AI'],
+  ['practice', 'هل السماح بالـAI يشمل كل المسائل؟', 'لا. الإعلان يميّز بين AI-Enabled وAI-Free. لا تعمّم السماح على المسارات التقليدية، وتابع صفحة القواعد لتفاصيل 20.0 عند تحديثها.', 'rules'],
   ['practice', 'وين أقرأ القواعد كاملة؟', 'افتح صفحة القواعد الرسمية قبل المشاركة، وراجعها مع فريقك والمراقب، خصوصًا تعليمات المصادر والأدوات والتقييم.', 'rules'],
 
-  ['community', 'شو دور سفير المسابقة؟', 'يساعد في التعريف بالتحدّي والتسجيل والتحضير والتنسيق المحلي. في فرع BAU، يتابع بلال حمدان هذه الخطوات مع الفرق.', 'bau', 'تنسيق فرع BAU'],
+  ['community', 'شو دور سفير المسابقة؟', 'يساعد في التعريف بالتحدّي والتسجيل والتحضير والتنسيق المحلي. في فرع BAU، يتابع بلال حمدان هذه الخطوات مع الفرق؛ تواصل معه مباشرة على belalhamdan@ieee.org.', 'contact', 'تواصل مع بلال حمدان'],
+  ['community', 'كيف أتواصل مع بلال للاستفسار عن المسابقة؟', 'راسلني على belalhamdan@ieee.org لأي استفسار عن المسابقة أو التسجيل أو تجهيز فريقك. أنا بلال حمدان، سفير فرع BAU.', 'contact', 'راسل بلال حمدان'],
   ['community', 'هل السفير هو نفسه المراقب؟', 'دورهما مختلف. السفير ينسّق معكم؛ المراقب يحتاج أهلية IEEE وتسجيلًا وقبولًا مستقلًا للإشراف على فريقكم.', 'proctors'],
   ['community', 'كيف أتابع أخبار فرعنا؟', 'تابع IEEE BAU وحساب IEEE BAU Computer Society، وتابع مجموعة الواتساب لتعليمات الحضور وآخر التحديثات.', 'bau', 'تنسيق فرع BAU'],
   ['community', 'وين بوابة شهادات المشاركة؟', 'يوجد رابط رسمي للمطالبة بالشهادات باستخدام رقم العضوية أو البريد المسجل ونوع المشارك، عند إتاحتها للنسخة المعنية.', 'certificates'],
@@ -112,7 +120,9 @@ export const resources = [
   ['13', 'IEEE Collabratec', 'تواصل للبحث عن مراقب مؤهل', 'network', 'official'],
   ['14', 'بوابة الشهادات', 'المطالبة بالشهادات عند إتاحتها', 'certificates', 'official'],
   ['15', 'تعليمات HTU الأصلية', 'نص متطلبات المشاركة والجوائز المحلية', 'htuRules', 'official'],
-  ['16', 'دعم التسجيل الرسمي', 'IEEEXtreme@ieee.org', 'support', 'registration']
+  ['16', 'دعم التسجيل الرسمي', 'IEEEXtreme@ieee.org', 'support', 'registration'],
+  ['17', 'موقع جامعة الحسين التقنية', 'افتح موقع الاستضافة على خرائط Google', 'htuMap', 'registration'],
+  ['18', 'تواصل مع بلال حمدان', 'استفسارات المسابقة والتسجيل والتحضير', 'contact', 'registration']
 ];
 
 export const socials = [
@@ -121,4 +131,12 @@ export const socials = [
   ['IEEE HTU', 'تحديثات الجهة المستضيفة', 'ieeehtu', 'https://www.instagram.com/ieeehtu/'],
   ['IEEE BAU Student Branch', 'فرع جامعة البلقاء التطبيقيّة', 'ieeebalqa', 'https://www.instagram.com/ieeebalqa/'],
   ['IEEE BAU Computer Society', 'مجتمعنا للبرمجة والحوسبة', 'ieee_bau_cs', 'https://www.instagram.com/ieee_bau_cs']
+];
+
+// Publicly announced registration IDs; this is a sourced selection, not a complete national directory.
+export const ambassadors = [
+  ['جامعة البلقاء التطبيقية — فرع BAU', 'بلال حمدان', 'IEEEXTREME20SB08217', 'mailto:belalhamdan@ieee.org'],
+  ['الجامعة الأردنية — UJ', 'Abdalrahman Hulliel', 'IEEEXTREME20SB08193', 'https://jo.linkedin.com/in/mariam-frehat-7ba94738b'],
+  ['الجامعة الألمانية الأردنية — GJU', 'Sara Saleem', 'IEEEXTREME20SB08215', 'https://www.linkedin.com/posts/activity-7508133262360453121-dyyV'],
+  ['جامعة الطفيلة التقنية — TTU', 'Ali Kabha', 'IEEEXTREME20SB08191', 'https://www.linkedin.com/posts/kabha_proud-to-announce-my-role-as-an-sb-ambassador-activity-7502388552736092160-mZ1h']
 ];

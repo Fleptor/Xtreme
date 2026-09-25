@@ -28,8 +28,7 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-$('#copy-id').addEventListener('click', async () => {
-  const input = $('#ambassador-id');
+async function copyAmbassadorId(input) {
   try {
     if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
     await navigator.clipboard.writeText(input.value);
@@ -38,7 +37,9 @@ $('#copy-id').addEventListener('click', async () => {
     input.focus(); input.select();
     toast('تم تحديد رقم السفير؛ انسخه من الحقل باستخدام خيار النسخ.');
   }
-});
+}
+$('#copy-id').addEventListener('click', () => copyAmbassadorId($('#ambassador-id')));
+$$('[data-copy-target]').forEach(button => button.addEventListener('click', () => copyAmbassadorId(document.getElementById(button.dataset.copyTarget))));
 
 const tabs = $$('[data-mode]');
 function setMode(mode, focus = false) {

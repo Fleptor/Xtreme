@@ -75,3 +75,33 @@
 @media(max-width:370px){.container{width:calc(100% - 28px)}.hero,.hero-inner{min-height:900px}.hero h1{font-size:47px}.hero-actions{align-items:flex-start;flex-direction:column;gap:14px}.hero-description{font-size:16px}.hero-date small{max-width:245px}.hero .edition-label{gap:8px}.hero .edition-label span{padding-right:8px;font-size:14px}.resource-grid,.social-grid{grid-template-columns:1fr}.resource-card{min-height:0}.resource-card p{margin-bottom:5px}.faq-filters button{font-size:15px}.copy-field input{width:100%;flex-basis:100%;min-width:0!important}.copy-field button{width:100%}.participation-tabs button{font-size:15px;gap:7px}.participation-tabs button span{display:none}.countdown{gap:9px}.countdown b{font-size:30px}.site-identifier b{font-size:20px}.ieee-meta a,.ieee-meta nav{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.button{transition:none!important}}
 @media print{.ieee-meta,.site-header,.site-footer{display:none!important}}
+
+/* Registration updates and personal ambassador contact. */
+.play-icon,.big-play{padding:0;direction:ltr;flex-shrink:0;line-height:0}
+.play-icon svg{width:20px;height:20px;display:block}
+.big-play svg{width:30px;height:30px;display:block}
+.hero-deadline{margin-top:16px;color:#fff1c6;font-size:16px}
+.hero-deadline time{font-weight:700;white-space:nowrap}
+.registration-deadline{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 28px;margin-bottom:36px;border:1px solid #c9bb91;border-right:4px solid var(--ieee-gold);background:#faf4e4}
+.registration-deadline .eyebrow{margin-bottom:5px}
+.registration-deadline h3{font-size:24px;margin-bottom:6px}
+.registration-deadline p{font-size:16px}
+.registration-deadline>a{flex-shrink:0}
+.ambassador-email{display:inline-block;margin-top:16px;color:#fff1c6;text-decoration:underline;text-underline-offset:5px;font-family:'Open Sans',Cairo,sans-serif;font-size:16px;overflow-wrap:anywhere}
+.ambassador-directory{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+.directory-heading{display:flex;justify-content:space-between;gap:32px;align-items:center;margin-bottom:24px}
+.directory-heading h3{font-size:28px}.directory-heading .eyebrow{margin-bottom:5px}.directory-heading>p{max-width:550px;font-size:16px}
+.ambassador-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.directory-card{padding:24px;background:#f1f3e9;border:1px solid #cbd5bd;min-width:0}
+.directory-card h4{font-size:19px}.directory-card>p{margin:5px 0 16px;font-size:16px}
+.directory-card .copy-field{background:#fffefa;border-color:#76866b}
+.directory-card .copy-field input{color:#173c30;font-size:16px}
+.directory-card .copy-field button{background:#dce6d0;color:#173c30;min-height:44px;min-width:60px}
+.directory-card .copy-field button:hover{background:#cbdcba}.directory-card>.text-link{display:inline-block;margin-top:16px}
+.ambassador-directory>.small-note{margin-top:18px;font-size:15px}
+.ai-guidance{margin-top:30px;padding:24px;background:#eef2e8;border:1px solid #c5d2b5;border-right:4px solid var(--ieee-green)}
+.ai-guidance .eyebrow{margin:0 0 8px}.ai-guidance h3{font-size:22px;line-height:1.7}.ai-guidance p{font-size:16px;margin-top:12px}.ai-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+.contact-card{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px;margin:30px 0;border:1px solid #758663;background:#123529}
+.contact-card h3{font-size:27px;color:#fff8e6}.contact-card p{color:#e4ecd9;font-size:16px}.contact-card .eyebrow{margin-bottom:6px}.contact-card .button{font-family:'Open Sans',Cairo,sans-serif;font-size:16px;gap:14px;white-space:normal;overflow-wrap:anywhere}
+.faq-help a{overflow-wrap:anywhere}
+@media(max-width:700px){.registration-deadline,.directory-heading,.contact-card{flex-direction:column;align-items:flex-start;gap:16px}.registration-deadline{padding:22px}.registration-deadline h3{font-size:22px}.ambassador-grid{grid-template-columns:1fr}.directory-card{padding:20px}.contact-card{padding:22px}.contact-card .button{padding:12px 16px;width:100%;justify-content:center;font-size:15px}.ai-guidance{padding:20px}.hero-deadline{font-size:15px}.hero,.hero-inner{min-height:830px}}

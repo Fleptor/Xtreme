@@ -78,3 +78,7 @@ The user supplied `Screenshots/Brin your own laptops.jpg`, containing a local co
 ## Ambassador selector only — 25 September 2026
 
 Removed the standalone directory at the user’s request. All 27 supplied records remain available through the university selector; the source-page link and existing #ambassadors anchor now lead to that selector.
+
+## Ambassador label and presentation — 26 September 2026
+
+The coordinator supplied the corrected selector label: `جامعة البلقاء التطبيقية - كلية الهندسة التكنولوجية - Belal Hamdan`. The college name now appears in the selected university details and English search keywords; Ambassador ID `IEEEXTREME20SB08217` and all 27 records are preserved. Repeated contact prompts now lead to one contact card, with a direct email link also retained in the footer. No competition rules or dates changed.

@@ -135,7 +135,7 @@ function filterUniversities() {
   ambassadorChoice.disabled = matches.length === 0;
   if (!terms.length) {
     ambassadorChoice.value = defaultAmbassador;
-    finderStatus.textContent = 'الاختيار الافتراضي: بلال حمدان — فرع BAU. اختار سفير جامعتك إذا كنت من فرع آخر.';
+    finderStatus.textContent = 'الاختيار الافتراضي: بلال حمدان — كلية الهندسة التكنولوجية. اختار سفير جامعتك إذا كنت من فرع آخر.';
   } else if (matches.length === 1) {
     ambassadorChoice.value = matches[0].value;
     finderStatus.textContent = 'لقينا سفير جامعتك. الرقم جاهز للنسخ.';

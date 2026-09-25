@@ -1,6 +1,8 @@
 export const links = {
   official: 'https://ieeextreme.org/',
   contact: 'mailto:belalhamdan@ieee.org',
+  contactSection: '#contact',
+  ambassadorSelector: '#ambassadors',
   htuMap: 'https://maps.app.goo.gl/3FgQ18NEifYTSfV89',
   htuDevices: 'sources.html#htu-devices',
   deadline: 'https://www.linkedin.com/posts/ieeextreme_ieeextreme20-ieeextreme-codetothextreme-activity-7507657995397353472-nM6e',
@@ -100,8 +102,8 @@ export const faqs = [
   ['practice', 'هل السماح بالـAI يشمل كل المسائل؟', 'لا. الإعلان يميّز بين AI-Enabled وAI-Free. لا تعمّم السماح على المسارات التقليدية، وتابع صفحة القواعد لتفاصيل 20.0 عند تحديثها.', 'rules'],
   ['practice', 'وين أقرأ القواعد كاملة؟', 'افتح صفحة القواعد الرسمية قبل المشاركة، وراجعها مع فريقك والمراقب، خصوصًا تعليمات المصادر والأدوات والتقييم.', 'rules'],
 
-  ['community', 'شو دور سفير المسابقة؟', 'يساعد في التعريف بالتحدّي والتسجيل والتحضير والتنسيق المحلي. في فرع BAU، يتابع بلال حمدان هذه الخطوات مع الفرق؛ تواصل معه مباشرة على belalhamdan@ieee.org.', 'contact', 'تواصل مع بلال حمدان'],
-  ['community', 'كيف أتواصل مع بلال للاستفسار عن المسابقة؟', 'راسلني على belalhamdan@ieee.org لأي استفسار عن المسابقة أو التسجيل أو تجهيز فريقك. أنا بلال حمدان، سفير فرع BAU.', 'contact', 'راسل بلال حمدان'],
+  ['community', 'شو دور سفير المسابقة؟', 'يساعد في التعريف بالتحدّي والتسجيل والتحضير والتنسيق المحلي. اختار جامعتك من بطاقة السفير في قسم التسجيل لتلاقي السفير ورقمه.', 'ambassadorSelector', 'اختار سفير جامعتك'],
+  ['community', 'كيف أتواصل مع بلال للاستفسار عن المسابقة؟', 'بتلاقي بريدي الإلكتروني في قسم التواصل أسفل الصفحة، للاستفسار عن المسابقة أو التسجيل أو تجهيز فريقك.', 'contactSection', 'معلومات التواصل'],
   ['community', 'هل السفير هو نفسه المراقب؟', 'دورهما مختلف. السفير ينسّق معكم؛ المراقب يحتاج أهلية IEEE وتسجيلًا وقبولًا مستقلًا للإشراف على فريقكم.', 'proctors'],
   ['community', 'كيف أتابع أخبار فرعنا؟', 'تابع IEEE BAU وحساب IEEE BAU Computer Society، وتابع مجموعة الواتساب لتعليمات الحضور وآخر التحديثات.', 'bau', 'تنسيق فرع BAU'],
   ['community', 'وين بوابة شهادات المشاركة؟', 'يوجد رابط رسمي للمطالبة بالشهادات باستخدام رقم العضوية أو البريد المسجل ونوع المشارك، عند إتاحتها للنسخة المعنية.', 'certificates'],
@@ -126,7 +128,6 @@ export const resources = [
   ['15', 'تعليمات HTU الأصلية', 'نص متطلبات المشاركة والجوائز المحلية', 'htuRules', 'official'],
   ['16', 'دعم التسجيل الرسمي', 'IEEEXtreme@ieee.org', 'support', 'registration'],
   ['17', 'موقع جامعة الحسين التقنية', 'افتح موقع الاستضافة على خرائط Google', 'htuMap', 'registration'],
-  ['18', 'تواصل مع بلال حمدان', 'استفسارات المسابقة والتسجيل والتحضير', 'contact', 'registration']
 ];
 
 export const socials = [
@@ -140,11 +141,11 @@ export const socials = [
 // All 27 entries supplied in Other Ambassadors.txt; preserve distinct branches and repeated universities.
 export const ambassadors = [
   [
-    "جامعة البلقاء التطبيقية — فرع BAU",
+    "جامعة البلقاء التطبيقية - كلية الهندسة التكنولوجية",
     "Belal Hamdan",
     "IEEEXTREME20SB08217",
     "mailto:belalhamdan@ieee.org",
-    "Al-Balqa Applied University Student Branch"
+    "Al-Balqa Applied University - Faculty of Engineering Technology (FET) Student Branch"
   ],
   [
     "جامعة العلوم الإسلامية العالمية — WISE",

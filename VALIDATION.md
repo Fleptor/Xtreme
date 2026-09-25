@@ -89,3 +89,13 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 - Reviewed the user-supplied coordination screenshot: at least one laptop per team; host does not supply laptops. Screenshot/contact details are excluded from the public project.
 - Existing build and link checks pass with 64 FAQs. The local guidance source anchor resolves correctly.
 - Browser checked the laptop FAQ search and the new readiness item: selecting it updates the checklist to 1 / 7 and progress to 1 of 7. No mobile document overflow at 390px.
+
+## Layout and contact cleanup — 26 September 2026
+
+- Removed decorative section, hero and resource numbering; sequential registration and proctor steps retain their useful ordering.
+- Reduced direct Belal email links from seven to two, removed the FAQ help card and duplicate BAU introduction, and retained the local form in registration/resources.
+- Confirmed the exact requested ambassador label, all 27 options, college-name search, distinct BAU branch selection and unchanged Ambassador ID.
+- Desktop content now fills the viewport with 48px inline margins (1,824px content at a 1,920px viewport), with 32px tablet and 14–18px mobile margins.
+- Browser checks at widths 320, 390, 768, 1024, 1440, 1920 and 2560 found no horizontal overflow. Reviewed desktop and mobile screenshots.
+- Verified clipboard copying, disabled copying for unknown universities, no-JavaScript default label, and responsive source-page layout.
+- `npm run check` and `git diff --check` pass.

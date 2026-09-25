@@ -29,7 +29,7 @@ for (const file of ['index.html','sources.html']) {
   for (const [,href] of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
     if (href.startsWith('#')) assert.ok(ids.includes(href.slice(1)), `Broken anchor: ${href}`);
     else if (/^(?:https?:|mailto:)/.test(href)) assert.doesNotThrow(() => new URL(href));
-    else await access(path.join(dist,href.split('#')[0]));
+    else await access(path.join(dist,href.split(/[?#]/)[0]));
   }
   for (const [,target] of html.matchAll(/aria-controls="([^"]+)"/g)) assert.ok(ids.includes(target), `Broken ARIA target: ${target}`);
   assert.ok(html.includes('alt="IEEE" width="116" height="34"'), `Official master brand missing in ${file}`);

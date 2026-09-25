@@ -67,3 +67,4 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 - Browser search checked with Arabic university terms, HTU, Center, an exact ID, a person's name, no results, and clearing the query. Clearing restores all 27 entries.
 - Copied the final entry (`IEEEXTREME20SB08220`) successfully; source links resolve to the new sources-page anchor.
 - No JavaScript errors or document overflow at 1440, 390 and 320 CSS pixels. Narrow phones stack each copy button below its full ID.
+- Live verification exposed cached scripts from the prior release. Builds now add content-hash query strings to CSS and JavaScript URLs on both pages, preventing an updated page from loading stale application code. Local asset checks account for these query strings.

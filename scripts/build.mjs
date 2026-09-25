@@ -1,6 +1,7 @@
 import { readFile, writeFile, mkdir, cp } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { links, faqs, categories, resources, socials, ambassadors } from '../src/content.mjs';
 
 export const root = fileURLToPath(new URL('../', import.meta.url));
@@ -12,6 +13,8 @@ const keywords = {about:'xtreme competition اكستريم إكستريم موع
 
 export async function build() {
   await mkdir(dist, {recursive:true});
+  const assetVersions = Object.fromEntries(await Promise.all(['styles.css','ieee.css','app.js','shell.js'].map(async file => [file,createHash('sha256').update(await readFile(path.join(root,'src',file))).digest('hex').slice(0,12)])));
+  const versionAssets = html => html.replace(/\b(href|src)="(styles\.css|ieee\.css|app\.js|shell\.js)"/g,(_,attribute,file) => `${attribute}="${file}?v=${assetVersions[file]}"`);
   const partials = Object.fromEntries(await Promise.all([['IEEE_META','ieee-meta.html'],['SITE_HEADER','site-header.html'],['SITE_FOOTER','site-footer.html']].map(async ([key,file]) => [key,await readFile(path.join(root,'src/partials',file),'utf8')])));
   const shell = (html, home = '') => html.replace(/\{\{(IEEE_META|SITE_HEADER|SITE_FOOTER)\}\}/g,(_,key)=>partials[key]).replaceAll('{{HOME}}',home).replaceAll('{{YEAR}}',String(new Date().getFullYear()));
   const template = shell(await readFile(path.join(root, 'src/index.html'), 'utf8'));
@@ -22,10 +25,10 @@ export async function build() {
   const socialMarkup = socials.map(([title,description,handle,url]) => `<a class="social-card" href="${url}" ${external}><div class="social-icon-row">${instagram}<span aria-hidden="true">↗</span></div><h3>${escape(title)}</h3><p>${escape(description)}</p><span class="handle">@${handle}</span></a>`).join('\n');
   const ambassadorMarkup = ambassadors.map(([university,name,id,source,originalUniversity],i) => `<article class="directory-card" data-search="${escape(originalUniversity)}"><h4>${escape(university)}</h4><p>${escape(name)}</p><div class="copy-field"><input id="directory-id-${i}" value="${escape(id)}" readonly dir="ltr" spellcheck="false" aria-label="رقم سفير ${escape(university)}"><button data-copy-target="directory-id-${i}" aria-label="نسخ رقم سفير ${escape(university)}">نسخ</button></div><a class="text-link" href="${escape(source)}">${id === 'IEEEXTREME20SB08217' ? 'تواصل مع بلال' : 'مصدر قائمة السفراء'} ↗</a></article>`).join('');
   const html = template.replace('{{AMBASSADORS}}', ambassadorMarkup).replace('{{FAQ}}', faqMarkup).replace('{{CATEGORIES}}',categoryMarkup).replace('{{RESOURCES}}',resourceMarkup).replace('{{SOCIALS}}',socialMarkup).replaceAll('{{FAQ_COUNT}}',String(faqs.length)).replace(/\{\{link:(\w+)\}\}/g,(_,key) => { if(!links[key]) throw new Error(`Unknown link ${key}`); return escape(links[key]); });
-  await writeFile(path.join(dist,'index.html'),html);
+  await writeFile(path.join(dist,'index.html'),versionAssets(html));
   await cp(path.join(root,'assets'),path.join(dist,'assets'),{recursive:true});
   for (const file of ['styles.css','ieee.css','app.js','shell.js']) await cp(path.join(root,'src',file),path.join(dist,file));
-  await writeFile(path.join(dist,'sources.html'),shell(await readFile(path.join(root,'src/sources.html'),'utf8'),'index.html'));
+  await writeFile(path.join(dist,'sources.html'),versionAssets(shell(await readFile(path.join(root,'src/sources.html'),'utf8'),'index.html')));
   console.log(`Built ${faqs.length} FAQs, ${resources.length} resources, ${socials.length} social links → dist/`);
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await build();

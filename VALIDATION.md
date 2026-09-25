@@ -83,3 +83,9 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 - The directory shortcut opens the full list. No mailto links remain inside the ambassador directory. The separate BAU introduction retains its own copy field and local form.
 - Embedded YouTube player loaded the correct title and played the video inline (readyState 4, paused false, advancing currentTime). The explicit YouTube link opened the correct video in a new tab.
 - No application JavaScript errors; no document overflow at 1440, 768, 390 and 320 pixels. Visually reviewed the university finder and BAU introduction, and corrected the finder controls to stack vertically.
+
+## Confirmed HTU laptop requirement
+
+- Reviewed the user-supplied coordination screenshot: at least one laptop per team; host does not supply laptops. Screenshot/contact details are excluded from the public project.
+- Existing build and link checks pass with 64 FAQs. The local guidance source anchor resolves correctly.
+- Browser checked the laptop FAQ search and the new readiness item: selecting it updates the checklist to 1 / 7 and progress to 1 of 7. No mobile document overflow at 390px.

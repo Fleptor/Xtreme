@@ -45,9 +45,10 @@ npm run check
 - Embedded YouTube registration tutorial using privacy-enhanced mode, with an explicit new-tab YouTube link.
 - Registration deadline, all 27 supplied Jordanian university ambassador entries in a searchable, collapsible list with copy controls, AI guidance, and the supplied HTU Google Maps link.
 - Online/on-site participation tabs and guidance on finding and confirming proctors.
+- Confirmed HTU device guidance: every team brings at least one laptop; the host does not supply laptops.
 - Local top-three prizes of 300 / 200 / 100 JOD, linked to the supplied promotional poster.
 - Separate HTU participation and local award requirements, including the exact all-female-team opening exception.
-- **63 sourced FAQs** in eight topics, with Arabic search, category filtering and progressive display.
+- **64 sourced FAQs** in eight topics, with Arabic search, category filtering and progressive display.
 - **18 resources**, including practice, supported languages/browsers, memberships, rules, proctor guidance and certificates.
 - All five supplied Instagram accounts and the WhatsApp update reminder.
 - UTC-based countdown with active/ended states, downloadable calendar event, and a preparation checklist with optional browser saving; switching saving off clears its stored data.

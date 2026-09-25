@@ -144,29 +144,12 @@ function filterUniversities() {
     prompt.disabled = true;
     ambassadorChoice.prepend(prompt);
     ambassadorChoice.value = '';
-    finderStatus.textContent = matches.length ? `لقينا ${matches.length} خيارات. اختار فرعك والسفير اللي بتنسّق معه.` : 'جرّب اسم الجامعة أو اختصارها، أو تصفّح القائمة الكاملة أدناه.';
+    finderStatus.textContent = matches.length ? `لقينا ${matches.length} خيارات. اختار فرعك والسفير اللي بتنسّق معه.` : 'جرّب اسم الجامعة أو اختصارها، أو امسح البحث لعرض كل الخيارات.';
   }
   showAmbassador();
 }
 universityLookup.addEventListener('input', filterUniversities);
 ambassadorChoice.addEventListener('change', () => { showAmbassador(); finderStatus.textContent = 'تم اختيار السفير. انسخ الرقم وأضفه على vTools.'; });
-$('#browse-ambassadors').addEventListener('click', () => { $('.ambassador-list').open = true; });
-
-const ambassadorCards = $$('.directory-card');
-const ambassadorSearch = $('#ambassador-search');
-ambassadorSearch.disabled = false;
-ambassadorSearch.addEventListener('input', () => {
-  const terms = normalize(ambassadorSearch.value.trim()).split(/\s+/).filter(Boolean);
-  let count = 0;
-  ambassadorCards.forEach(card => {
-    const text = normalize(card.textContent + ' ' + card.dataset.search + ' ' + card.querySelector('input').value);
-    card.hidden = !terms.every(term => text.includes(term));
-    if (!card.hidden) count++;
-  });
-  $('#ambassador-count').textContent = `عرض ${count} من ${ambassadorCards.length} سفيرًا`;
-  $('#ambassador-empty').hidden = count > 0;
-});
-
 const faqItems = $$('.faq-item');
 const searchable = new Map(faqItems.map(item => [item, normalize(item.textContent + ' ' + item.dataset.keywords)]));
 const categoryButtons = $$('[data-faq-category]');

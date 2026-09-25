@@ -43,7 +43,7 @@ npm run check
 - Official vTools registration, the HTU hosting form, and BAU local coordination form, each with its own purpose.
 - BAU Ambassador ID **IEEEXTREME20SB08217** with a copy button and manual-copy fallback.
 - Embedded YouTube registration tutorial using privacy-enhanced mode, with an explicit new-tab YouTube link.
-- Registration deadline, all 27 supplied Jordanian university ambassador entries in a searchable, collapsible list with copy controls, AI guidance, and the supplied HTU Google Maps link.
+- Registration deadline, all 27 supplied Jordanian university ambassador entries in the university selector with an ID-copy control, AI guidance, and the supplied HTU Google Maps link.
 - Online/on-site participation tabs and guidance on finding and confirming proctors.
 - Confirmed HTU device guidance: every team brings at least one laptop; the host does not supply laptops.
 - Local top-three prizes of 300 / 200 / 100 JOD, linked to the supplied promotional poster.
@@ -88,6 +88,6 @@ The jungle illustration is illustrative artwork, not a photograph of HTU. It was
 
 The website follows the implemented requirements documented in [IEEE-DESIGN-REVIEW.md](IEEE-DESIGN-REVIEW.md), including shared branding, official logo/favicon, global navigation, policy footer, accessible contrast and IEEE button styling. That record also identifies the IEEE review and domain-specific cookie-governance steps needed before official publication. Local checks are not an IEEE certification.
 
-Ambassador directory data comes from `references/Other Ambassadors.txt`. Preserve every supplied name, ID and distinct branch; University of Jordan has two entries. English university labels are retained for search alongside Arabic display labels.
+Ambassador selector data comes from `references/Other Ambassadors.txt`. Preserve every supplied name, ID and distinct branch; University of Jordan has two entries. English university labels are retained for search alongside Arabic display labels.
 
-The registration sidebar welcomes every university with a quick university lookup and ID-copy field, defaulting to Belal’s BAU ID. Multiple matches require explicit selection; unknown searches disable copying. A dedicated BAU introduction and local form follow the complete ambassador directory.
+The registration sidebar welcomes every university with a quick university lookup and ID-copy field, defaulting to Belal’s BAU ID. Multiple matches require explicit selection; unknown searches disable copying. A dedicated BAU introduction and local form follow the registration cards; the duplicate standalone directory has been removed.

@@ -74,3 +74,7 @@ The supplied tutorial `T-4hHZvCQnw` is embedded directly with a lazy-loaded priv
 ## HTU laptop confirmation — 25 September 2026
 
 The user supplied `Screenshots/Brin your own laptops.jpg`, containing a local coordination reply to whether the host can supply devices for teams without laptops. The reply says no and states that each team is expected to have at least one laptop. The website now states that HTU teams must bring at least one laptop per team. It does not infer a laptop-per-person requirement, a maximum device count, or an equipment loan scheme. Bringing the charger is preparation advice. The screenshot contains personal contact information and is not copied into this public repository or deployment; only the relevant guidance is summarized and attributed on the sources page. This confirmation supplements the existing host regulations without changing their original text.
+
+## Ambassador selector only — 25 September 2026
+
+Removed the standalone directory at the user’s request. All 27 supplied records remain available through the university selector; the source-page link and existing #ambassadors anchor now lead to that selector.

@@ -68,3 +68,10 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 - Copied the final entry (`IEEEXTREME20SB08220`) successfully; source links resolve to the new sources-page anchor.
 - No JavaScript errors or document overflow at 1440, 390 and 320 CSS pixels. Narrow phones stack each copy button below its full ID.
 - Live verification exposed cached scripts from the prior release. Builds now add content-hash query strings to CSS and JavaScript URLs on both pages, preventing an updated page from loading stale application code. Local asset checks account for these query strings.
+
+## Local prize cards — 25 September 2026
+
+- Visually matched the supplied poster: first 300 JOD, second 200 JOD, third 100 JOD.
+- Build and existing content/link checks pass with 63 FAQs. The linked original poster returns HTTP 200 as image/png.
+- Chromium at desktop 1440px and mobile 390px: no document overflow. Reviewed mobile prize cards and verified the new prize FAQ is searchable.
+- Prize cards sit in the HTU section alongside the existing local award eligibility requirements.

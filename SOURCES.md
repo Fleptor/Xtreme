@@ -30,7 +30,7 @@ Reviewed 25 September 2026. Source references are also attached to every FAQ ans
 - Compiler version examples observed: g++ 15.2.0, OpenJDK 21, Python 3.13.3, Mono 6.8, Node 20.18.1, Rust 1.71.1 and Go 1.19.2. These versions are not copied into promotional claims; the source page remains the reference.
 - The live rules page displays an upcoming 20.0 update notice. Per the user’s explicit exception, the site explains the newly announced AI-enabled/AI-free format and says detailed participation rules are pending. Historical AI guidance is not presented as the final 20.0 policy. Scoring and global prize details remain omitted.
 - General proctor/eligibility facts are also supported by the dedicated eligibility and proctor pages. Preparatory advice is explicitly labeled in the FAQ.
-- The supplied prize poster is visual inspiration only. No prize amounts were imported from an image into current promotional claims.
+- At the user’s request, the supplied local prize poster is now cited for first / second / third prizes of 300 / 200 / 100 JOD. It is not used as evidence of global prize amounts.
 - The member-account screenshots were not embedded; private membership details are not required for this public guide.
 
 ## Artwork
@@ -56,3 +56,7 @@ The shared header uses an unmodified black IEEE master PNG. Official IEEE favico
 ## Complete supplied ambassador directory — 25 September 2026
 
 The user identified an ambassador-numbers file. The file present in the workspace is `Other Ambassadors.txt`; it contains 27 distinct ambassador IDs. An exact copy is preserved at `references/Other Ambassadors.txt`. All 27 names and IDs are copied without modification; original English institution labels are retained for search and Arabic labels are provided for display. The directory includes both University of Jordan entries, Al-Huson University College, and separate BAU / BAU-Center branches. The supplied list replaces the previous four-entry web-sourced selection, including its abbreviated TTU ambassador name. “Complete” refers to the supplied list, not an independently audited roster of every university. Sources-page attribution now points to the supplied list rather than the superseded social posts.
+
+## Local top-three prizes — supplied poster
+
+The user explicitly requested the prizes shown in `Screenshots/Promotional Samples/Screenshot 2026-09-25 at 17-21-07 Instagram.png`. Visually reviewed: first place **300 JOD**, second place **200 JOD**, third place **100 JOD**. The original image is copied unchanged to `assets/htu-prizes.png` and linked from the HTU prize cards, FAQ and public sources page. The promotional set identifies HTU / Jordan Section; these amounts are presented as local host awards alongside the supplied host eligibility rules. No per-person allocation, payment procedure, sponsorship detail or global reward claim is inferred.

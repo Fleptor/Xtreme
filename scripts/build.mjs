@@ -20,7 +20,15 @@ export async function build() {
   const template = shell(await readFile(path.join(root, 'src/index.html'), 'utf8'));
   const faqMarkup = faqs.map(([cat,q,a,source,label],i) => `<details class="faq-item" data-category="${cat}" data-keywords="${keywords[cat]}" id="question-${i+1}"><summary><span>${escape(q)}</span></summary><div class="faq-answer"><p>${escape(a)}</p><a href="${escape(links[source])}" ${fileAttributes(source)}>${escape(label || 'المصدر الرسمي')}${source === 'htuRules' ? ' (TXT، 2 KB، نافذة جديدة)' : ''} ↗</a></div></details>`).join('\n');
   const categoryMarkup = categories.map(([key,label]) => `<button data-faq-category="${key}" aria-pressed="${key==='all'}">${label}<span>${key==='all'?faqs.length:faqs.filter(item=>item[0]===key).length}</span></button>`).join('');
-  const resourceMarkup = resources.map(([,title,description,key,category]) => `<a class="resource-card" href="${escape(links[key])}" data-resource-category="${category}" ${fileAttributes(key)}><span class="resource-arrow" aria-hidden="true">↗</span><h3>${escape(title)}</h3><p>${escape(description)}${key === 'htuRules' ? ' (TXT، 2 KB، نافذة جديدة)' : ''}</p></a>`).join('\n');
+  const resourceGroups = [
+    ['practice', 'مساحة التدريب', 'جرّب المنصة وجهّز أدواتك قبل المنافسة.'],
+    ['registration', 'التسجيل والتجهيز', 'كل خطوة إلها رابطها.'],
+    ['official', 'الأدلة والمراجع', 'ارجع للمصدر وقت ما تحتاج التفاصيل.']
+  ];
+  const resourceMarkup = resourceGroups.map(([category,title,description]) => {
+    const items = resources.filter(resource => resource[4] === category).map(([,name,detail,key]) => `<li><a class="resource-link" href="${escape(links[key])}" ${fileAttributes(key)}><div><h4>${escape(name)}</h4><p>${escape(detail)}${key === 'htuRules' ? ' (TXT، 2 KB، نافذة جديدة)' : ''}</p></div><span class="resource-link-arrow" aria-hidden="true">↗</span></a></li>`).join('');
+    return `<section class="resource-group" data-resource-group="${category}" aria-labelledby="resource-${category}-title"><div class="resource-group-heading"><h3 id="resource-${category}-title">${escape(title)}</h3><p>${escape(description)}</p></div><ul class="resource-list">${items}</ul></section>`;
+  }).join('');
   const instagram = '<svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>';
   const socialMarkup = socials.map(([title,description,handle,url]) => `<a class="social-card" href="${url}" ${external}><div class="social-icon-row">${instagram}<span aria-hidden="true">↗</span></div><h3>${escape(title)}</h3><p>${escape(description)}</p><span class="handle">@${handle}</span></a>`).join('\n');
   const ambassadorOptions = ambassadors.map(([university,name,id,source,originalUniversity]) => {

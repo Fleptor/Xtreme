@@ -39,7 +39,7 @@ npm run check
 
 ## Included
 
-- Eight journey sections without decorative numbering, with fluid full-width desktop layouts and responsive mobile margins.
+- Eight journey sections without decorative numbering, with wider desktop side margins, a 1,680px content limit and responsive mobile margins.
 - Official vTools registration, the HTU hosting form, and BAU local coordination form, each with its own purpose.
 - BAU Ambassador ID **IEEEXTREME20SB08217** with a copy button and manual-copy fallback.
 - Embedded YouTube registration tutorial using privacy-enhanced mode, with an explicit new-tab YouTube link.
@@ -49,7 +49,7 @@ npm run check
 - Local top-three prizes of 300 / 200 / 100 JOD, linked to the supplied promotional poster.
 - Separate HTU participation and local award requirements, including the exact all-female-team opening exception.
 - **64 sourced FAQs** in eight topics, with Arabic search, category filtering and progressive display.
-- **17 resources**, including practice, supported languages/browsers, memberships, rules, proctor guidance and certificates.
+- **17 resources** in grouped link lists, with a highlighted training area and category filters, including memberships, rules, proctor guidance and certificates.
 - All five supplied Instagram accounts and the WhatsApp update reminder.
 - UTC-based countdown with active/ended states, downloadable calendar event, and a preparation checklist with optional browser saving; switching saving off clears its stored data.
 - Self-hosted Arabic fonts and artwork; no analytics. The lazy-loaded YouTube iframe is the external media integration.
@@ -90,4 +90,4 @@ The website follows the implemented requirements documented in [IEEE-DESIGN-REVI
 
 Ambassador selector data comes from `references/Other Ambassadors.txt`. Preserve every supplied name, ID and distinct branch; University of Jordan has two entries. English university labels are retained for search alongside Arabic display labels.
 
-The registration sidebar welcomes every university with a quick university lookup and ID-copy field, defaulting to Belal’s BAU ID. Multiple matches require explicit selection; unknown searches disable copying. The BAU local form remains in the registration steps and resource list. One contact card and the footer email link provide access to Belal; repeated contact prompts and the duplicate BAU introduction have been removed.
+The registration sidebar welcomes every university with a quick university lookup and ID-copy field, defaulting to Belal’s BAU ID. Multiple matches require explicit selection; unknown searches disable copying. The BAU local form remains in the registration steps and resource list. The contact FAQ directs students to their own branch’s ambassador through the university selector and branch channels. Belal’s email remains in the footer; the standalone contact card and duplicate BAU introduction have been removed.

@@ -99,3 +99,12 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 - Browser checks at widths 320, 390, 768, 1024, 1440, 1920 and 2560 found no horizontal overflow. Reviewed desktop and mobile screenshots.
 - Verified clipboard copying, disabled copying for unknown universities, no-JavaScript default label, and responsive source-page layout.
 - `npm run check` and `git diff --check` pass.
+
+## Resource directory and spacing refinement — 26 September 2026
+
+- Increased desktop gutters to 6% per side, with a 1,680px maximum content width. At 1,920px the inline margins are 120px, up from 48px.
+- Replaced rectangular resource cards with grouped lists, fine dividers and a highlighted training group. All 17 destinations and category filtering remain available; all links render without JavaScript.
+- Replaced the personal contact FAQ with branch-ambassador guidance and a link to the university selector. Removed the contact card before the social links; the footer email remains.
+- Checked widths 320, 390, 768, 1024, 1152, 1200, 1440, 1920 and 2560 for overflow and reviewed desktop/mobile screenshots.
+- Verified every resource filter on desktop/mobile, keyboard filter activation, the FAQ search and its selector link, and resources without JavaScript.
+- `npm run check` and `git diff --check` pass.

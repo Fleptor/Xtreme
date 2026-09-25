@@ -102,7 +102,8 @@ updateChecklist();
 
 $$('[data-resource-filter]').forEach(button => button.addEventListener('click', () => {
   $$('[data-resource-filter]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-  $$('.resource-card').forEach(card => { card.hidden = button.dataset.resourceFilter !== 'all' && card.dataset.resourceCategory !== button.dataset.resourceFilter; });
+  $$('[data-resource-group]').forEach(group => { group.hidden = button.dataset.resourceFilter !== 'all' && group.dataset.resourceGroup !== button.dataset.resourceFilter; });
+  $('.resource-directory').classList.toggle('is-filtered', button.dataset.resourceFilter !== 'all');
 }));
 
 // Fold Arabic diacritics and common letter variants for forgiving Arabic search.

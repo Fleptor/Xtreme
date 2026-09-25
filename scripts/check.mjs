@@ -37,7 +37,10 @@ for (const file of ['index.html','sources.html']) {
   assert.ok(html.includes('assets/favicon.ico'), `Official favicon missing in ${file}`);
   assert.ok(!html.includes('brand-symbol') && !html.includes('brand-x'), `Improvised wordmark remains in ${file}`);
   for (const required of ['https://www.ieee.org/accessibility_statement.html','https://www.ieee.org/nondiscrimination','https://www.ieee-ethics-reporting.org/','https://www.ieee.org/site_terms_conditions.html','https://privacy.ieee.org/policies']) assert.ok(html.includes(required), `IEEE footer destination missing: ${required}`);
-  for (const [anchor] of html.matchAll(/<a\b[^>]+>/g)) if (anchor.includes('target="_blank"')) assert.ok(anchor.includes('.txt'), `HTML destination should open in same tab: ${anchor}`);
+  for (const [anchor] of html.matchAll(/<a\b[^>]+>/g)) if (anchor.includes('target="_blank"')) {
+    assert.ok(anchor.includes('.txt') || anchor.includes(`href="${links.tutorial}"`), `Unexpected new-tab link: ${anchor}`);
+    assert.ok(anchor.includes('noopener') && anchor.includes('noreferrer'), `Missing new-tab protections: ${anchor}`);
+  }
 }
 const html = await readFile(path.join(dist,'index.html'),'utf8');
 assert.ok(html.includes('IEEEXTREME20SB08217'));
@@ -54,4 +57,4 @@ assert.match(calendar,/DTEND:20261101T000000Z/);
 const jordan = new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Amman',hour:'2-digit',hourCycle:'h23'}).format(new Date('2026-10-31T00:00:00Z'));
 assert.equal(jordan,'03');
 console.log(`PASS: ${faqs.length} sourced FAQs; all local links, assets, anchors, ARIA targets, resource URLs, protected identifiers, calendar and Jordan time checked.`);
-console.log('PASS: shared IEEE identity, official favicon, administrative footer and same-tab HTML links on both pages.');
+console.log('PASS: shared IEEE identity, official favicon, administrative footer and link targets on both pages (YouTube explicitly opens in a new tab).');

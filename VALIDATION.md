@@ -75,3 +75,11 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 - Build and existing content/link checks pass with 63 FAQs. The linked original poster returns HTTP 200 as image/png.
 - Chromium at desktop 1440px and mobile 390px: no document overflow. Reviewed mobile prize cards and verified the new prize FAQ is searchable.
 - Prize cards sit in the HTU section alongside the existing local award eligibility requirements.
+
+## University finder and embedded tutorial
+
+- Existing build/link checks and JavaScript syntax check pass. The link-target check now permits the explicitly requested YouTube new-tab link and checks its protections.
+- Default BAU ID, unique HTU lookup, two UJ choices, two BAU branch choices, no-match state and clearing back to the default were exercised in Chromium. Ambiguous or empty results disable copying until resolved; selecting a UJ ambassador copied the correct full ID.
+- The directory shortcut opens the full list. No mailto links remain inside the ambassador directory. The separate BAU introduction retains its own copy field and local form.
+- Embedded YouTube player loaded the correct title and played the video inline (readyState 4, paused false, advancing currentTime). The explicit YouTube link opened the correct video in a new tab.
+- No application JavaScript errors; no document overflow at 1440, 768, 390 and 320 pixels. Visually reviewed the university finder and BAU introduction, and corrected the finder controls to stack vertically.

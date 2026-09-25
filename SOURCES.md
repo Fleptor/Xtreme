@@ -64,3 +64,9 @@ The user explicitly requested the prizes shown in `Screenshots/Promotional Sampl
 ## Opening ceremony wording clarification
 
 Attendance is explicitly described as mandatory for teams participating at HTU, with at least one member present at 12:00 AM. The only participation exception is a team consisting entirely of female members, with all members checked in by 8:00 AM. Every standalone FAQ answer repeats the scope of that exception. Host award eligibility continues to require every team member at the opening, without this exception, as stated in the supplied host regulations.
+
+## Registration experience and embedded tutorial
+
+The university finder uses the same 27 supplied ambassador records as the directory; it defaults to Belal’s BAU ID, preserves the choice between multiple branches/ambassadors, and disables copying for unresolved searches. The BAU-only introduction remains separate from the all-university finder. The post-directory mailto link and the directory’s special “contact Belal” source link were removed.
+
+The supplied tutorial `T-4hHZvCQnw` is embedded directly with a lazy-loaded privacy-enhanced iframe and no autoplay, following [YouTube’s embed instructions](https://support.google.com/youtube/answer/171780?hl=en) and [player parameters](https://developers.google.com/youtube/player_parameters). The explicit external YouTube link opens a new tab as requested. The public privacy description now discloses the embedded service.

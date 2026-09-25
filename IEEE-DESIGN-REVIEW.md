@@ -30,7 +30,7 @@ The detailed pages were read in a real browser because the research fetcher coul
 | Calls to action | IEEE pill shape, 50 px radius, 2 px border, bold Open Sans/Cairo, high contrast, action-led labels, 400 ms color transitions. Reduced-motion preference disables transitions. |
 | Links | HTML destinations open in the same tab. HTU's supporting text file opens in a new tab with type, size and new-window information. Calendar download is labeled ICS. Google sign-in is disclosed beside the HTU registration step. |
 | Accessibility | Skip link, semantic landmarks/headings, visible focus, keyboard menu and tabs, native FAQ disclosures, labeled controls, responsive text and layout. A disabled search field without JavaScript avoids presenting a nonworking search; all FAQ text and resources remain readable. |
-| Local storage | Checklist saving requires an explicit opt-in. Turning it off deletes saved progress and its preference. The site sets no cookies, includes no analytics and makes no third-party runtime asset requests. |
+| Local storage | Checklist saving requires an explicit opt-in. Turning it off deletes saved progress and its preference. The site includes no analytics. The registration tutorial now uses an explicit YouTube privacy-enhanced iframe; loading/playing it contacts YouTube. |
 | Secondary page | Sources page uses the same identity, menu and footer; includes guide-specific browser/accessibility information. |
 
 The fantasy temple is campaign artwork, not a photograph of HTU. This distinction is disclosed in the source notes. The IEEE master logo is never placed over that image or used as part of the jungle illustration.
@@ -67,3 +67,5 @@ No messages, forms, domain registrations or review requests were submitted on th
 - Cairo and generated jungle artwork retain their existing provenance in `SOURCES.md`.
 
 IEEE artwork remains subject to the toolkit agreement, which permits use for official IEEE volunteer activities. Its use here follows the supplied context of the BAU competition ambassador's student-branch outreach.
+
+The requested “Open on YouTube” link intentionally opens a new tab and announces that behavior, with `noopener noreferrer`. This is an explicit user-requested exception to the earlier same-tab HTML-link rule.

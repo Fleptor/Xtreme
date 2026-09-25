@@ -43,7 +43,7 @@ npm run check
 - Official vTools registration, the HTU hosting form, and BAU local coordination form, each with its own purpose.
 - BAU Ambassador ID **IEEEXTREME20SB08217** with a copy button and manual-copy fallback.
 - Belal Hamdan's linked YouTube registration tutorial, corrected SVG play icons, and direct contact at belalhamdan@ieee.org.
-- Registration deadline, a sourced selection of university ambassador IDs with copy controls, AI guidance, and the supplied HTU Google Maps link.
+- Registration deadline, all 27 supplied Jordanian university ambassador entries in a searchable, collapsible list with copy controls, AI guidance, and the supplied HTU Google Maps link.
 - Online/on-site participation tabs and guidance on finding and confirming proctors.
 - Separate HTU participation and local award requirements, including the exact all-female-team opening exception.
 - **62 sourced FAQs** in eight topics, with Arabic search, category filtering and progressive display.
@@ -85,3 +85,5 @@ The jungle illustration is illustrative artwork, not a photograph of HTU. It was
 ## IEEE design review
 
 The website follows the implemented requirements documented in [IEEE-DESIGN-REVIEW.md](IEEE-DESIGN-REVIEW.md), including shared branding, official logo/favicon, global navigation, policy footer, accessible contrast and IEEE button styling. That record also identifies the IEEE review and domain-specific cookie-governance steps needed before official publication. Local checks are not an IEEE certification.
+
+Ambassador directory data comes from `references/Other Ambassadors.txt`. Preserve every supplied name, ID and distinct branch; University of Jordan has two entries. English university labels are retained for search alongside Arabic display labels.

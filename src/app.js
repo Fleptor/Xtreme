@@ -107,6 +107,21 @@ $$('[data-resource-filter]').forEach(button => button.addEventListener('click', 
 
 // Fold Arabic diacritics and common letter variants for forgiving Arabic search.
 const normalize = value => value.toLowerCase().normalize('NFKD').replace(/[\u064B-\u065F\u0670\u0640]/g, '').replace(/[أإآٱ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه');
+const ambassadorCards = $$('.directory-card');
+const ambassadorSearch = $('#ambassador-search');
+ambassadorSearch.disabled = false;
+ambassadorSearch.addEventListener('input', () => {
+  const terms = normalize(ambassadorSearch.value.trim()).split(/\s+/).filter(Boolean);
+  let count = 0;
+  ambassadorCards.forEach(card => {
+    const text = normalize(card.textContent + ' ' + card.dataset.search + ' ' + card.querySelector('input').value);
+    card.hidden = !terms.every(term => text.includes(term));
+    if (!card.hidden) count++;
+  });
+  $('#ambassador-count').textContent = `عرض ${count} من ${ambassadorCards.length} سفيرًا`;
+  $('#ambassador-empty').hidden = count > 0;
+});
+
 const faqItems = $$('.faq-item');
 const searchable = new Map(faqItems.map(item => [item, normalize(item.textContent + ' ' + item.dataset.keywords)]));
 const categoryButtons = $$('[data-faq-category]');

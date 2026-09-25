@@ -133,10 +133,195 @@ export const socials = [
   ['IEEE BAU Computer Society', 'مجتمعنا للبرمجة والحوسبة', 'ieee_bau_cs', 'https://www.instagram.com/ieee_bau_cs']
 ];
 
-// Publicly announced registration IDs; this is a sourced selection, not a complete national directory.
+// All 27 entries supplied in Other Ambassadors.txt; preserve distinct branches and repeated universities.
 export const ambassadors = [
-  ['جامعة البلقاء التطبيقية — فرع BAU', 'بلال حمدان', 'IEEEXTREME20SB08217', 'mailto:belalhamdan@ieee.org'],
-  ['الجامعة الأردنية — UJ', 'Abdalrahman Hulliel', 'IEEEXTREME20SB08193', 'https://jo.linkedin.com/in/mariam-frehat-7ba94738b'],
-  ['الجامعة الألمانية الأردنية — GJU', 'Sara Saleem', 'IEEEXTREME20SB08215', 'https://www.linkedin.com/posts/activity-7508133262360453121-dyyV'],
-  ['جامعة الطفيلة التقنية — TTU', 'Ali Kabha', 'IEEEXTREME20SB08191', 'https://www.linkedin.com/posts/kabha_proud-to-announce-my-role-as-an-sb-ambassador-activity-7502388552736092160-mZ1h']
+  [
+    "جامعة البلقاء التطبيقية — فرع BAU",
+    "Belal Hamdan",
+    "IEEEXTREME20SB08217",
+    "mailto:belalhamdan@ieee.org",
+    "Al-Balqa Applied University Student Branch"
+  ],
+  [
+    "جامعة العلوم الإسلامية العالمية — WISE",
+    "Amro Abdo",
+    "IEEEXTREME20SB08001",
+    "sources.html#ambassador-sources",
+    "World Islamic Sciences & Education University (WISE)"
+  ],
+  [
+    "الجامعة الأمريكية في مادبا — AUM",
+    "Yazeed Mohammad Abdulsalam Suleiman",
+    "IEEEXTREME20SB08002",
+    "sources.html#ambassador-sources",
+    "American University of Madaba (AUM)"
+  ],
+  [
+    "جامعة الحسين التقنية — HTU",
+    "Farah Akroush",
+    "IEEEXTREME20SB08003",
+    "sources.html#ambassador-sources",
+    "Al-Hussein Technical University (HTU)"
+  ],
+  [
+    "جامعة الإسراء — IU",
+    "Zaid khaled abu awwad",
+    "IEEEXTREME20SB08004",
+    "sources.html#ambassador-sources",
+    "Israa University (IU)"
+  ],
+  [
+    "جامعة العلوم التطبيقية الخاصة — ASU",
+    "Saba Naser Saleem",
+    "IEEEXTREME20SB08006",
+    "sources.html#ambassador-sources",
+    "Applied Science University (ASU)"
+  ],
+  [
+    "جامعة الزرقاء — ZU",
+    "Roaa Ali Almomani",
+    "IEEEXTREME20SB08007",
+    "sources.html#ambassador-sources",
+    "Zarqa University (ZU)"
+  ],
+  [
+    "جامعة مؤتة — MUTAH",
+    "Nazzal Faisal Al-Hajaya",
+    "IEEEXTREME20SB08008",
+    "sources.html#ambassador-sources",
+    "Mutah University (MUTAH)"
+  ],
+  [
+    "كلية الحصن الجامعية — HUSON",
+    "Besan Khaled Awawdeh",
+    "IEEEXTREME20SB08009",
+    "sources.html#ambassador-sources",
+    "Al-Huson University College (HUSON)"
+  ],
+  [
+    "جامعة إربد الأهلية — INU",
+    "Tuqa Yahya Mahmoud Rababah",
+    "IEEEXTREME20SB08010",
+    "sources.html#ambassador-sources",
+    "Irbid National University (INU)"
+  ],
+  [
+    "جامعة آل البيت — AABU",
+    "Besan awad",
+    "IEEEXTREME20SB08011",
+    "sources.html#ambassador-sources",
+    "Al Al-Bayt University (AABU)"
+  ],
+  [
+    "جامعة الأميرة سمية للتكنولوجيا — PSUT",
+    "Yousef Rami Aljamal",
+    "IEEEXTREME20SB08012",
+    "sources.html#ambassador-sources",
+    "Princess Sumaya University for Technology (PSUT)"
+  ],
+  [
+    "الجامعة الأردنية — JU",
+    "Hadeel Mohammad Salem Abu-Muqabil",
+    "IEEEXTREME20SB08013",
+    "sources.html#ambassador-sources",
+    "University of Jordan (JU)"
+  ],
+  [
+    "جامعة جدارا — Jadara",
+    "Ahmad Abujdeh",
+    "IEEEXTREME20SB08014",
+    "sources.html#ambassador-sources",
+    "Jadara University (Jadara)"
+  ],
+  [
+    "الجامعة الهاشمية — HU",
+    "Layan Alkiswani",
+    "IEEEXTREME20SB08015",
+    "sources.html#ambassador-sources",
+    "Hashemite University (HU)"
+  ],
+  [
+    "جامعة الشرق الأوسط — MEU",
+    "Hamzeh Al Bawaneh",
+    "IEEEXTREME20SB08190",
+    "sources.html#ambassador-sources",
+    "Middle East University Student Branch"
+  ],
+  [
+    "جامعة الطفيلة التقنية — TTU",
+    "Ali Nedal Ali Kabha",
+    "IEEEXTREME20SB08191",
+    "sources.html#ambassador-sources",
+    "Tafila Technical University Student Branch"
+  ],
+  [
+    "جامعة العقبة للتكنولوجيا — AUT",
+    "Sama ghanem",
+    "IEEEXTREME20SB08192",
+    "sources.html#ambassador-sources",
+    "Aqaba University of Technology Student Branch"
+  ],
+  [
+    "الجامعة الأردنية — UJ",
+    "Abdalrahman Hulliel",
+    "IEEEXTREME20SB08193",
+    "sources.html#ambassador-sources",
+    "University of Jordan Student Branch"
+  ],
+  [
+    "جامعة الحسين بن طلال — AHU",
+    "Laith Al-Qaisy",
+    "IEEEXTREME20SB08194",
+    "sources.html#ambassador-sources",
+    "Al-Hussein Bin Talal University Student Branch"
+  ],
+  [
+    "جامعة جرش",
+    "Suhaib aburooman",
+    "IEEEXTREME20SB08197",
+    "sources.html#ambassador-sources",
+    "Jerash University Student Branch"
+  ],
+  [
+    "جامعة الزيتونة الأردنية — ZUJ",
+    "Sara Qazaqi",
+    "IEEEXTREME20SB08214",
+    "sources.html#ambassador-sources",
+    "Al-Zaytoonah University of Jordan Student Branch"
+  ],
+  [
+    "الجامعة الألمانية الأردنية — GJU",
+    "Sara Saleem",
+    "IEEEXTREME20SB08215",
+    "sources.html#ambassador-sources",
+    "German Jordanian University Student Branch"
+  ],
+  [
+    "جامعة العلوم والتكنولوجيا الأردنية — JUST",
+    "Abdullah banihani",
+    "IEEEXTREME20SB08216",
+    "sources.html#ambassador-sources",
+    "Jordan Uni. for Science and Technology Student Branch"
+  ],
+  [
+    "جامعة البلقاء التطبيقية — فرع المركز",
+    "Joud Alsaket",
+    "IEEEXTREME20SB08218",
+    "sources.html#ambassador-sources",
+    "Al-Balqa Applied University-Center Student Branch"
+  ],
+  [
+    "جامعة اليرموك — YU",
+    "Nagham Abu Ghazleh",
+    "IEEEXTREME20SB08219",
+    "sources.html#ambassador-sources",
+    "Yarmouk University Student Branch"
+  ],
+  [
+    "جامعة عمان العربية — AAU",
+    "Zahraa Raed",
+    "IEEEXTREME20SB08220",
+    "sources.html#ambassador-sources",
+    "Amman Arab University Student Branch"
+  ]
 ];

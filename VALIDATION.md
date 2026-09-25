@@ -59,3 +59,11 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 - FAQ search for AI returns the two new questions; clearing the search restores the normal list.
 - Reviewed the mobile hero and ambassador directory visually; verified sources-page personal contact links.
 - Source dates and AI guidance checked against the official current announcements. Existing detailed accessibility audit above records the previous revision; it is not a new full audit of this update.
+
+## Complete ambassador directory — 25 September 2026
+
+- Compared all 27 directory records against the supplied `Other Ambassadors.txt`: names, IDs and original institution labels match exactly; no duplicate IDs or omitted entries.
+- Existing build/content checks, JavaScript syntax check and whitespace check pass.
+- Browser search checked with Arabic university terms, HTU, Center, an exact ID, a person's name, no results, and clearing the query. Clearing restores all 27 entries.
+- Copied the final entry (`IEEEXTREME20SB08220`) successfully; source links resolve to the new sources-page anchor.
+- No JavaScript errors or document overflow at 1440, 390 and 320 CSS pixels. Narrow phones stack each copy button below its full ID.

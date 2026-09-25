@@ -60,3 +60,7 @@ The user identified an ambassador-numbers file. The file present in the workspac
 ## Local top-three prizes — supplied poster
 
 The user explicitly requested the prizes shown in `Screenshots/Promotional Samples/Screenshot 2026-09-25 at 17-21-07 Instagram.png`. Visually reviewed: first place **300 JOD**, second place **200 JOD**, third place **100 JOD**. The original image is copied unchanged to `assets/htu-prizes.png` and linked from the HTU prize cards, FAQ and public sources page. The promotional set identifies HTU / Jordan Section; these amounts are presented as local host awards alongside the supplied host eligibility rules. No per-person allocation, payment procedure, sponsorship detail or global reward claim is inferred.
+
+## Opening ceremony wording clarification
+
+Attendance is explicitly described as mandatory for teams participating at HTU, with at least one member present at 12:00 AM. The only participation exception is a team consisting entirely of female members, with all members checked in by 8:00 AM. Every standalone FAQ answer repeats the scope of that exception. Host award eligibility continues to require every team member at the opening, without this exception, as stated in the supplied host regulations.

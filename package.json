@@ -1,0 +1,14 @@
+{
+  "name": "ieeextreme-20-bau-journey",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Arabic IEEEXtreme 20.0 guide for BAU students and HTU participants",
+  "scripts": {
+    "dev": "node scripts/server.mjs",
+    "start": "node scripts/server.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

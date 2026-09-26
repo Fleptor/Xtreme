@@ -124,3 +124,11 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 - `npm run check` and `git diff --check` pass.
 - Chromium checks at 320, 390, 768, 1024, 1100 and 1440 px: logo loads with the expected intrinsic dimensions, retains its aspect ratio, and causes no horizontal page overflow.
 - Visually reviewed desktop and mobile screenshots. Verified the mobile menu opens, closes on section selection, and leaves the registration heading below the sticky header.
+
+## Content layout reflow — 27 September 2026
+
+- Registration now pairs the steps with the ambassador finder and gives the tutorial a full-width row. Tablet and phone layouts stack the guide and finder.
+- HTU uses two related content stacks: attendance with equipment, and award eligibility with prizes. Preparation puts AI guidance below practice and the checklist. FAQ controls sit above the answers, and the five social cards fill complete rows.
+- `npm run check` and `git diff --check` pass. An HTML comparison verified all original text, links, IDs, ARIA targets and checklist keys were retained; element nesting remains valid.
+- Inspected responsive layouts from 320 to 1920 px without horizontal overflow; reviewed desktop and phone screenshots. Verified ambassador lookup, FAQ search/category filters, resource filters, checklist updates/reset, participation tabs and mobile navigation.
+- With JavaScript disabled at 390 px, all five registration steps, 64 questions and three prize cards remain visible, with no horizontal overflow.

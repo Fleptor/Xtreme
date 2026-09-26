@@ -32,7 +32,7 @@ for (const file of ['index.html','sources.html']) {
     else await access(path.join(dist,href.split(/[?#]/)[0]));
   }
   for (const [,target] of html.matchAll(/aria-controls="([^"]+)"/g)) assert.ok(ids.includes(target), `Broken ARIA target: ${target}`);
-  assert.ok(html.includes('alt="IEEE" width="116" height="34"'), `Official master brand missing in ${file}`);
+  assert.ok(html.includes('src="assets/ieee-bau-branch.png" alt="IEEE Al-balqa Applied University — Faculty of Engineering Technology"'), `BAU branch logo missing in ${file}`);
   assert.ok(html.includes('class="ieee-meta"'), `IEEE meta navigation missing in ${file}`);
   assert.ok(html.includes('assets/favicon.ico'), `Official favicon missing in ${file}`);
   assert.ok(!html.includes('brand-symbol') && !html.includes('brand-x'), `Improvised wordmark remains in ${file}`);

@@ -41,7 +41,7 @@ Hero generated using the built-in image generation tool, then exported to `asset
 
 The website was revised against the [official IEEE Digital Style Guide](https://brand-experience.ieee.org/guidelines/digital/style-guide/), its global-elements, branding, buttons, accessibility and navigation guidance. Detailed requirements, official asset download links, implementation notes and the boundary of local validation are in [IEEE-DESIGN-REVIEW.md](IEEE-DESIGN-REVIEW.md).
 
-The shared header uses an unmodified black IEEE master PNG. Official IEEE favicon files replace the initial decorative X favicon in the generated HTML. Open Sans is self-hosted for Latin text with Cairo for Arabic glyph coverage. The hero artwork remains illustrative. No official IEEE approval, domain registration or cookie-management configuration has been claimed or fabricated.
+As of 26 September 2026, the shared header uses the supplied BAU branch logo reconstructed at higher resolution, replacing the original black IEEE master PNG at the user’s request. See the artwork record below. Official IEEE favicon files replace the initial decorative X favicon in the generated HTML. Open Sans is self-hosted for Latin text with Cairo for Arabic glyph coverage. The hero artwork remains illustrative. No official IEEE approval, domain registration or cookie-management configuration has been claimed or fabricated.
 
 ## Published feedback update — 25 September 2026
 
@@ -82,3 +82,12 @@ Removed the standalone directory at the user’s request. All 27 supplied record
 ## Ambassador label and presentation — 26 September 2026
 
 The coordinator supplied the corrected selector label: `جامعة البلقاء التطبيقية - كلية الهندسة التكنولوجية - Belal Hamdan`. The college name now appears in the selected university details and English search keywords; Ambassador ID `IEEEXTREME20SB08217` and all 27 records are preserved. Repeated contact prompts now lead to one contact card, with a direct email link also retained in the footer. No competition rules or dates changed.
+
+
+## BAU branch logo — 26 September 2026
+
+- Reference: user-supplied `Screenshots/IEEE BAU Branch Logo - sample.jpg`, preserved in `references/ieee-bau-branch-sample.jpg`.
+- Searched for the exact Faculty of Engineering Technology artwork through web/image search, the [branch LinkedIn page](https://www.linkedin.com/company/ieeebau), the [IEEE Jordan branch directory](https://sac.jordan.ieee.org/branches.html), and the [historical branch website](https://ewh.ieee.org/sb/jordan/bau/). No usable high-resolution copy of this exact lockup was found; some sources were inaccessible. BAU-Center and Beirut Arab University results were excluded.
+- `assets/ieee-bau-branch.png`: 1795 × 876 transparent RGBA PNG recreated with the built-in imagegen tool from the supplied sample. This is a reconstruction, not a downloaded official master. Preserves the blue emblem, divider and exact two-line wording: “IEEE Al-balqa Applied University” / “Faculty of Engineering Technology”.
+- Exact generation prompt: `references/ieee-bau-branch-prompt.txt`.
+- Both public pages use the shared header and link the branch logo to the previously supplied [BAU Instagram account](https://www.instagram.com/ieeebalqa/). The original IEEE favicon assets remain in use.

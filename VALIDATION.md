@@ -116,3 +116,11 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 - Removed inline bold emphasis and large attendance-number callouts. Preserved all requirements from `assets/htu-regulations.txt`: current students, vTools registration, all members on site, 10-hour participation, midnight opening, the all-female-team check-in exception by 8 AM, and 15-hour/all-member-opening award eligibility. Retained laptop guidance, 3 AM contest start, supplied forms/map/source links, prizes and WhatsApp reminder.
 - Reviewed desktop/mobile screenshots and checked widths 320, 390, 768, 1024, 1440 and 1920: no horizontal overflow or overlap with the hero footer. The tutorial action stays inside the hero at every size.
 - `npm run check` and `git diff --check` pass.
+
+
+## BAU branch logo — 26 September 2026
+
+- Replaced the shared header logo on the home and sources pages with the transparent 1795 × 876 BAU faculty reconstruction; checked exact text against the supplied sample.
+- `npm run check` and `git diff --check` pass.
+- Chromium checks at 320, 390, 768, 1024, 1100 and 1440 px: logo loads with the expected intrinsic dimensions, retains its aspect ratio, and causes no horizontal page overflow.
+- Visually reviewed desktop and mobile screenshots. Verified the mobile menu opens, closes on section selection, and leaves the registration heading below the sticky header.

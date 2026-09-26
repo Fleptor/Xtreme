@@ -16,15 +16,17 @@ Reviewed and implemented on 25 September 2026 against IEEE's official Brand Expe
 
 The detailed pages were read in a real browser because the research fetcher could not access several of them. The browser showed current 2026 footer information; older search-index dates were not treated as evidence of the latest body text.
 
+On 26 September 2026, the user requested replacing the generic IEEE header logo with the BAU Faculty of Engineering Technology branch logo. This supersedes the original master-brand header treatment below; it does not establish IEEE approval of the reconstructed artwork. Provenance is recorded in `SOURCES.md`.
+
 ## Applied to both public pages
 
 | Area | Implementation |
 | --- | --- |
-| IEEE master brand | Original transparent black PNG from IEEE, unchanged. Upper-right header, linked to IEEE.org in the same tab, `alt="IEEE"`. Rendered at 116 × 33.94 px with proportional height and 17 px clear space on all sides. |
-| Site identifier | Plain Open Sans title at the upper-left, larger than the IEEE master logo. Links home. Removed the improvised gold X/IEEE wordmark. Local BAU guide authorship remains clear. |
+| BAU branch logo | Transparent 1795 × 876 PNG reconstructed from the supplied faculty sample. Upper-right header on both pages, linked to the supplied BAU Instagram account, with descriptive alt text. Rendered at 220 px wide on desktop, 164 px on mobile, and 136 px on narrow screens with proportional height. |
+| Site identifier | Plain Open Sans title at the upper-left. Links home. Removed the improvised gold X/IEEE wordmark. Local BAU guide authorship remains clear. |
 | Global navigation | IEEE.org, IEEE Xplore® with italic Xplore, Standards, Spectrum and More Sites in the specified left-to-right order; Join IEEE and Donate at the right. Open Sans at 12 px, no visited-color shift, hover underline. Wraps on mobile. |
 | Footer | Shared Home, Contact, Accessibility, Nondiscrimination, Ethics Reporting, Terms & Disclosures, Privacy and More Sites links; required IEEE copyright and organizational descriptor. Policies link to IEEE rather than being copied into local policies. |
-| Favicon | Original IEEE favicon and touch icons from its downloadable set. No recoloring or new logo generation. |
+| Favicon | Original IEEE favicon and touch icons from its downloadable set. Favicon files are unmodified. |
 | Campaign palette | Main action colors are IEEE expanded-palette dark green `#006341` and gold `#FFC72C`; links use IEEE blue `#00629B`, with purple visited states on light backgrounds. Dark neutral surfaces, paper texture and jungle artwork provide the campaign setting. |
 | Typography | Self-hosted Open Sans for Latin text. Cairo supplies Arabic glyphs because Open Sans does not cover Arabic. Body copy and controls are at least 15 px; primary buttons are 16 px, or 15 px in compact layouts. Text line spacing generally exceeds 1.5. |
 | Calls to action | IEEE pill shape, 50 px radius, 2 px border, bold Open Sans/Cairo, high contrast, action-led labels, 400 ms color transitions. Reduced-motion preference disables transitions. |
@@ -39,7 +41,7 @@ The fantasy temple is campaign artwork, not a photograph of HTU. This distinctio
 
 - `npm run check` and JavaScript syntax checks pass.
 - Browser inspection: 320, 390, 768, 1024 and 1440 px; no horizontal page overflow.
-- Verified unchanged logo dimensions, alt text, same-tab destination and right-side placement. The event notice was moved below the header to keep the master brand near the top on small screens.
+- Original 25 September check verified the former master logo’s dimensions, alt text, same-tab destination and right-side placement; the replacement branch logo was reviewed separately on 26 September. The event notice was moved below the header to keep the master brand near the top on small screens.
 - Axe-core 4.10.3: no detected A/AA violations in the reviewed Chromium desktop, mobile and sources-page states. All 58 FAQ answers and both participation panels were expanded for coverage.
 - Automated contrast cannot fully evaluate photographic/texture backgrounds. A separate diagnostic temporarily removed the paper/community background images in the test browser to evaluate underlying text, and explicit conservative contrast calculations checked the real theme bounds. The production textures remain in place.
 - Worst-case hero text contrast is at least 5.22:1 for informative text, using the 78% dark overlay over an all-white image pixel. Decorative expedition lettering is excluded. Green CTA/white text is 7.34:1; gold CTA/dark text is 9.77:1. Key text/link colors on the darkest possible paper grain remain above 5:1.
@@ -61,7 +63,8 @@ No messages, forms, domain registrations or review requests were submitted on th
 
 ## Asset provenance
 
-- `assets/ieee-master-black.png`: [official black master PNG](https://brand-experience.ieee.org/download/ieee-mb-black-png/?wpdmdl=4847), original 287 × 84 RGBA bytes.
+- `assets/ieee-bau-branch.png`: built-in imagegen reconstruction from the supplied sample; see `SOURCES.md` and `references/ieee-bau-branch-prompt.txt`.
+- `assets/ieee-master-black.png` (former header logo, retained as source artwork): [official black master PNG](https://brand-experience.ieee.org/download/ieee-mb-black-png/?wpdmdl=4847), original 287 × 84 RGBA bytes.
 - `assets/favicon.ico`, `favicon-32x32.png`, `apple-touch-icon.png`: [official IEEE favicon set](https://brand-experience.ieee.org/download/ieee-favicon-2/?wpdmdl=8949), original files.
 - `assets/open-sans.ttf`: [Google Fonts Open Sans source](https://github.com/google/fonts/tree/main/ofl/opensans), with `OpenSans-OFL.txt` included.
 - Cairo and generated jungle artwork retain their existing provenance in `SOURCES.md`.

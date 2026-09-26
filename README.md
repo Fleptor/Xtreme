@@ -82,11 +82,11 @@ Last reviewed **25 September 2026**. Keep official registration separate from lo
 
 The official registration deadline is 17 October 2026. The announced 20.0 hybrid format includes AI-enabled challenges and AI-free traditional tracks; detailed 20.0 rules are still pending. This AI note is the user-requested exception to avoiding pending-rule FAQs. Unverified global prize amounts, transport, catering and equipment limits are not advertised. The official rules remain directly accessible.
 
-The jungle illustration is illustrative artwork, not a photograph of HTU. It was created with the built-in image generation tool; its complete prompt is in `references/hero-prompt.txt`. Cairo and Open Sans are self-hosted under the included SIL Open Font Licenses. The master logo and favicon come from IEEE's official asset downloads and remain subject to its toolkit agreement.
+The jungle illustration is illustrative artwork, not a photograph of HTU. It was created with the built-in image generation tool; its complete prompt is in `references/hero-prompt.txt`. Cairo and Open Sans are self-hosted under the included SIL Open Font Licenses. The header uses a high-resolution reconstruction of the supplied BAU Faculty of Engineering Technology branch logo; its sample and built-in imagegen prompt are preserved in `references/ieee-bau-branch-sample.jpg` and `references/ieee-bau-branch-prompt.txt`. The favicon files come from IEEE's official downloads.
 
 ## IEEE design review
 
-The website follows the implemented requirements documented in [IEEE-DESIGN-REVIEW.md](IEEE-DESIGN-REVIEW.md), including shared branding, official logo/favicon, global navigation, policy footer, accessible contrast and IEEE button styling. That record also identifies the IEEE review and domain-specific cookie-governance steps needed before official publication. Local checks are not an IEEE certification.
+The website follows the implemented requirements documented in [IEEE-DESIGN-REVIEW.md](IEEE-DESIGN-REVIEW.md), including shared branding, the BAU branch header logo, official favicon, global navigation, policy footer, accessible contrast and IEEE button styling. That record also identifies the IEEE review and domain-specific cookie-governance steps needed before official publication. Local checks are not an IEEE certification.
 
 Ambassador selector data comes from `references/Other Ambassadors.txt`. Preserve every supplied name, ID and distinct branch; University of Jordan has two entries. English university labels are retained for search alongside Arabic display labels.
 

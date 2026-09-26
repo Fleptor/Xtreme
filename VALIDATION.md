@@ -108,3 +108,11 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 - Checked widths 320, 390, 768, 1024, 1152, 1200, 1440, 1920 and 2560 for overflow and reviewed desktop/mobile screenshots.
 - Verified every resource filter on desktop/mobile, keyboard filter activation, the FAQ search and its selector link, and resources without JavaScript.
 - `npm run check` and `git diff --check` pass.
+
+## Tutorial button and HTU copy — 26 September 2026
+
+- Gave the hero tutorial link a pale blue background, dark blue text/play icon and a 52px minimum height, visually distinct from the gold primary action.
+- Rewrote HTU copy in conversational Arabic, starting with a description identifying the university as the local competition host. The section now proceeds through registration, equipment, attendance, award eligibility and prize amounts.
+- Removed inline bold emphasis and large attendance-number callouts. Preserved all requirements from `assets/htu-regulations.txt`: current students, vTools registration, all members on site, 10-hour participation, midnight opening, the all-female-team check-in exception by 8 AM, and 15-hour/all-member-opening award eligibility. Retained laptop guidance, 3 AM contest start, supplied forms/map/source links, prizes and WhatsApp reminder.
+- Reviewed desktop/mobile screenshots and checked widths 320, 390, 768, 1024, 1440 and 1920: no horizontal overflow or overlap with the hero footer. The tutorial action stays inside the hero at every size.
+- `npm run check` and `git diff --check` pass.

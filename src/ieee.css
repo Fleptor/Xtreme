@@ -96,9 +96,9 @@
 .host-prizes{margin-bottom:32px;padding:30px;background:#f7f0df;border:1px solid #cfbf94}
 .prize-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:24px}.prize-heading .eyebrow{margin-bottom:6px}.prize-heading h3{font-size:26px;line-height:1.7}.prize-heading>a{flex-shrink:0}
 .prize-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.prize-card{display:flex;align-items:center;flex-direction:column;padding:26px 18px;border:1px solid #c7b475;border-top:4px solid #ac8628;background:#fffaf0;text-align:center}
-.prize-rank{font-size:18px;font-weight:700;color:#2c4937}.prize-card strong{font-family:'Open Sans',Cairo,sans-serif;font-size:58px;line-height:1.4;font-weight:700;color:#193c31;margin-block:8px}.prize-currency{font-size:15px;color:#465b43}
-.prize-first{background:#193c31;border-color:#ad975a;border-top-color:#ffcc33}.prize-first .prize-rank,.prize-first .prize-currency{color:#fff0c5}.prize-first strong{color:#ffcc33}.prize-second{border-top-color:#77877b}.prize-third{border-top-color:#a66c43}.host-prizes>.small-note{font-size:15px;margin-top:20px;line-height:2}
-@media(max-width:700px){.host-prizes{padding:22px}.prize-heading{align-items:flex-start;flex-direction:column;gap:12px}.prize-heading h3{font-size:23px}.prize-grid{grid-template-columns:1fr;gap:14px}.prize-card{padding:20px}.prize-card strong{font-size:48px;margin-block:4px}}
+.prize-rank{font-size:18px;font-weight:700;color:#2c4937}.prize-card .prize-amount{font-family:'Open Sans',Cairo,sans-serif;font-size:58px;line-height:1.4;font-weight:700;color:#193c31;margin-block:8px}.prize-currency{font-size:15px;color:#465b43}
+.prize-first{background:#193c31;border-color:#ad975a;border-top-color:#ffcc33}.prize-first .prize-rank,.prize-first .prize-currency{color:#fff0c5}.prize-first .prize-amount{color:#ffcc33}.prize-second{border-top-color:#77877b}.prize-third{border-top-color:#a66c43}.host-prizes>.small-note{font-size:15px;margin-top:20px;line-height:2}
+@media(max-width:700px){.host-prizes{padding:22px}.prize-heading{align-items:flex-start;flex-direction:column;gap:12px}.prize-heading h3{font-size:23px}.prize-grid{grid-template-columns:1fr;gap:14px}.prize-card{padding:20px}.prize-card .prize-amount{font-size:48px;margin-block:4px}}
 
 /* A shared welcome, with BAU coordination in its own introduction. */
 .ambassador-finder h3{font-size:29px;line-height:1.6}.ambassador-finder .card-topline{margin-bottom:18px}.ambassador-finder>p{font-size:16px;line-height:1.9}
@@ -142,3 +142,28 @@
 .resource-directory.is-filtered [data-resource-group="practice"] li{border-top:0}
 @media(max-width:700px){.resource-directory{grid-template-columns:minmax(0,1fr);gap:32px}.resource-group-heading h3{font-size:22px}.resource-link{padding:18px 0;gap:16px}.resource-link h4{font-size:16px}.resource-group[data-resource-group="practice"]{padding:22px}.resource-directory .resource-group .resource-list{grid-template-columns:minmax(0,1fr);gap:0}.resource-group[data-resource-group="practice"] li+li{border-inline-start:0;border-top:1px solid #cbd5c2;padding-inline-start:0}.resource-group[data-resource-group="practice"] .resource-link{padding-block:18px}}
 @media print{.resource-directory{display:block}.resource-group{margin-bottom:24px}.resource-link{break-inside:avoid}}
+
+/* A clearly visible secondary action beside the gold registration button. */
+.hero-actions{flex-wrap:wrap}
+.hero-actions .video-link{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:9px 24px;border:2px solid #c6dfed;border-radius:50px;background:#edf6fb;color:#005a87;font-size:16px;font-weight:700;line-height:1.75;text-decoration:none;transition:background-color .2s,border-color .2s}
+.hero-actions .video-link .play-icon{width:28px;height:28px;background:#005a87;border:0;color:#fff}
+.hero-actions .video-link:hover{background:#d3e9f5;border-color:#d3e9f5}
+.hero-actions .video-link:focus-visible{outline-color:#fff;outline-offset:5px}
+.htu-heading{margin-bottom:36px}
+.htu-heading .htu-intro{max-width:780px;margin-top:20px;font-size:17px;line-height:2}
+.htu-planning{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-bottom:36px}
+.htu-registration-guide h3{font-size:24px;margin-bottom:12px}
+.htu-registration-guide>p{font-size:16px;line-height:2}
+.htu-registration-guide .htu-actions{margin-top:20px}
+.htu-planning .htu-equipment-note{margin:0}
+.host-card h3{margin:0 0 16px}
+.host-card-intro{font-size:16px;line-height:2;margin-bottom:20px}
+.htu-cards .check-list li{font-size:16px;line-height:2}
+.htu-cards .host-exception{min-height:0;margin-top:20px}
+.htu-cards .host-exception p{margin:0;font-size:15px;line-height:2}
+.htu-section .host-prizes{margin-top:32px;margin-bottom:24px}
+.prize-heading p{font-size:16px;line-height:1.9;margin-top:8px}
+.htu-followup{justify-content:space-between;gap:16px 24px}
+.htu-followup p{font-size:15px}
+@media(max-width:800px){.htu-planning{grid-template-columns:1fr;gap:26px}}
+@media(max-width:700px){.hero-actions .video-link{font-size:15px;padding-inline:20px}.htu-heading .htu-intro{font-size:16px}.htu-registration-guide h3{font-size:22px}.htu-cards .check-list li,.host-card-intro{font-size:15px}}

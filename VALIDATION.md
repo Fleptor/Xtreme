@@ -132,3 +132,9 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 - `npm run check` and `git diff --check` pass. An HTML comparison verified all original text, links, IDs, ARIA targets and checklist keys were retained; element nesting remains valid.
 - Inspected responsive layouts from 320 to 1920 px without horizontal overflow; reviewed desktop and phone screenshots. Verified ambassador lookup, FAQ search/category filters, resource filters, checklist updates/reset, participation tabs and mobile navigation.
 - With JavaScript disabled at 390 px, all five registration steps, 64 questions and three prize cards remain visible, with no horizontal overflow.
+
+## FAQ restoration and discovery headings — 27 September 2026
+
+- Restored the FAQ layout from before the content reflow: search and vertical categories beside the answers on desktop, with the original stacked mobile layout.
+- Centered the four discovery values and their headings, including the flex-based word labels.
+- Build/content checks and whitespace checks pass. Visually reviewed at 1440 and 390 px; FAQ search works and neither layout overflows horizontally.

@@ -208,12 +208,6 @@
   .save-preference{padding-top:16px}
   .prepare-grid>.ai-guidance{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:32px;margin:0}
   .ai-details>p:first-child{margin-top:0}
-  .faq-layout{display:block}
-  .faq-sidebar{display:grid;grid-template-columns:minmax(260px,.8fr) minmax(0,2fr);column-gap:32px;align-items:start;margin-bottom:28px}
-  .faq-sidebar>label{grid-column:1;grid-row:1}
-  .faq-sidebar .search-field{grid-column:1;grid-row:2;margin-top:8px}
-  .faq-sidebar .faq-filters{grid-column:2;grid-row:1/3;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0}
-  .faq-filters button{gap:16px}
   .social-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
   .social-card{grid-column:span 2}
   .social-card:nth-last-child(-n+2){grid-column:span 3}
@@ -223,8 +217,6 @@
   .htu-overview,.prepare-grid{gap:28px}
   .htu-details{gap:20px}
   .htu-awards .host-prizes{padding:20px}
-  .faq-sidebar{display:block}
-  .faq-sidebar .search-field{max-width:540px;margin-block:10px 20px}
 }
 @media screen and (max-width:800px){
   .registration-layout,.htu-overview,.htu-details,.prepare-grid{grid-template-columns:minmax(0,1fr)}
@@ -246,3 +238,7 @@
   .htu-awards .prize-amount{grid-column:2;grid-row:1/3;margin:0}
   .htu-awards .prize-currency{grid-column:1}
 }
+
+/* Center the discovery card headings, including the flex-based word labels. */
+.stats-grid strong,.stats-grid h3{text-align:center}
+.stats-grid .stat-word{justify-content:center}

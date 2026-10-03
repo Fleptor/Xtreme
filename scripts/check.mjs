@@ -3,6 +3,7 @@ import { readFile, access } from 'node:fs/promises';
 import path from 'node:path';
 import { build, dist, root } from './build.mjs';
 import { links, faqs, categories, resources, socials } from '../src/content.mjs';
+import { facts, interpolate } from '../src/facts.mjs';
 
 await build();
 assert.equal(links.vtools, 'https://xtreme.vtools.ieee.org/');
@@ -29,7 +30,15 @@ for (const file of ['index.html','sources.html']) {
   for (const [,href] of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
     if (href.startsWith('#')) assert.ok(ids.includes(href.slice(1)), `Broken anchor: ${href}`);
     else if (/^(?:https?:|mailto:)/.test(href)) assert.doesNotThrow(() => new URL(href));
-    else await access(path.join(dist,href.split(/[?#]/)[0]));
+    else {
+      const destination = path.join(dist,href.split(/[?#]/)[0]);
+      await access(destination);
+      if (href.includes('#') && destination.endsWith('.html')) {
+        const targetHtml = await readFile(destination,'utf8');
+        const targetId = decodeURIComponent(href.split('#')[1]);
+        assert.ok(targetHtml.includes(`id="${targetId}"`), `Broken cross-page anchor: ${href}`);
+      }
+    }
   }
   for (const [,target] of html.matchAll(/aria-controls="([^"]+)"/g)) assert.ok(ids.includes(target), `Broken ARIA target: ${target}`);
   assert.ok(html.includes('src="assets/ieee-bau-branch.png" alt="IEEE Al-balqa Applied University — Faculty of Engineering Technology"'), `BAU branch logo missing in ${file}`);
@@ -45,6 +54,20 @@ for (const file of ['index.html','sources.html']) {
 const html = await readFile(path.join(dist,'index.html'),'utf8');
 assert.ok(html.includes('IEEEXTREME20SB08217'));
 assert.ok(html.includes('lang="ar" dir="rtl"'));
+const chapterIds = [...html.matchAll(/<section class="chapter" id="([^"]+)"/g)].map(match => match[1]);
+assert.deepEqual(chapterIds, ['discover','registration','participation','prepare','faq']);
+const nav = html.match(/<nav id="main-nav"[\s\S]*?<\/nav>/)[0];
+assert.deepEqual([...nav.matchAll(/href="#([^"]+)"/g)].map(match => match[1]), chapterIds, 'Main navigation must follow chapter order');
+assert.ok(html.includes(`data-start="${facts.start}" data-end="${facts.end}"`), 'Countdown must use the shared event dates');
+assert.equal(facts.htuDeadline, '17 أكتوبر 2026');
+assert.equal(facts.vtoolsDeadline, '27 أكتوبر 2026');
+assert.equal(facts.libraryDeadlineJordanDate, '30 أكتوبر 2026');
+assert.equal(facts.libraryDeadlineJordanTime, '02:59');
+assert.throws(() => interpolate('{{fact:missingDate}}'), /Unknown fact/);
+for (const deadline of [facts.htuDeadline, facts.vtoolsDeadline, facts.libraryDeadlineDate]) {
+  assert.ok(html.includes(deadline), `Missing deadline: ${deadline}`);
+  assert.ok(faqs.some(([, , answer]) => answer.includes(deadline)), `Deadline missing in FAQ: ${deadline}`);
+}
 const css = await readFile(path.join(dist,'styles.css'),'utf8') + await readFile(path.join(dist,'ieee.css'),'utf8');
 for (const [,url] of css.matchAll(/url\('([^']+)'\)/g)) await access(path.join(dist,url));
 const originalRules = await readFile(path.join(root,'assets/htu-regulations.txt'),'utf8');

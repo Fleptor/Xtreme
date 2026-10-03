@@ -1,6 +1,6 @@
 # Editorial sources
 
-Reviewed 25 September 2026. Source references are also attached to every FAQ answer and exposed on the public `sources.html` page.
+Baseline review: 25 September 2026. AI and workspace rules rechecked on 3 October 2026; dated updates appear below. Source references are also attached to every FAQ answer and exposed on the public `sources.html` page.
 
 | Claim / resource | Evidence | Verification |
 | --- | --- | --- |
@@ -28,7 +28,7 @@ Reviewed 25 September 2026. Source references are also attached to every FAQ ans
 - The host file gives 12:00 AM and 8:00 AM without separately specifying a timezone. These are presented as local HTU attendance instructions. The independently specified contest start is 00:00 UTC, converted through `Asia/Amman` to 03:00. No venue exit/re-entry policy is inferred.
 - CS Academy's environment was read in a JavaScript-capable browser. Its current displayed browser minimums are Chrome 91, Firefox 90 and Safari 15. The page footer says its language list was last updated September 12, 2025. The site labels these as environment information, recommends modern browsers, and links to the current full list.
 - Compiler version examples observed: g++ 15.2.0, OpenJDK 21, Python 3.13.3, Mono 6.8, Node 20.18.1, Rust 1.71.1 and Go 1.19.2. These versions are not copied into promotional claims; the source page remains the reference.
-- The live rules page displays an upcoming 20.0 update notice. Per the user’s explicit exception, the site explains the newly announced AI-enabled/AI-free format and says detailed participation rules are pending. Historical AI guidance is not presented as the final 20.0 policy. Scoring and global prize details remain omitted.
+- The official rules now publish the 20.0 task types and workspace requirements, verified on 3 October 2026. Game-type tasks allow AI; locked-workspace tasks prohibit it and disable external copy/paste. The published rules replace the previous pending-rules notice and the earlier social announcement as the guide's AI reference. Scoring and global prize details remain omitted.
 - General proctor/eligibility facts are also supported by the dedicated eligibility and proctor pages. Preparatory advice is explicitly labeled in the FAQ.
 - At the user’s request, the supplied local prize poster is now cited for first / second / third prizes of 300 / 200 / 100 JOD. It is not used as evidence of global prize amounts.
 - The member-account screenshots were not embedded; private membership details are not required for this public guide.
@@ -45,8 +45,8 @@ As of 26 September 2026, the shared header uses the supplied BAU branch logo rec
 
 ## Published feedback update — 25 September 2026
 
-- Registration closes 17 October 2026: [official IEEEXtreme announcement](https://www.linkedin.com/posts/ieeextreme_ieeextreme20-ieeextreme-codetothextreme-activity-7507657995397353472-nM6e), read in the live official LinkedIn feed. No unverified cutoff time or HTU deadline is inferred.
-- AI: [official 20.0 hybrid-format announcement](https://www.linkedin.com/posts/ieeextreme_ieeextreme20-ieeextreme-3200plus-activity-7509243612015149056-Fnb8), read live. It distinguishes AI-enabled challenges from AI-free traditional tracks. The [live rules page](https://ieeextreme.org/rules/) currently displays an update notice. Do not transplant the previous edition’s code-generation rule as a definitive 20.0 restriction.
+- Superseded deadline attribution: the [previous IEEEXtreme announcement](https://www.linkedin.com/posts/ieeextreme_ieeextreme20-ieeextreme-codetothextreme-activity-7507657995397353472-nM6e) was previously used for the competition deadline. Use the coordinator's 3 October correction below: HTU hosting closes 17 October; vTools competition registration closes 27 October. The earlier announcement is retained here as historical evidence only.
+- Historical AI reference: the [official 20.0 format announcement](https://www.linkedin.com/posts/ieeextreme_ieeextreme20-ieeextreme-3200plus-activity-7509243612015149056-Fnb8) preceded the detailed rules. The guide's 3 October update below uses the [published rules](https://ieeextreme.org/rules/) instead. The update notice observed on 25 September is superseded.
 - UJ: Abdalrahman Hulliel, `IEEEXTREME20SB08193`; his public announcement appears in the [indexed LinkedIn activity](https://jo.linkedin.com/in/mariam-frehat-7ba94738b). The profile owner is not the ambassador; the embedded announcement explicitly names Abdalrahman and University of Jordan. Direct profile access is sign-in restricted.
 - GJU: Sara Saleem, `IEEEXTREME20SB08215`; [announcement](https://www.linkedin.com/posts/activity-7508133262360453121-dyyV), also read live in the [official GJU branch feed](https://jo.linkedin.com/company/ieee-gju-student-branch).
 - TTU: Ali Kabha, `IEEEXTREME20SB08191`; [ambassador announcement](https://www.linkedin.com/posts/kabha_proud-to-announce-my-role-as-an-sb-ambassador-activity-7502388552736092160-mZ1h), indexed on his public profile.
@@ -91,3 +91,45 @@ The coordinator supplied the corrected selector label: `جامعة البلقا�
 - `assets/ieee-bau-branch.png`: 1795 × 876 transparent RGBA PNG recreated with the built-in imagegen tool from the supplied sample. This is a reconstruction, not a downloaded official master. Preserves the blue emblem, divider and exact two-line wording: “IEEE Al-balqa Applied University” / “Faculty of Engineering Technology”.
 - Exact generation prompt: `references/ieee-bau-branch-prompt.txt`.
 - Both public pages use the shared header and link the branch logo to the previously supplied [BAU Instagram account](https://www.instagram.com/ieeebalqa/). The original IEEE favicon assets remain in use.
+
+## Registration form clarification — 3 October 2026
+
+The registration steps, HTU section and registration FAQ now explicitly state that the BAU coordination form does not register a team for the competition or HTU hosting. HTU participants must complete official vTools registration and then the separate HTU form, preparing a screenshot of their team details. This clarifies the existing instructions in `references/IEEEXtreme-whatsapp-ar.txt` and `references/IEEEXtreme-host-registration-ar.txt`; `assets/htu-regulations.txt` requires every HTU participant to be officially registered through vTools.
+
+The [official vTools portal](https://xtreme.vtools.ieee.org/) was rechecked on 3 October 2026 and still directs participants to sign in with their IEEE account. The older registration-tips page returned HTTP 403 during this check; no new rule or deadline is inferred from it. Form URLs, ambassador IDs and host requirements are unchanged.
+
+## Official registration deadlines — corrected 3 October 2026
+
+Belal Hamdan, the guide coordinator, explicitly confirmed both official deadlines: **17 October 2026 for HTU hosting** and **27 October 2026 for IEEEXtreme competition registration through vTools**. This correction is the source for the updated hero, registration panel, HTU section, FAQ and public sources page. Since vTools registration precedes the HTU form, teams attending HTU must finish both in time for the 17 October hosting deadline. No cutoff hour or timezone was supplied or inferred.
+
+Searches on 3 October still surfaced earlier IEEEXtreme posts citing 17 October for competition registration; an updated public announcement confirming 27 October was not independently located. The site attributes these corrected dates to the coordinator's direct confirmation instead of attaching the superseded announcement to the new dates.
+
+## HTU team requirements and registration changes — 3 October 2026
+
+The coordinator supplied these clarifications for the guide:
+
+- HTU teams cannot divide participation between members at the host and members participating remotely. This also follows the all-members-present requirement in `assets/htu-regulations.txt`.
+- HTU requires at least two teammates registered on the same team; a solo contestant must add a registered teammate. A guest accompanying a solo contestant does not meet this requirement. The global IEEEXtreme 1–3-member rule remains distinct from this local hosting minimum.
+- If the proctor has approved a team, its membership cannot be edited, and a membership change is needed, the team must be disbanded/deleted and registered again with the intended members. This instruction is conditional; approval alone is not a reason to recreate a team.
+
+The public source notes at `sources.html#team-requirements` and `sources.html#team-registration-updates` attribute these updates to the coordinator. The two-member minimum and rebuilding procedure are not present in the supplied original host-regulations file; that file remains intact, with the new guidance documented as a supplement. A read-only check on 3 October could access the vTools sign-in page but not the HTU form or the direct rules page; no authenticated team editing or deletion was performed or independently observed.
+
+The gender-related opening-ceremony FAQ now explicitly says a team with male and female students, avoiding the ambiguous Arabic phrase for a “mixed team.” References to the competition's AI-enabled/AI-free format do not describe mixed-location teams.
+
+## Published AI and workspace rules — 3 October 2026
+
+Read the [official rules](https://ieeextreme.org/rules/) in the browser, expanding “New for 2026 (IEEEXtreme 20).” The page matches the text supplied by the coordinator. Direct web fetching returned HTTP 403, but browser access and official search-indexed content both exposed the new section.
+
+- Game-type tasks allow AI and involve programs responding to automated bots, sometimes other teams' programs, through standard input/output.
+- Locked-workspace tasks prohibit AI. Code is written in the official workspace and external copy/paste is disabled. Preconfigured files inside that workspace may be copied from manually.
+- Teams may upload their code libraries, up to **100 kilobytes**, at [CS Academy workspace configuration](https://csacademy.com/workspace/template). No byte convention, file-count limit or upload procedure beyond the published rules is inferred.
+- The IEEEXtreme 20.0 library deadline is **29 October 2026, 23:59 UTC**. `Intl.DateTimeFormat` with `Asia/Amman` confirms **30 October 2026, 02:59** in Jordan. The source also lists **26 September 2026, 23:59 UTC** for PreXtreme; that past deadline is not presented as the upcoming IEEEXtreme deadline or a registration cutoff.
+- Teams may customize code loaded at the start of a task and add files for manual copying. All workspace configuration must be completed before a task starts and cannot be changed after it starts. This does not prevent writing contest solutions inside the workspace during a task.
+
+Updated the existing preparation panel, FAQs, resource list, readiness checklist and public source notes. The task restrictions and upload deadline remain visible; configuration details are expandable. Library upload is optional preparation for teams that want to use libraries. No libraries were uploaded or account settings changed. Older outreach/research documents outside the website remain dated historical material.
+
+## Guide structure and shared facts — 4 October 2026
+
+Reorganized the existing material into five chapters without changing its authority: competition overview, registration, participation location, preparation/rules, and questions/resources. HTU and remote guidance share the location chapter; proctor help belongs to registration; links live in the FAQ resource directory. The three compact notices stay beside the actions they govern. Supporting material uses native expandable rows.
+
+`src/facts.mjs` now supplies repeated deadlines, team limits, attendance/award hours, local prizes, the default ambassador ID and common warnings to templates and FAQ answers. Jordan-time labels and calendar/countdown instants are derived from UTC timestamps. This is a content-maintenance change; source attribution remains the official rules or the coordinator's local clarifications above. Original source assets remain intact.

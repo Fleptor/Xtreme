@@ -39,7 +39,7 @@ npm run check
 
 ## Included
 
-- Eight journey sections without decorative numbering, with wider desktop side margins, a 1,680px content limit and responsive mobile margins.
+- Five chapters in a fixed order: overview, registration, participation location, preparation/rules, and questions/resources. Chapters share one surface, heading pattern, action style and expandable detail rows; content is limited to 1,140px for readability.
 - Official vTools registration, the HTU hosting form, and BAU local coordination form, each with its own purpose.
 - BAU Ambassador ID **IEEEXTREME20SB08217** with a copy button and manual-copy fallback.
 - Embedded YouTube registration tutorial using privacy-enhanced mode, with an explicit new-tab YouTube link.
@@ -48,8 +48,9 @@ npm run check
 - Confirmed HTU device guidance: every team brings at least one laptop; the host does not supply laptops.
 - Local top-three prizes of 300 / 200 / 100 JOD, linked to the supplied promotional poster.
 - Separate HTU participation and local award requirements, including the exact all-female-team opening exception.
-- **64 sourced FAQs** in eight topics, with Arabic search, category filtering and progressive display.
-- **17 resources** in grouped link lists, with a highlighted training area and category filters, including memberships, rules, proctor guidance and certificates.
+- **67 sourced FAQs** in eight topics, with Arabic search, category filtering and progressive display.
+- **18 resources** in grouped link lists, inside an expandable directory with category filters, including workspace setup, memberships, rules, proctor guidance and certificates.
+- Six always-visible essential links immediately before the footer: vTools, CS Academy practice, workspace setup, HTU registration, BAU coordination and official rules. The full directory remains on the index page.
 - All five supplied Instagram accounts and the WhatsApp update reminder.
 - UTC-based countdown with active/ended states, downloadable calendar event, and a preparation checklist with optional browser saving; switching saving off clears its stored data.
 - Self-hosted Arabic fonts and artwork; no analytics. The lazy-loaded YouTube iframe is the external media integration.
@@ -60,11 +61,12 @@ npm run check
 | File | Purpose |
 | --- | --- |
 | `src/index.html` | Arabic page sections and content; build placeholders expand FAQs and links |
-| `src/content.mjs` | Resource URLs, FAQ questions and citations, social accounts |
+| `src/content.mjs` | Resource URLs, FAQ questions and citations, ambassadors and social accounts |
+| `src/facts.mjs` | Shared dates, limits, warnings and derived Jordan-time labels |
 | `src/styles.css` | Design tokens, layout, responsive and reduced-motion styles |
-| `src/ieee.css` | IEEE identity, typography, palette, button and contrast refinements |
+| `src/ieee.css` | Shared IEEE identity, navigation, buttons and footer |
 | `src/partials/` | Shared IEEE global navigation, header and administrative footer |
-| `src/shell.js` | Shared keyboard-accessible navigation on both pages |
+| `src/shell.js` | Shared navigation and bookmarks that reveal collapsed content |
 | `src/app.js` | Search, tabs, countdown, clipboard, navigation and checklist |
 | `src/sources.html` | Public source notes and provenance |
 | `assets/` | Hero, fonts, icons, calendar and original HTU regulations |
@@ -76,11 +78,24 @@ npm run check
 
 The FAQ is rendered at build time, so search engines and browsers without JavaScript can read every answer. The browser narrows the existing content for interactive searching.
 
+## Keep new information predictable
+
+1. Choose the existing chapter that owns the topic. Keep this order within it: introduction, essential dates/requirements, actions, supporting details, then sources.
+2. Keep consequential rules visible next to the relevant action. Use the existing compact notice for registration, HTU attendance or AI restrictions; ordinary explanations belong in the surrounding text. Avoid adding a separate warning wall or repeating full panels.
+3. Put longer explanations in native `details` rows. Proctor help, ambassador lookup, the video, award conditions, workspace instructions, readiness and the full resource directory use this pattern. Registration steps retain equal visual weight.
+4. Change repeated facts in `src/facts.mjs`. HTML uses `{{fact:key}}` and `{{copy:key}}`; FAQs import the same values. The countdown and built calendar derive their boundaries from the event timestamp. Cite supporting evidence in `SOURCES.md` and the public sources page when facts change.
+5. Preserve existing IDs and FAQ order: published bookmarks reveal the right tab, open containing disclosures, and reveal filtered questions or resources. Keep original checklist keys so saved progress survives updates.
+6. Run `npm run check`, preview the relevant chapter at phone and desktop sizes, and test links into anything moved behind a disclosure.
+
 ## Content maintenance
 
 Last reviewed **25 September 2026**. Keep official registration separate from local forms. Preserve the supplied ID and URLs unless the coordinator changes them. Current platform details come from the live CS Academy environment; do not treat older competition FAQ browser versions as independently current. HTU requirements come from the supplied host regulations, copied verbatim to `assets/htu-regulations.txt`.
 
-The official registration deadline is 17 October 2026. The announced 20.0 hybrid format includes AI-enabled challenges and AI-free traditional tracks; detailed 20.0 rules are still pending. This AI note is the user-requested exception to avoiding pending-rule FAQs. Unverified global prize amounts, transport, catering and equipment limits are not advertised. The official rules remain directly accessible.
+Registration dates corrected on **3 October 2026**, as confirmed by the coordinator: the official HTU hosting deadline is **17 October 2026**; the official IEEEXtreme registration deadline on vTools is **27 October 2026**. HTU teams must complete vTools first and then the separate HTU form within the earlier hosting deadline.
+
+Team guidance clarified on **3 October 2026**: IEEEXtreme allows 1–3 members, while HTU requires at least two registered teammates and every member physically attending. A team cannot split participation between HTU and remote members. The HTU notice summarizes team requirements beside attendance instructions; registration and HTU form instructions explain the separate forms. A native expandable note under vTools explains the coordinator's procedure for changing members when a proctor-approved team cannot be edited: disband/delete it and register it again with the intended members. The new source notes supplement the original host regulations without altering that supplied file.
+
+The official 20.0 rules were reviewed on **3 October 2026**. AI is allowed for game-type tasks and prohibited for locked-workspace tasks, where external copy/paste is disabled and code must be written inside the official workspace. Teams may upload code libraries up to **100 KB** by **29 October 2026 at 23:59 UTC**, equivalent to **30 October at 02:59 in Jordan**. Starting code and additional files for manual copying can be prepared in advance; workspace configuration must be completed before each task starts and cannot be changed after its start. The preparation panel, optional setup disclosure, eight-item readiness checklist, FAQs and resource list link to the rules and CS Academy workspace. Unverified global prize amounts, transport, catering and equipment limits are not advertised.
 
 The jungle illustration is illustrative artwork, not a photograph of HTU. It was created with the built-in image generation tool; its complete prompt is in `references/hero-prompt.txt`. Cairo and Open Sans are self-hosted under the included SIL Open Font Licenses. The header uses a high-resolution reconstruction of the supplied BAU Faculty of Engineering Technology branch logo; its sample and built-in imagegen prompt are preserved in `references/ieee-bau-branch-sample.jpg` and `references/ieee-bau-branch-prompt.txt`. The favicon files come from IEEE's official downloads.
 
@@ -90,4 +105,4 @@ The website follows the implemented requirements documented in [IEEE-DESIGN-REVI
 
 Ambassador selector data comes from `references/Other Ambassadors.txt`. Preserve every supplied name, ID and distinct branch; University of Jordan has two entries. English university labels are retained for search alongside Arabic display labels.
 
-The registration sidebar welcomes every university with a quick university lookup and ID-copy field, defaulting to Belal’s BAU ID. Multiple matches require explicit selection; unknown searches disable copying. The BAU local form remains in the registration steps and resource list. The contact FAQ directs students to their own branch’s ambassador through the university selector and branch channels. Belal’s email remains in the footer; the standalone contact card and duplicate BAU introduction have been removed.
+The expandable ambassador finder in registration welcomes every university with a quick university lookup and ID-copy field, defaulting to Belal’s BAU ID. Multiple matches require explicit selection; unknown searches disable copying. The BAU local form remains in the registration steps and resource list. The contact FAQ directs students to their own branch’s ambassador through the university selector and branch channels. Belal’s email remains in the footer; the standalone contact card and duplicate BAU introduction have been removed.

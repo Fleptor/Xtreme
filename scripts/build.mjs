@@ -3,11 +3,11 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { links, faqs, categories, resources, socials, ambassadors } from '../src/content.mjs';
+import { facts, interpolate } from '../src/facts.mjs';
 
 export const root = fileURLToPath(new URL('../', import.meta.url));
 export const dist = path.join(root, 'dist');
 const escape = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-const external = '';
 const fileAttributes = key => key === 'htuRules' ? 'target="_blank" rel="noopener noreferrer"' : '';
 const keywords = {about:'xtreme competition اكستريم إكستريم موعد تاريخ',team:'student graduate membership team عضويه اعضاء',registration:'registration vtools تسجيل ambassador id رقم السفير',proctor:'proctor proctors مراقب مراقبين المراقب المراقبين',participation:'online remote onsite اونلاين أونلاين عن بعد حضور',htu:'htu host هوست استضافة حسين طالبات بنات جوائز افتتاح',practice:'practice browser language لغات متصفحات تدريب',community:'ambassador سفير واتساب شهادة'};
 
@@ -29,17 +29,19 @@ export async function build() {
     const items = resources.filter(resource => resource[4] === category).map(([,name,detail,key]) => `<li><a class="resource-link" href="${escape(links[key])}" ${fileAttributes(key)}><div><h4>${escape(name)}</h4><p>${escape(detail)}${key === 'htuRules' ? ' (TXT، 2 KB، نافذة جديدة)' : ''}</p></div><span class="resource-link-arrow" aria-hidden="true">↗</span></a></li>`).join('');
     return `<section class="resource-group" data-resource-group="${category}" aria-labelledby="resource-${category}-title"><div class="resource-group-heading"><h3 id="resource-${category}-title">${escape(title)}</h3><p>${escape(description)}</p></div><ul class="resource-list">${items}</ul></section>`;
   }).join('');
-  const instagram = '<svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>';
-  const socialMarkup = socials.map(([title,description,handle,url]) => `<a class="social-card" href="${url}" ${external}><div class="social-icon-row">${instagram}<span aria-hidden="true">↗</span></div><h3>${escape(title)}</h3><p>${escape(description)}</p><span class="handle">@${handle}</span></a>`).join('\n');
+  const socialMarkup = socials.map(([title,description,handle,url]) => `<a class="social-link" href="${url}"><bdi>${escape(title)}</bdi><span>${escape(description)}</span><bdi class="handle">@${handle}</bdi></a>`).join('\n');
   const ambassadorOptions = ambassadors.map(([university,name,id,source,originalUniversity]) => {
     const aliases = originalUniversity.startsWith('University of Jordan') ? 'UJ JU' : originalUniversity.startsWith('Al-Balqa') ? 'BAU' : '';
-    return `<option value="${escape(id)}" data-name="${escape(name)}" data-university="${escape(university)}" data-search="${escape(originalUniversity + ' ' + aliases)}"${id === 'IEEEXTREME20SB08217' ? ' selected' : ''}>${escape(university)} - ${escape(name)}</option>`;
+    return `<option value="${escape(id)}" data-name="${escape(name)}" data-university="${escape(university)}" data-search="${escape(originalUniversity + ' ' + aliases)}"${id === facts.ambassadorId ? ' selected' : ''}>${escape(university)} - ${escape(name)}</option>`;
   }).join('');
   const html = template.replace('{{AMBASSADOR_OPTIONS}}', ambassadorOptions).replace('{{FAQ}}', faqMarkup).replace('{{CATEGORIES}}',categoryMarkup).replace('{{RESOURCES}}',resourceMarkup).replace('{{SOCIALS}}',socialMarkup).replaceAll('{{FAQ_COUNT}}',String(faqs.length)).replace(/\{\{link:(\w+)\}\}/g,(_,key) => { if(!links[key]) throw new Error(`Unknown link ${key}`); return escape(links[key]); });
-  await writeFile(path.join(dist,'index.html'),versionAssets(html));
+  await writeFile(path.join(dist,'index.html'),versionAssets(interpolate(html)));
   await cp(path.join(root,'assets'),path.join(dist,'assets'),{recursive:true});
   for (const file of ['styles.css','ieee.css','app.js','shell.js']) await cp(path.join(root,'src',file),path.join(dist,file));
-  await writeFile(path.join(dist,'sources.html'),versionAssets(shell(await readFile(path.join(root,'src/sources.html'),'utf8'),'index.html')));
+  await writeFile(path.join(dist,'sources.html'),versionAssets(interpolate(shell(await readFile(path.join(root,'src/sources.html'),'utf8'),'index.html'))));
+  const icsDate = date => date.replace(/[-:]/g,'');
+  const calendar = (await readFile(path.join(root,'assets/ieeextreme-20.ics'),'utf8')).replace(/DTSTART:[^\r\n]+/,`DTSTART:${icsDate(facts.start)}`).replace(/DTEND:[^\r\n]+/,`DTEND:${icsDate(facts.end)}`);
+  await writeFile(path.join(dist,'assets/ieeextreme-20.ics'),calendar);
   console.log(`Built ${faqs.length} FAQs, ${resources.length} resources, ${socials.length} social links → dist/`);
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await build();

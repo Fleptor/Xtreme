@@ -138,3 +138,54 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 - Restored the FAQ layout from before the content reflow: search and vertical categories beside the answers on desktop, with the original stacked mobile layout.
 - Centered the four discovery values and their headings, including the flex-based word labels.
 - Build/content checks and whitespace checks pass. Visually reviewed at 1440 and 390 px; FAQ search works and neither layout overflows horizontally.
+
+## Registration clarity — 3 October 2026
+
+- Removed the special green background, filled number and button from the vTools step. All five registration steps share the same neutral styling and text-link treatment; unused featured-step CSS was removed.
+- Added visible, labelled Arabic warnings above the full registration steps and beside the HTU registration instructions. Clarified the BAU and HTU step descriptions and the matching FAQ: the BAU form is for coordination only; HTU attendance requires official vTools registration followed by the separate HTU form.
+- `npm run check` passes, including the build, all 64 FAQs, registration URLs, protected ambassador ID, assets, anchors and ARIA targets. `git diff --check` passes.
+- Chromium checks at 320, 390, 768, 1024 and 1440 px found no page or warning overflow. Computed number, content and link styles match across all five steps. Both warnings remain visible with JavaScript disabled at 390 px, and the updated FAQ is searchable and opens correctly.
+- Reviewed desktop registration and desktop/mobile HTU screenshots. Review captures are saved in the parent workspace's `output/` as `registration-clarified-{desktop,mobile}.png` and `htu-registration-clarified-{desktop,mobile}.png`.
+
+## Separate official registration deadlines — 3 October 2026
+
+- Applied the coordinator's correction throughout the hero, registration panel, HTU instructions, FAQ, public sources page and editorial documentation: HTU hosting closes 17 October 2026; IEEEXtreme vTools registration closes 27 October 2026. HTU teams are reminded to complete vTools first and the HTU form within the earlier deadline.
+- Replaced the superseded deadline announcement link with the public source note attributing the corrected dates to the coordinator's confirmation. Checked that the new source anchor exists and the FAQ source points to it.
+- `npm run check` and `git diff --check` pass. Chromium checks at 320, 390, 768 and 1440 px confirmed both date labels and ISO dates, no horizontal overflow, and no overlap between the hero dates and its footer. The deadline FAQ remains searchable and opens correctly.
+- Visually reviewed the two-date panel at 390 and 1440 px; screenshots are in the parent workspace's `output/registration-deadlines-{390,1440}.png`.
+
+## HTU team requirements and expandable registration help — 3 October 2026
+
+- Clarified the global 1–3-member rule and HTU's minimum of two registered teammates in the overview, registration steps, participation options, HTU notice and FAQs. HTU teams must all attend; splitting members between HTU and remote participation is explicitly prohibited.
+- Reused the existing HTU warning for three concise requirements. Added one native `details` disclosure beneath vTools for the approved, uneditable-team case; it starts closed. Replaced the gender-related “mixed team” wording with an explicit reference to male and female students.
+- The build/content check passes with 65 FAQs. FAQ searches locate the solo-team guidance, rebuilding procedure, split-location prohibition and opening-ceremony clarification. Both new source anchors resolve. The original host-regulations asset remains unchanged, with the coordinator's additions documented separately.
+- Chromium checks at 320, 390, 768 and 1440 px found no horizontal overflow, including with the disclosure expanded. Its keyboard controls open with Enter and close with Space. Both participation tabs work. With JavaScript disabled at 390 px, the disclosure still opens, the three HTU requirements remain visible and all 65 FAQs are present.
+- Reviewed the HTU notice and expanded help on phone and desktop. Captures are in the parent workspace's `output/htu-team-guidance-{390,1440}.png` and `output/team-edit-help-{390,1440}.png`. `git diff --check` passes.
+
+## Published AI and workspace rules — 3 October 2026
+
+- Verified the official rules in the browser by expanding the 2026 section. Replaced the pending-rules content with game-type/locked-workspace guidance, the 100 KB library limit, workspace preparation instructions and a direct configuration link. Task restrictions and the deadline remain visible; setup details use a native disclosure.
+- The UTC deadline `2026-10-29T23:59:00Z` and Jordan deadline `2026-10-30T02:59:00+03:00` represent the same instant; the Jordan conversion was checked with `Intl.DateTimeFormat` using `Asia/Amman`. The past PreXtreme deadline is not advertised as upcoming.
+- `npm run check` passes with 67 FAQs and 18 resources. No superseded pending-AI wording remains in the active site content or README. Public source notes now cite the published rules.
+- Chromium checks at 320, 390, 768, 1024 and 1440 px found no page or panel overflow, including expanded setup details. The disclosure opens with Enter, closes with Space, and works without JavaScript. Both UTC/Jordan dates remain visible. Relevant FAQ searches and the training resource filter find the new content.
+- In an isolated browser context, existing saved checklist entries were retained, the new workspace item started unchecked, and all eight items produced progress 8/8. Reload retained the new item, disabling saving cleared storage, and reset returned 0/8. No browser page errors were reported during these interactions.
+- Visually reviewed phone and desktop screenshots in the parent workspace's `output/ai-workspace-{390,1440}.png`. `git diff --check` passes.
+
+## Unified five-chapter guide — 4 October 2026
+
+- Replaced the separate visual treatments with five consistent chapters: overview, registration, participation location, preparation/rules, and questions/resources. HTU and remote participation share tabs; proctor help, ambassador lookup, video, award conditions, workspace instructions, readiness and the resource directory use native disclosures.
+- Registration, HTU attendance and AI restrictions each retain one visible contextual notice. All five registration steps share the same computed text, background and number colors. Deadlines and the workspace configuration cutoff remain visible; longer supporting explanations start collapsed.
+- Centralized repeated dates, team limits, attendance/award hours, prizes and common warning copy in `src/facts.mjs`. Templates, FAQ answers, the countdown and generated calendar reuse these values. The public source page retains the distinction between official sources and coordinator-supplied local clarifications.
+- `npm run check`, JavaScript syntax checks and `git diff --check` pass. The content check now covers cross-page fragments, chapter/navigation order and shared deadline data. Comparison against the pre-refactor source confirmed every existing ID, FAQ identity/order, resource destination, ambassador record, social link and checklist key remains intact.
+- Chromium checks at 320, 390, 768, 1024, 1151 and 1440 px found no horizontal overflow, including with all supporting details expanded. The default page measures 9,633 px at 390 px wide and 7,185 px at 1440 px wide. Visually reviewed the overview, registration, HTU and preparation on desktop/phone; captures are in the parent workspace's `output/guide-*.png`.
+- Verified mobile menu selection/Escape, sticky-header clearance, RTL tab arrow keys, Enter/Space disclosure controls, links into hidden HTU/resource panels and collapsed disclosures, cross-page ambassador links, late FAQ bookmarks, Arabic FAQ search, resource filters and ambassador searches with multiple/no matches. Fixed an initialization race that could hide a bookmarked FAQ after the first filter pass.
+- In an isolated browser context, seven saved checklist entries survived, the workspace item started unchecked, checking it reached 8/8, reload retained it, opting out erased storage and reset returned 0/8. No browser page errors occurred in these interaction checks.
+- Without JavaScript at 390 px, all 67 FAQs and both participation modes remain available, all three warnings remain visible, resource/proctor disclosures work, and the page does not overflow. Nonfunctional copy/save/progress controls are hidden.
+- Axe-core 4.10.3 reported no detected WCAG A/AA violations in the expanded desktop guide, mobile guide or sources page. This is automated Chromium coverage, not a claim of comprehensive accessibility certification.
+- Consolidation was validated locally before publication.
+
+## Essential resource links before the footer — 4 October 2026
+
+- Added six visible links on the index page directly before the footer, reusing the existing URL placeholders: vTools, CS Academy practice, workspace setup, HTU registration, BAU coordination and the official rules. The BAU description retains the distinction between coordination and registration.
+- The compact list uses three columns on desktop, two on tablet and one on phones. Its “all resources” link opens the full directory in the FAQ on the same page.
+- `npm run check` and `git diff --check` pass. Chromium checks at 320, 390, 768 and 1440 px confirmed all six destinations, default visibility, placement immediately before the footer and no horizontal overflow. The full-directory link opens its disclosure correctly. Visually reviewed phone and desktop screenshots saved as `output/essential-links-{390,1440}.png` in the parent workspace.

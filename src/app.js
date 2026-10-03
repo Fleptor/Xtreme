@@ -12,8 +12,8 @@ function toast(message) {
 }
 
 // Calendar boundaries are UTC instants; the visible label is explicitly Jordan time.
-const start = Date.parse('2026-10-31T00:00:00Z');
-const end = Date.parse('2026-11-01T00:00:00Z');
+const start = Date.parse($('#countdown').dataset.start);
+const end = Date.parse($('#countdown').dataset.end);
 function updateCountdown() {
   const now = Date.now();
   const remaining = Math.max(0, Math.floor((start - now) / 1000));
@@ -68,6 +68,7 @@ setMode('onsite');
 const storageKey = 'xtreme20-bau-readiness-v1';
 const preferenceKey = 'xtreme20-bau-save-readiness';
 const checkboxes = $$('[data-check]');
+$('#readiness-progress').max = checkboxes.length;
 const savePreference = $('#save-readiness');
 let storageAvailable = true;
 try {
@@ -113,7 +114,7 @@ const universityLookup = $('#university-lookup');
 const ambassadorChoice = $('#ambassador-choice');
 const finderStatus = $('#finder-status');
 const finderOptions = [...ambassadorChoice.options].map(option => option.cloneNode(true));
-const defaultAmbassador = 'IEEEXTREME20SB08217';
+const defaultAmbassador = $('#ambassador-id').value;
 universityLookup.disabled = false;
 ambassadorChoice.disabled = false;
 function showAmbassador() {
@@ -181,3 +182,18 @@ $('#faq-more').addEventListener('click', () => {
   faqItems.filter(item => !item.hidden)[previousVisible]?.querySelector('summary').focus({ preventScroll: true });
 });
 filterFaq();
+
+// Reveal content before the shared shell follows a bookmark into a closed panel.
+document.addEventListener('guide:reveal', ({ detail: { target } }) => {
+  const panel = target.closest('[role="tabpanel"]');
+  if (panel) setMode(panel.id === 'remote-panel' ? 'remote' : 'onsite');
+  const question = target.closest('.faq-item');
+  if (question) {
+    category = question.dataset.category;
+    searchInput.value = '';
+    const siblings = faqItems.filter(item => item.dataset.category === category);
+    visibleLimit = Math.max(8, siblings.indexOf(question) + 1);
+    filterFaq();
+  }
+  if (target.closest('[data-resource-group]')) $('[data-resource-filter="all"]').click();
+});

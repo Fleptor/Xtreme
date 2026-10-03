@@ -72,3 +72,7 @@ No messages, forms, domain registrations or review requests were submitted on th
 IEEE artwork remains subject to the toolkit agreement, which permits use for official IEEE volunteer activities. Its use here follows the supplied context of the BAU competition ambassador's student-branch outreach.
 
 The requested “Open on YouTube” link intentionally opens a new tab and announces that behavior, with `noopener noreferrer`. This is an explicit user-requested exception to the earlier same-tab HTML-link rule.
+
+## Guide consolidation — 4 October 2026
+
+The five-chapter redesign retains the shared IEEE navigation, BAU logo, favicon, policies, self-hosted typefaces, palette, pill buttons, visited-link treatment and keyboard focus. The common body surface is now plain warm paper without a texture; chapters use matching headings, dividers and disclosure rows. `styles.css` owns guide components, while `ieee.css` owns identity and navigation, replacing the accumulated overrides. Body copy and controls remain at least 15 px; the IEEE global links retain their specified 12 px treatment. The header's measured height supplies the anchor offset so chapter links clear the sticky navigation.

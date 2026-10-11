@@ -45,7 +45,7 @@ As of 26 September 2026, the shared header uses the supplied BAU branch logo rec
 
 ## Published feedback update — 25 September 2026
 
-- Superseded deadline attribution: the [previous IEEEXtreme announcement](https://www.linkedin.com/posts/ieeextreme_ieeextreme20-ieeextreme-codetothextreme-activity-7507657995397353472-nM6e) was previously used for the competition deadline. Use the coordinator's 3 October correction below: HTU hosting closes 17 October; vTools competition registration closes 27 October. The earlier announcement is retained here as historical evidence only.
+- Registration deadline: the [official IEEEXtreme announcement](https://www.linkedin.com/posts/ieeextreme_ieeextreme20-ieeextreme-codetothextreme-activity-7507657995397353472-nM6e) states 17 October 2026. Rechecked on 12 October; the coordinator confirmed that this date also applies to HTU hosting. See the unified-deadline update below.
 - Historical AI reference: the [official 20.0 format announcement](https://www.linkedin.com/posts/ieeextreme_ieeextreme20-ieeextreme-3200plus-activity-7509243612015149056-Fnb8) preceded the detailed rules. The guide's 3 October update below uses the [published rules](https://ieeextreme.org/rules/) instead. The update notice observed on 25 September is superseded.
 - UJ: Abdalrahman Hulliel, `IEEEXTREME20SB08193`; his public announcement appears in the [indexed LinkedIn activity](https://jo.linkedin.com/in/mariam-frehat-7ba94738b). The profile owner is not the ambassador; the embedded announcement explicitly names Abdalrahman and University of Jordan. Direct profile access is sign-in restricted.
 - GJU: Sara Saleem, `IEEEXTREME20SB08215`; [announcement](https://www.linkedin.com/posts/activity-7508133262360453121-dyyV), also read live in the [official GJU branch feed](https://jo.linkedin.com/company/ieee-gju-student-branch).
@@ -98,11 +98,11 @@ The registration steps, HTU section and registration FAQ now explicitly state th
 
 The [official vTools portal](https://xtreme.vtools.ieee.org/) was rechecked on 3 October 2026 and still directs participants to sign in with their IEEE account. The older registration-tips page returned HTTP 403 during this check; no new rule or deadline is inferred from it. Form URLs, ambassador IDs and host requirements are unchanged.
 
-## Official registration deadlines — corrected 3 October 2026
+## Unified registration deadline — 12 October 2026
 
-Belal Hamdan, the guide coordinator, explicitly confirmed both official deadlines: **17 October 2026 for HTU hosting** and **27 October 2026 for IEEEXtreme competition registration through vTools**. This correction is the source for the updated hero, registration panel, HTU section, FAQ and public sources page. Since vTools registration precedes the HTU form, teams attending HTU must finish both in time for the 17 October hosting deadline. No cutoff hour or timezone was supplied or inferred.
+Belal Hamdan confirmed that competition and HTU hosting registration now share **17 October 2026** as their deadline. This supersedes the earlier separate-deadline guidance. The [official IEEEXtreme announcement](https://www.linkedin.com/posts/ieeextreme_ieeextreme20-ieeextreme-codetothextreme-activity-7507657995397353472-nM6e), opened again on 12 October, explicitly states the competition registration date.
 
-Searches on 3 October still surfaced earlier IEEEXtreme posts citing 17 October for competition registration; an updated public announcement confirming 27 October was not independently located. The site attributes these corrected dates to the coordinator's direct confirmation instead of attaching the superseded announcement to the new dates.
+The overview, registration panel, HTU section, FAQ and public sources page use the same date. HTU participants must complete vTools registration first, then the separate HTU form, within that deadline. The BAU form remains local coordination only. No shared cutoff hour or timezone is inferred for the two forms. The code-library upload deadline remains separate.
 
 ## HTU team requirements and registration changes — 3 October 2026
 

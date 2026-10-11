@@ -4,12 +4,15 @@ const dateLabel = iso => { const [year, month, day] = iso.slice(0,10).split('-')
 const numericDate = iso => iso.slice(0,10).split('-').reverse().join('-');
 const jordanParts = iso => Object.fromEntries(new Intl.DateTimeFormat('en-GB', {timeZone:'Asia/Amman',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date(iso)).map(part => [part.type,part.value]));
 
+const registrationDeadlineISO = '2026-10-17';
+
 export const facts = {
-  reviewed: '4 أكتوبر 2026',
+  reviewed: '12 أكتوبر 2026',
   start: '2026-10-31T00:00:00Z',
   competitionHours: 24,
-  htuDeadlineISO: '2026-10-17',
-  vtoolsDeadlineISO: '2026-10-27',
+  registrationDeadlineISO,
+  htuDeadlineISO: registrationDeadlineISO,
+  vtoolsDeadlineISO: registrationDeadlineISO,
   libraryDeadlineISO: '2026-10-29T23:59:00Z',
   teamMin: 1, teamMax: 3, graduateMax: 2, htuTeamMin: 2,
   attendanceHours: 10, awardHours: 15,
@@ -23,7 +26,7 @@ facts.competitionDate = dateLabel(facts.start);
 facts.competitionDateISO = facts.start.slice(0,10);
 facts.teamRange = `${facts.teamMin}–${facts.teamMax}`;
 facts.htuTeamRange = `${facts.htuTeamMin}–${facts.teamMax}`;
-for (const key of ['htu','vtools']) {
+for (const key of ['registration','htu','vtools']) {
   facts[`${key}Deadline`] = dateLabel(facts[`${key}DeadlineISO`]);
   facts[`${key}DeadlineNumeric`] = numericDate(facts[`${key}DeadlineISO`]);
   facts[`${key}DeadlineShort`] = facts[`${key}Deadline`].replace(/ \d{4}$/,'');

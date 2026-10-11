@@ -149,7 +149,7 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 
 ## Separate official registration deadlines — 3 October 2026
 
-- Applied the coordinator's correction throughout the hero, registration panel, HTU instructions, FAQ, public sources page and editorial documentation: HTU hosting closes 17 October 2026; IEEEXtreme vTools registration closes 27 October 2026. HTU teams are reminded to complete vTools first and the HTU form within the earlier deadline.
+- Historical validation of the earlier separate-deadline layout. This guidance is superseded by the unified registration deadline update dated 12 October 2026 below.
 - Replaced the superseded deadline announcement link with the public source note attributing the corrected dates to the coordinator's confirmation. Checked that the new source anchor exists and the FAQ source points to it.
 - `npm run check` and `git diff --check` pass. Chromium checks at 320, 390, 768 and 1440 px confirmed both date labels and ISO dates, no horizontal overflow, and no overlap between the hero dates and its footer. The deadline FAQ remains searchable and opens correctly.
 - Visually reviewed the two-date panel at 390 and 1440 px; screenshots are in the parent workspace's `output/registration-deadlines-{390,1440}.png`.
@@ -200,3 +200,10 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 - All 23 PDF downloads and the ZIP return HTTP 200 with correct PDF/ZIP content types in the local server. A real browser download of `registration-qr-ar.pdf` completes with the expected filename.
 - Alternate editions expand normally and their fragment links open the relevant disclosure. At 320 px with JavaScript disabled, all 23 download links remain present, native disclosures work and there is no horizontal overflow.
 - Home-page and shared footer links lead to the downloads page. Existing chapter and navigation order remains intact.
+
+## Unified registration deadline — 12 October 2026
+
+- Both vTools and HTU hosting now use the shared 17 October 2026 registration date. The overview shows one combined registration row; registration instructions and FAQ explain that the forms remain separate and must be completed within the same deadline.
+- Rechecked the official IEEEXtreme registration announcement and updated public and editorial source notes to the coordinator's latest correction. Removed the superseded date from the current source tree and generated pages.
+- `npm run check` and `git diff --check` pass. Existing checks cover the shared deadline, 67 FAQs, internal links, protected registration URLs, calendar and 23 printable PDF checksums. Downloadable PDF text and ZIP contents contain no superseded registration date.
+- Chromium previews at 390 and 1440 px show the unified date and clear form order with no horizontal overflow. Reviewed both screenshots. QR destinations and published anchors remain unchanged.

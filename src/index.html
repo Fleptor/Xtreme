@@ -46,8 +46,7 @@
         <div class="deadline-overview" aria-labelledby="dates-title">
           <h3 id="dates-title">المواعيد اللي تهمّكم</h3>
           <dl class="date-list">
-            <div><dt>تسجيل استضافة HTU</dt><dd><time datetime="{{fact:htuDeadlineISO}}">{{fact:htuDeadline}}</time><a class="text-link" href="#htu">تفاصيل الاستضافة ←</a></dd></div>
-            <div><dt>تسجيل المسابقة على vTools</dt><dd><time datetime="{{fact:vtoolsDeadlineISO}}">{{fact:vtoolsDeadline}}</time><a class="text-link" href="#registration">خطوات التسجيل ←</a></dd></div>
+            <div><dt>التسجيل في المسابقة واستضافة HTU</dt><dd><time datetime="{{fact:registrationDeadlineISO}}">{{fact:registrationDeadline}}</time><span class="small-note">موعد موحّد؛ سجّلوا على vTools ثم عبّوا نموذج HTU إذا اخترتوا الاستضافة.</span><a class="text-link" href="#registration">خطوات التسجيل ←</a></dd></div>
             <div><dt>رفع مكتبات الكود</dt><dd><time datetime="{{fact:libraryDeadlineISO}}">{{fact:libraryDeadlineDate}} · <bdi>{{fact:libraryDeadlineUTC}}</bdi></time><span class="small-note">الأردن: {{fact:libraryDeadlineJordanDate}} · <bdi>{{fact:libraryDeadlineJordanTime}}</bdi> فجرًا</span><a class="text-link" href="#workspace">تجهيز مساحة العمل ←</a></dd></div>
           </dl>
         </div>
@@ -60,7 +59,7 @@
     <section class="chapter" id="registration" aria-labelledby="registration-title">
       <div class="container">
         <header class="chapter-heading"><p class="eyebrow">جهّز فريقك</p><h2 id="registration-title">خطوات التسجيل</h2><p>ابدؤوا بالتسجيل الرسمي، وبعده كمّلوا نماذج التنسيق اللي بتخصّ مشاركتكم.</p></header>
-        <p class="section-meta">آخر موعد لـvTools: <time datetime="{{fact:vtoolsDeadlineISO}}">{{fact:vtoolsDeadline}}</time>. للمشاركة من HTU، كمّلوا vTools ثم نموذج الاستضافة ضمن موعد <time datetime="{{fact:htuDeadlineISO}}">{{fact:htuDeadlineShort}}</time>.</p>
+        <p class="section-meta">آخر موعد موحّد لتسجيل المسابقة على vTools واستضافة HTU: <time datetime="{{fact:registrationDeadlineISO}}">{{fact:registrationDeadline}}</time>. سجّلوا على vTools أولًا، ثم كمّلوا نموذج HTU إذا اخترتوا الاستضافة.</p>
         <aside class="notice" aria-labelledby="registration-warning-title"><h3 id="registration-warning-title">نموذج الفرع وحده ما بكفّي</h3><p>{{copy:localForm}}</p></aside>
         <ol class="registration-steps">
           <li><div><h3>كوّنوا الفريق وجهّزوا العضوية</h3><p>المسابقة بتسمح بـ<bdi>{{fact:teamRange}}</bdi> أعضاء، وHTU بتتطلب <bdi>{{fact:htuTeamRange}}</bdi>. كل الأعضاء لازم يكونوا IEEE Student أو Graduate Student، وبحد أعلى {{fact:graduateMax}} من فئة Graduate Student. جهّزوا أرقام العضوية واسم الفريق.</p><a class="text-link" href="{{link:membership}}">بوابة عضوية IEEE ↗</a></div></li>

@@ -141,3 +141,7 @@ Imported the coordinator's final `Xtreme-Ambassador/booth/` materials into `asse
 The brochure is an HTU hosting document; its hosting conditions and local prize amounts must not be described as global prizes or BAU arrangements. Original brochure and sticker PDFs are copied byte-for-byte. Only local file-link annotations in the three guide PDFs were repaired for web use, without reflowing their pages. Their example code and blank booth metrics template are included. Original artwork licenses and source notes accompany the pack.
 
 Two new one-page A4 QR signs replace `links-ar.pdf`: registration opens `https://belalhamdan.com/Xtreme/#registration`, retaining the distinction between official vTools and local coordination; resources opens `https://belalhamdan.com/Xtreme/printables.html`. QR destinations were decoded from the rendered PDFs. This is a file-publication update, not a new verification of competition rules.
+
+## Combined booth QR sign — 12 October 2026
+
+Added the decorated one-page A4 `booth-qr-duo-ar.pdf` from the booth materials. It reuses the approved Pixel vector and branch logo with two native-vector QR codes, keeping the registration and resources URLs unchanged. The separate QR sheets remain available as alternatives. The regenerated catalog and ZIP contain 24 PDFs.

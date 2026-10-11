@@ -207,3 +207,9 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 - Rechecked the official IEEEXtreme registration announcement and updated public and editorial source notes to the coordinator's latest correction. Removed the superseded date from the current source tree and generated pages.
 - `npm run check` and `git diff --check` pass. Existing checks cover the shared deadline, 67 FAQs, internal links, protected registration URLs, calendar and 23 printable PDF checksums. Downloadable PDF text and ZIP contents contain no superseded registration date.
 - Chromium previews at 390 and 1440 px show the unified date and clear form order with no horizontal overflow. Reviewed both screenshots. QR destinations and published anchors remain unchanged.
+
+## Combined A4 booth QR sign — 12 October 2026
+
+- Added the decorated Pixel sign with registration and resources QR codes side by side, and made it the first booth download. The separate QR sheets remain alternatives; the catalog and ZIP now contain 24 PDFs.
+- The new PDF is one A4 portrait page with embedded fonts, native vector QR codes, 58 mm QR boxes and four-module quiet zones. Both exact destinations decoded successfully from PDF renders at 72, 150 and 300 dpi; their right/left placement was verified and the full-page preview reviewed.
+- All 23 prior PDFs are byte-identical to the previous website revision. `npm run check` passes for 24 PDF hashes and all site links; `git diff --check` passes. No physical printer test was performed.

@@ -87,11 +87,11 @@
       "files": [
         {
           "path": "printables/booth-qr-duo-ar.pdf",
-          "title": "التسجيل والموارد — لوحة واحدة مع Pixel",
-          "description": "الاختيار المقترح للبوث: ورقة A4 مزينة بكودي QR، للتسجيل والموارد. اطبعها بدل اللوحتين المنفصلتين.",
+          "title": "التسجيل والموارد — نصف ورقة A4",
+          "description": "الاختيار المقترح للبوث: التصميم في النصف العلوي من A4، بكودي التسجيل والموارد وخط قص في المنتصف. النصف السفلي فارغ.",
           "pages": 1,
-          "bytes": 793546,
-          "sha256": "85c45851f1dceea1f87fcfa83edf0f455c8b2d94caefd86faa74e7d26d7dfa1d",
+          "bytes": 757325,
+          "sha256": "f53b0eca09fe03a455d19e1f01481346b0146cc9575308e8fda068ecea36cb23",
           "source": "printables/booth-qr-duo-ar.pdf"
         },
         {

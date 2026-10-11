@@ -210,6 +210,8 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 
 ## Combined A4 booth QR sign — 12 October 2026
 
-- Added the decorated Pixel sign with registration and resources QR codes side by side, and made it the first booth download. The separate QR sheets remain alternatives; the catalog and ZIP now contain 24 PDFs.
-- The new PDF is one A4 portrait page with embedded fonts, native vector QR codes, 58 mm QR boxes and four-module quiet zones. Both exact destinations decoded successfully from PDF renders at 72, 150 and 300 dpi; their right/left placement was verified and the full-page preview reviewed.
+- Added the decorated sign with registration and resources QR codes side by side, and made it the first booth download. The separate QR sheets remain alternatives; the catalog and ZIP now contain 24 PDFs.
+- The new PDF is one A4 portrait page with embedded fonts, native vector QR codes, 52 mm QR boxes and four-module quiet zones. Both exact destinations decoded successfully from PDF renders at 72, 150 and 300 dpi; their right/left placement was verified and the full-page preview reviewed.
 - All 23 prior PDFs are byte-identical to the previous website revision. `npm run check` passes for 24 PDF hashes and all site links; `git diff --check` passes. No physical printer test was performed.
+
+- Final layout: artwork occupies only the upper 210 × 148.5 mm of the A4 page, with a dashed centre cut line. Verified that all text stays above the cut and the lower half is blank. The pointing mascot and scan-instruction line are absent; the header and footer content is retained. Both codes decode at 72, 150 and 300 dpi after the layout change.

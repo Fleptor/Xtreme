@@ -144,4 +144,4 @@ Two new one-page A4 QR signs replace `links-ar.pdf`: registration opens `https:/
 
 ## Combined booth QR sign — 12 October 2026
 
-Added the decorated one-page A4 `booth-qr-duo-ar.pdf` from the booth materials. It reuses the approved Pixel vector and branch logo with two native-vector QR codes, keeping the registration and resources URLs unchanged. The separate QR sheets remain available as alternatives. The regenerated catalog and ZIP contain 24 PDFs.
+Added `booth-qr-duo-ar.pdf` from the booth materials: a one-page A4 PDF with the decorated sign confined to the upper 210 × 148.5 mm, a centre cut line, and blank lower half. It uses the approved branch logo with two native-vector QR codes; the pointing Pixel remains exclusive to the recruitment poster. The sign retains the header and footer content in a compact layout, keeping the registration and resources URLs unchanged. The separate QR sheets remain available as alternatives. The regenerated catalog and ZIP contain 24 PDFs.

@@ -1,6 +1,7 @@
 import { facts, guidance } from './facts.mjs';
 
 export const links = {
+  printables: 'printables.html',
   official: 'https://ieeextreme.org/',
   contact: 'mailto:belalhamdan@ieee.org',
   ambassadorSelector: '#ambassadors',
@@ -135,6 +136,7 @@ export const resources = [
   ['16', 'دعم التسجيل الرسمي', 'IEEEXtreme@ieee.org', 'support', 'registration'],
   ['17', 'موقع جامعة الحسين التقنية', 'افتح موقع الاستضافة على خرائط Google', 'htuMap', 'registration'],
   ['18', 'إعداد مساحة العمل', `مكتبات حتى ${facts.libraryKB} KB · كود البداية والملفات المسبقة`, 'workspace', 'practice'],
+  ['19', 'موارد البوث والمطبوعات', 'دليل المكتبة والبروشور والستيكرات ولوحات QR بصيغة PDF', 'printables', 'official'],
 ];
 
 export const socials = [

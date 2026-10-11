@@ -9,7 +9,7 @@ const portIndex = args.indexOf('--port');
 const hostIndex = args.indexOf('--host');
 const port = Number(portIndex >= 0 ? args[portIndex+1] : process.env.PORT || 4173);
 const host = hostIndex >= 0 ? args[hostIndex+1] : '127.0.0.1';
-const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.ico':'image/x-icon','.webp':'image/webp','.ttf':'font/ttf','.txt':'text/plain; charset=utf-8','.ics':'text/calendar; charset=utf-8'};
+const types = {'.pdf':'application/pdf','.zip':'application/zip','.json':'application/json; charset=utf-8','.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.ico':'image/x-icon','.webp':'image/webp','.ttf':'font/ttf','.txt':'text/plain; charset=utf-8','.ics':'text/calendar; charset=utf-8'};
 const server = createServer(async (req,res) => {
   if (!['GET','HEAD'].includes(req.method)) {res.writeHead(405,{'Allow':'GET, HEAD'}).end(); return;}
   try {

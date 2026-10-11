@@ -1,0 +1,77 @@
+# مصادر أدلة البوث والملصقات
+
+آخر تحقق: 6 أكتوبر 2026. هذه ملاحظات توثيقية للمنظم، وليست منشورًا دعائيًا.
+
+## المنافسة ودليل المكتبة
+
+| الموضوع | المصدر | نطاق الاستناد |
+| --- | --- | --- |
+| موعد نسخة 20.0 | [الموقع الرسمي](https://ieeextreme.org/) | 31 أكتوبر 2026؛ محتوى مفهرس رسميًا، لأن الفتح المباشر أعاد 403. |
+| المكتبات وبيئة العمل المقفلة | [القواعد](https://ieeextreme.org/rules/) | 100 KB وموعد 29 أكتوبر 23:59 UTC، وتجهيز قوالب البداية والملفات قبل بدء المسألة. آخر نص مفهرس تحقق منه في هذا البحث يحمل تحديثًا بتاريخ 29 سبتمبر 2026. |
+| العضوية والفريق والمراقب | [الأهلية](https://ieeextreme.org/eligibility/) | عضوية Student أو Graduate Student، حتى ثلاثة أعضاء وبحد أقصى اثنين Graduate Student، ومراقب مؤهل. |
+| نقطة الدخول إلى القالب | [CSAcademy Template](https://csacademy.com/workspace/template) | فُتحت الصفحة بمتصفح؛ ظهرت مطالبة تسجيل الدخول. لم يُستخدم حساب خاص ولم يُرفع شيء إليه. |
+| تسميات الواجهة وسلوكها | [ملف JavaScript العام v651](https://csacademy.com/static/js/bundle.js?v=651) | فُحص عبر تنزيل عام بتاريخ المراجعة. مكونات TemplateFileSidebar وTemplateUsage وCreateFileModal وTemplateWorkspacePanel؛ New وUpload وLANGUAGE FILES؛ ملفات نصية وحدود القالب ورسائل الحفظ ونسخ القالب عند كشف المهمة. هذه مراجعة للشيفرة الأمامية، وليست اختبارًا لخادم الرفع بعد الدخول. |
+| التدريب | [مجتمع IEEEXtreme](https://csacademy.com/ieeextreme-practice/) | وجهة التدريب التي تحيل إليها قواعد المسابقة. |
+| التوقيت الأردني | [المرجع المحلي](../IEEEXtreme-reference.md) | تحويل UTC إلى Asia/Amman؛ فُحص التحويل برمجيًا أثناء إعداد الحزمة. |
+| التسجيل والتنسيق | [رسالة الفرع الحالية](../Promotional%20Text/Main%20Messages/IEEEXtreme-whatsapp-ar.txt) | نُقلت روابط vTools وفورم الفرع وفورم HTU والفيديو وAmbassador ID كما هي؛ لم تُعدل النماذج أو تُرسل طلبات. |
+| شروط HTU | [تعليمات الاستضافة](../HTU%20HOST%20REGULATIONS.txt) | ترتيبات محلية منفصلة عن الأهلية العالمية، ويؤكدها المنظم قبل الزيارة. |
+
+ملاحظة للمنظم: بعض الرسائل الترويجية ومواضع FAQ القديمة في المستودع ما زالت تحمل سياسة AI السابقة أو عبارة انتظار قواعد 20.0. في مواد هذا البوث يُعتمد [دليل المكتبة الجديد](../IEEEXtreme-csacademy-library-guide-ar.md) والقواعد الحالية؛ راجع تلك الرسائل قبل إعادة استخدامها.
+
+## جذب الزوار وتشجيع المشاركة
+
+| المصدر | ما يدعمه |
+| --- | --- |
+| [University of Nebraska Lincoln — Tabling and Booth Tips](https://involved.unl.edu/recognized-student-organization-manual/tabling-and-booth-tips/) | هدف واضح، هوية مرئية، متطوعون متفاعلون، أنشطة وهدايا، تسهيل الوصول والمتابعة. |
+| [UC San Diego — Student Leader and Org Resources](https://sixth.ucsd.edu/student-life/student-leader-org-resources/index.html) | معلومات مطبوعة مختصرة، شرح شفهي جاهز، فريق صغير عند الطاولة، تفاعل وتجهيز أدوات احتياطية. |
+| [تقرير بوث IEEE في جامعة عمّان العربية](https://events.vtools.ieee.org/m/555877) | مثال محلي منشور في vTools على استخدام البوث للتعريف بأنشطة IEEE؛ لا يقدم قياسًا تجريبيًا لزيادة التسجيل. |
+
+الألعاب الستة، والأربعون تطبيقًا المقترحًا، وأوقات التشغيل، وأمثلة الكميات ومؤشرات القياس صيغت لهذه الحزمة. لم تُنسب إلى المصادر معدلات تحويل أو ضمانات نجاح. لا تمثل إرشادات الجامعات الأجنبية سياسة لجامعة البلقاء التطبيقية.
+
+## الأصول البصرية
+
+| الملصق | أصل الملف | المعالجة |
+| --- | --- | --- |
+| IEEE | `~/IEEE/Media/ieee_logo-1565858426.png` | وضع الصورة الأصلية بنسبة أبعادها على أبيض. |
+| IEEEXtreme 20.0 | `~/IEEE/Media/Xtreme_20.0.png` | الشعار الأبيض الأصلي فوق أرضية كحلية داخل إطار الملصق. |
+| Computer Society | `~/IEEE/Media/IEEE_Computer.png` | الشعار الكامل عالي الدقة في الورقة الثانية. عُزل الرمز البرتقالي نفسه بإطار عرض SVG لبقية الملصقات، بلا اسم الجمعية وبلا إعادة رسم. |
+| فرع BAU | `~/IEEE/Media/ieee-bau-branch.png` | الأصل بكامل نصه ونسبته، دون اختصار اسم الكلية. |
+| Pixel | `~/IEEE/Media/photo_2024-12-29_19-14-49-removebg-preview.png` | صورة Pixel الدائرية الأصلية. جرى التعرف عليه أيضًا من `Final_pixel_greeting.png`؛ لم يُستخدم البوستر العريض كملصق. |
+| Tux | [Linux repository logo.svg](https://github.com/torvalds/linux/blob/master/Documentation/images/logo.svg) | الأصل محفوظ كما نُزّل، مع نسخة PNG شفافة مصدرة منه بارتفاع 1200 بكسل للطباعة لتجنب عيب تكرار تدرجات SVG في محرك التصدير. لم تتغير رسمة الشخصية. |
+| حواسيب ليلة المسابقة | `stickers/computer_art.py` وملفات SVG في `stickers/assets/` | خمس رسومات متجهية أصلية بأشكال هندسية وخطوط مستديرة: إرهاق مع قهوة، وصدمة مع حيرة، وابتسامة متكلّفة تخفي التعب، ونوم منزعج، وتبرّم لطيف. وجه القرص المرن الداكن وملامحه النعناعية يطابقان أسلوب بقية الشخصيات. تعبير الشاشة تفسير كرتوني لفكرة «Hide the Pain Harold» التي اقترحها المستخدم؛ لم تُنسخ صورة الشخص أو ملامحه الواقعية. الألوان والوجوه امتداد لأسلوب Pixel؛ تُضمّن كرسوم متجهية بلا خطوط خارجية أو صور مولدة، ولا تمثل أجهزة أو شعارات تجارية. |
+| سهما IEEE والمعين | [ملف IEEE المتجهي في Simple Icons](https://github.com/simple-icons/simple-icons/blob/develop/icons/ieee.svg) | حُفظ السهم المستقيم والسهم المنحني في `ieee-field.svg` بلون أزرق. يحتفظ `ieee-kite.svg` بالمعين والسهمين دون حروف IEEE عبر إطار عرض للملف الأصلي. لم تُرسم الأسهم من التخمين. |
+| C وC++ وJava وPython | [أصول Devicon](https://github.com/devicons/devicon/tree/master/icons) | ملفات `c/c-original.svg` و`cplusplus/cplusplus-original.svg` و`java/java-original.svg` و`python/python-original.svg`. الرموز وحدها بلا أسماء إضافية؛ أربعة ملصقات لكل لغة في الورقة الثانية. |
+
+نُسخت الأصول المستخدمة إلى `stickers/assets/` لكي تظل الحزمة مستقلة عن مسار `~/IEEE/`. لم تُستبدل الأصول الأصلية أو تُرفع إلى خدمة خارجية. استخدام العلامات هنا للمواد التي طلبها الفرع، ولا يتضمن ادعاء اعتماد تصميم الملصقات من IEEE.
+
+**Tux attribution:** Original artwork by **Larry Ewing**, vector re-illustration by **Garrett LeSage**, refinements by **IFo Hancroft**. [نص الإذن في مستودع Linux](https://github.com/torvalds/linux/blob/master/Documentation/images/COPYING-logo)، [نسخة محلية](stickers/assets/TUX-LICENSE.txt). يظهر الإسناد أيضًا أسفل ورقة Pixel وTux؛ احتفظ به عند مشاركة الحزمة.
+
+خطا Cairo وOpen Sans مأخوذان من أصول الطباعة الموجودة في المشروع. أُرفقت ملفات ترخيص OFL. حُولت حروف أوراق الملصقات إلى مسارات لضمان ثباتها عند الطباعة.
+
+أُرفقت تراخيص [Devicon](stickers/assets/DEVICON-LICENSE.txt) و[Simple Icons](stickers/assets/SIMPLE-ICONS-LICENSE.txt). أُبقيت ملفات SVG المصدرية، مع تصدير PNG بدقة 1200×1200 للرموز المستوردة لتجنب عيوب تكرار التدرجات أو الأقنعة في محرك PDF. رسومات الحواسيب والملحقات الجديدة تبقى متجهية داخل PDF. راجع [شرح IEEE لتاريخ الرمز](https://ewh.ieee.org/sb/iiee/new/ieee/logo.html): السهم المستقيم يمثل التيار الكهربائي، والمنحني يمثل المجال الكهرومغناطيسي.
+
+## القياس والتحقق
+
+### إضافات الأزرار المربعة — 8 أكتوبر 2026
+
+تخص هذه الإضافات نسخة `straight-cut-designed/` وحدها. الصفحة الثانية فيها 9 صفوف، في كل صف شعار Computer Society وشعار الفرع بقياس 44×30 مم، وثلاثة أزرار بقياس 30×30 مم؛ المجموع 45 ملصقًا. الرموز الجديدة لا تمثل قائمة اللغات المعتمدة في المسابقة. اختار المستخدم شعار STMicroelectronics/STM32، لذلك استُخدم رمز ST للشركة، وليس شعار Assembly أو AssemblyScript.
+
+| الرمز | مصدر الأصل والتحقق | الإسناد والمعالجة |
+| --- | --- | --- |
+| Ruby | [Devicon: ruby-original.svg](https://github.com/devicons/devicon/blob/master/icons/ruby/ruby-original.svg)؛ [صفحة شعار Ruby](https://www.ruby-lang.org/en/about/logo/) | الشعار الأحمر دون عنوان مضاف. Copyright © 2006 Yukihiro Matsumoto؛ [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/). |
+| Rust | [مستودع الرسوم الرسمي](https://github.com/rust-lang/rust-artwork/blob/main/logo/rust-logo-single-path.svg)؛ [ترخيص الأصل](https://github.com/rust-lang/rust-artwork/blob/main/logo/README.md) | ترس Rust بحرف R، دون تغيير الرسم أو اللون. Rust Foundation؛ [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). |
+| Lua | [Devicon: lua-original.svg](https://github.com/devicons/devicon/blob/master/icons/lua/lua-original.svg)؛ [مصدر Lua وشروط استخدام الشعارات](https://www.lua.org/images/) | Copyright © 1998 Lua.org؛ Graphic design by Alexandre Nakonechnyj. بقيت كلمة Lua الموجودة داخل الشعار نفسه، دون إضافة اسم بجانبه أو تغيير نسبه. |
+| STMicroelectronics | [ملف الرمز في Simple Icons](https://github.com/simple-icons/simple-icons/blob/develop/icons/stmicroelectronics.svg)؛ [العلامات لدى الشركة](https://www.st.com/content/st_com/en/about/st-trademark-list.html) | رمز ST الأصلي أحادي اللون، دون اسم الشركة أو عبارة إضافية. يمثل الشركة المرتبطة بـSTM32، وليس فراشة STM32 الخاصة بعائلة المنتجات. |
+
+حُفظت ملفات SVG ونسخ PNG بدقة 1200×1200 في `stickers/assets/`. لا توجد إعادة رسم أو تعديل لنسب هذه الرموز؛ تتغير أحجام العرض لتناسب الأزرار. [إسناد الإضافات وروابط التراخيص](stickers/assets/LANGUAGE-ADDITIONS-LICENSES.txt)، و[ترخيص شعار Rust](stickers/assets/RUST-LOGO-LICENSE.txt). ملفات Devicon وSimple Icons تخضع أيضًا للتراخيص المرفقة سابقًا في المجلد نفسه.
+
+### أبعاد الحزمة الأصلية
+
+رموز اللغات ضمن 28 مم، وبقية الملصقات الصغيرة ضمن 30 مم، اختيار عملي قريب من طلب حجم عملة نصف دينار، وليس ادعاءً أن جميع إصدارات العملة لها قياس واحد. الشعارات الطويلة 44×25 مم للحفاظ على النص. صفحات PDF وSVG مضبوطة على A4، ويوجد خط معايرة 50 مم في كل ورقة. جودة الطبعة والألوان وقابلية قراءة النص الصغير على الورق تحتاج عينة من الطابعة المستخدمة.
+
+## حزمة التنزيل ولوحتا QR — 11 أكتوبر 2026
+
+- أضيف البروشور الذي زوّد به المنظّم (`IEEEXtreme Brochures.pdf`) كما هو: وجهان A4 أفقي بالإنجليزية، ويخص استضافة HTU وجوائزها المحلية.
+- حلت `registration-qr-ar.pdf` و`resources-qr-ar.pdf` محل لوحة `links-ar` المجمّعة. الوجهتان هما قسم التسجيل في [دليل الفرع](https://belalhamdan.com/Xtreme/#registration) و[صفحة المطبوعات](https://belalhamdan.com/Xtreme/printables.html).
+- الحزمة المحدثة تشمل نسخ الملصقات الثلاث والملفات الفردية، دون تعديل رسومها. لا تشمل النماذج الأولية والنسخ الاحتياطية.
+- هذا تحديث لتجميع الملفات ووجهات QR، وليس مراجعة جديدة لقواعد المنافسة أو إعادة اختبار لرفع المكتبات.

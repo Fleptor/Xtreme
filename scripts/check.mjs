@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { build, dist, root } from './build.mjs';
 import { links, faqs, categories, resources, socials } from '../src/content.mjs';
 import { facts, interpolate } from '../src/facts.mjs';
@@ -22,7 +23,7 @@ for (const [category,question,answer,source] of faqs) {
   questions.add(question);
 }
 for (const resource of resources) assert.ok(links[resource[3]], `Missing resource URL: ${resource[1]}`);
-for (const file of ['index.html','sources.html']) {
+for (const file of ['index.html','sources.html','printables.html']) {
   const html = await readFile(path.join(dist,file),'utf8');
   assert.ok(!/\{\{|\}\}|TODO|placeholder\.com|بانتظار التأكيد|waiting for 20/i.test(html), `Unresolved content in ${file}`);
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
@@ -52,6 +53,19 @@ for (const file of ['index.html','sources.html']) {
   }
 }
 const html = await readFile(path.join(dist,'index.html'),'utf8');
+const catalog = JSON.parse(await readFile(path.join(root,'src/printables.json'),'utf8'));
+const printables = catalog.groups.flatMap(group => group.files);
+assert.equal(printables.length,23,'Expected all 23 current printable PDFs');
+assert.equal(new Set(printables.map(file => file.path)).size,printables.length,'Duplicate printable');
+const downloads = await readFile(path.join(dist,'printables.html'),'utf8');
+assert.ok(!downloads.includes('links-ar.pdf'),'Retired QR sheet must not be offered');
+for (const file of printables) {
+  const bytes = await readFile(path.join(dist,'assets/printables',file.path));
+  assert.equal(bytes.subarray(0,5).toString(),'%PDF-',`Not a PDF: ${file.path}`);
+  assert.equal(bytes.length,file.bytes,`Stale file size: ${file.path}`);
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),file.sha256,`Changed source copy: ${file.path}`);
+  assert.ok(downloads.includes(`href="assets/printables/${file.path}" download`),`Missing download: ${file.path}`);
+}
 assert.ok(html.includes('IEEEXTREME20SB08217'));
 assert.ok(html.includes('lang="ar" dir="rtl"'));
 const chapterIds = [...html.matchAll(/<section class="chapter" id="([^"]+)"/g)].map(match => match[1]);
@@ -80,4 +94,4 @@ assert.match(calendar,/DTEND:20261101T000000Z/);
 const jordan = new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Amman',hour:'2-digit',hourCycle:'h23'}).format(new Date('2026-10-31T00:00:00Z'));
 assert.equal(jordan,'03');
 console.log(`PASS: ${faqs.length} sourced FAQs; all local links, assets, anchors, ARIA targets, resource URLs, protected identifiers, calendar and Jordan time checked.`);
-console.log('PASS: shared IEEE identity, official favicon, administrative footer and link targets on both pages (YouTube explicitly opens in a new tab).');
+console.log('PASS: shared IEEE identity, official favicon, administrative footer and link targets on all three pages; 23 printable PDF checksums and downloads verified.');

@@ -1,4 +1,4 @@
-import { readFile, writeFile, mkdir, cp } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, cp, stat, readdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
@@ -39,6 +39,23 @@ export async function build() {
   await cp(path.join(root,'assets'),path.join(dist,'assets'),{recursive:true});
   for (const file of ['styles.css','ieee.css','app.js','shell.js']) await cp(path.join(root,'src',file),path.join(dist,file));
   await writeFile(path.join(dist,'sources.html'),versionAssets(interpolate(shell(await readFile(path.join(root,'src/sources.html'),'utf8'),'index.html'))));
+  const catalog = JSON.parse(await readFile(path.join(root,'src/printables.json'),'utf8'));
+  const size = bytes => bytes >= 1024 * 1024 ? `${(bytes / (1024 * 1024)).toFixed(1)} MB` : `${Math.ceil(bytes / 1024)} KB`;
+  const pages = count => count === 1 ? 'صفحة واحدة' : count === 2 ? 'صفحتان' : `${count} صفحات`;
+  const download = file => {
+    const url = `assets/printables/${file.path}`;
+    return `<li class="printable-file"><div><h3><a href="${escape(url)}">${escape(file.title)}</a></h3><p>${escape(file.description)}</p><p class="file-meta"><bdi>PDF · ${size(file.bytes)}</bdi><span> · ${pages(file.pages)}</span></p></div><a class="printable-download" href="${escape(url)}" download aria-label="${escape('تنزيل '+file.title)}">تنزيل <span aria-hidden="true">↓</span></a></li>`;
+  };
+  const printables = catalog.groups.map(group => {
+    const body = `<p class="printable-description">${escape(group.description)}</p>${group.instructions ? `<a class="text-link" href="assets/printables/${escape(group.instructions)}">تعليمات الطباعة والقص (TXT) ←</a>` : ''}<ul class="printable-list">${group.files.map(download).join('')}</ul>`;
+    return group.collapsed ? `<details class="guide-details printable-alternative" id="${group.id}"><summary>${escape(group.title)}</summary><div class="details-content">${body}</div></details>` : `<section class="printable-section" id="${group.id}" aria-labelledby="${group.id}-title"><h2 id="${group.id}-title">${escape(group.title)}</h2>${body}</section>`;
+  }).join('\n');
+  const licenses = (await readdir(path.join(root,'assets/printables/LICENSES'))).sort().map(file => `<a href="assets/printables/LICENSES/${escape(file)}" lang="en" dir="ltr">${escape(file.replace('.txt',''))}</a>`).join('');
+  const printPage = shell(await readFile(path.join(root,'src/printables.html'),'utf8'),'index.html')
+    .replace('{{PRINTABLES}}',printables).replace('{{PRINT_LICENSES}}',licenses)
+    .replace('{{PACK_SIZE}}',size((await stat(path.join(root,'assets/printables/PRINT_PACK.zip'))).size))
+    .replace('{{PDF_COUNT}}',String(catalog.groups.reduce((total,group) => total+group.files.length,0)));
+  await writeFile(path.join(dist,'printables.html'),versionAssets(interpolate(printPage)));
   const icsDate = date => date.replace(/[-:]/g,'');
   const calendar = (await readFile(path.join(root,'assets/ieeextreme-20.ics'),'utf8')).replace(/DTSTART:[^\r\n]+/,`DTSTART:${icsDate(facts.start)}`).replace(/DTEND:[^\r\n]+/,`DTEND:${icsDate(facts.end)}`);
   await writeFile(path.join(dist,'assets/ieeextreme-20.ics'),calendar);

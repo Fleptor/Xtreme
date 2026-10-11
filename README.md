@@ -49,7 +49,8 @@ npm run check
 - Local top-three prizes of 300 / 200 / 100 JOD, linked to the supplied promotional poster.
 - Separate HTU participation and local award requirements, including the exact all-female-team opening exception.
 - **67 sourced FAQs** in eight topics, with Arabic search, category filtering and progressive display.
-- **18 resources** in grouped link lists, inside an expandable directory with category filters, including workspace setup, memberships, rules, proctor guidance and certificates.
+- **19 resources** in grouped link lists, inside an expandable directory with category filters, including workspace setup, memberships, rules, proctor guidance, certificates and printable downloads.
+- `printables.html`: 23 A4 PDFs plus a complete ZIP, including the HTU brochure, Arabic CS Academy guide, two separate QR signs, booth activities and all three sticker editions. The latest home-printing edition has 177 stickers; each edition includes its combined PDF and four individual pages. Original attribution and licenses accompany the downloads.
 - Six always-visible essential links immediately before the footer: vTools, CS Academy practice, workspace setup, HTU registration, BAU coordination and official rules. The full directory remains on the index page.
 - All five supplied Instagram accounts and the WhatsApp update reminder.
 - UTC-based countdown with active/ended states, downloadable calendar event, and a preparation checklist with optional browser saving; switching saving off clears its stored data.
@@ -69,6 +70,9 @@ npm run check
 | `src/shell.js` | Shared navigation and bookmarks that reveal collapsed content |
 | `src/app.js` | Search, tabs, countdown, clipboard, navigation and checklist |
 | `src/sources.html` | Public source notes and provenance |
+| `src/printables.html` | Arabic downloads page; latest home-printing pack and optional earlier editions |
+| `src/printables.json` | Imported printable catalog, source-relative paths, PDF page counts, sizes and SHA-256 hashes |
+| `assets/printables/` | Final printable PDFs, ZIP, code examples, printing instructions and licenses |
 | `assets/` | Hero, fonts, icons, calendar and original HTU regulations |
 | `scripts/` | Dependency-free build, preview server and content checks |
 | `references/` | Supplied local announcement evidence; not copied into the public build |
@@ -88,6 +92,8 @@ The FAQ is rendered at build time, so search engines and browsers without JavaSc
 6. Run `npm run check`, preview the relevant chapter at phone and desktop sizes, and test links into anything moved behind a disclosure.
 
 ## Content maintenance
+
+Printable files were imported from the local `Xtreme-Ambassador/booth/` materials on **11 October 2026**. Rebuild the local pack before syncing the website. From that materials checkout, run `python booth/build_print_pack.py --website /path/to/ieeextreme-20` using an environment with `pypdf`; this updates both the ZIP and the website catalog/assets from the same final PDFs. Then run `npm run check` in this repository. Do not import prototypes, backups or the retired `links-ar.pdf`. The new registration QR targets `https://belalhamdan.com/Xtreme/#registration`; the resources QR targets `https://belalhamdan.com/Xtreme/printables.html`. The original brochure and sticker artwork are preserved. Three existing guide PDFs have only their local file-link annotations repaired to public destinations; example source files and the blank booth metrics sheet are included. This import does not change the review date of competition rules.
 
 Last reviewed **25 September 2026**. Keep official registration separate from local forms. Preserve the supplied ID and URLs unless the coordinator changes them. Current platform details come from the live CS Academy environment; do not treat older competition FAQ browser versions as independently current. HTU requirements come from the supplied host regulations, copied verbatim to `assets/htu-regulations.txt`.
 

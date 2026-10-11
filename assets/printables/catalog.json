@@ -1,0 +1,252 @@
+{
+  "updated": "2026-10-11",
+  "groups": [
+    {
+      "id": "student-resources",
+      "title": "للمتسابقين",
+      "description": "دليل المكتبة والبروشور؛ اقرأهما على جهازك أو نزّلهما للطباعة.",
+      "files": [
+        {
+          "path": "printables/csacademy-library-guide-ar.pdf",
+          "title": "دليل مكتبة CS Academy",
+          "description": "شرح عربي خطوة بخطوة لإضافة المكتبة وتجهيز مساحة العمل.",
+          "pages": 4,
+          "bytes": 58199,
+          "sha256": "d4a8d4bb81de5ab8cf9e9d65cf5c340aecc796e9fe3449002db553fc9a2dec9f",
+          "source": "printables/csacademy-library-guide-ar.pdf"
+        },
+        {
+          "path": "ieeextreme-20-htu-brochure.pdf",
+          "title": "بروشور IEEEXtreme 20.0 — استضافة HTU",
+          "description": "بروشور بالإنجليزية، وجهان بحجم A4 أفقي. معلومات الاستضافة والجوائز فيه تخص HTU.",
+          "pages": 2,
+          "bytes": 10306154,
+          "sha256": "09c77f0c57c0606978d854397432f6d3b246ef05ab243c37fd80922c0474d459",
+          "source": "IEEEXtreme Brochures.pdf"
+        }
+      ]
+    },
+    {
+      "id": "home-stickers",
+      "title": "ستيكرات للطباعة المنزلية — أحدث نسخة",
+      "description": "177 ملصقًا بإطارات ومشاهد؛ الحواف جزء من التصميم، والقص كله بخطوط مستقيمة. أزرار البرمجة 30×30 مم.",
+      "collapsed": false,
+      "files": [
+        {
+          "path": "stickers/straight-cut-designed/PRINT_ALL_A4_STRAIGHT_CUT_DESIGNED.pdf",
+          "title": "الحزمة كاملة — أربع صفحات",
+          "description": "177 ملصقًا. اطبع الحزمة أو اختار الصفحات الفردية أدناه.",
+          "pages": 4,
+          "bytes": 2198336,
+          "sha256": "938c4fd1091921a3a6217a791dbab7034f65fd7246022ff2ba79d3b6836cd5d6",
+          "source": "stickers/straight-cut-designed/PRINT_ALL_A4_STRAIGHT_CUT_DESIGNED.pdf"
+        },
+        {
+          "path": "stickers/straight-cut-designed/pdf/01_ieee_xtreme_A4.pdf",
+          "title": "الصفحة 1: IEEE وXtreme",
+          "description": "36 ملصقًا · A4 عمودي.",
+          "pages": 1,
+          "bytes": 1227880,
+          "sha256": "f2e907d6dba65b15eaebf3c0e3d8f74b0b97ca6e53f124e9385d372ac95cfd3d",
+          "source": "stickers/straight-cut-designed/pdf/01_ieee_xtreme_A4.pdf"
+        },
+        {
+          "path": "stickers/straight-cut-designed/pdf/02_cs_branch_A4.pdf",
+          "title": "الصفحة 2: Computer Society والفرع ورموز البرمجة",
+          "description": "45 ملصقًا · A4 عمودي.",
+          "pages": 1,
+          "bytes": 7379634,
+          "sha256": "5b41e4b560dedec7e8e2b593f2964df3f9201c29e9af695f1e68d951baf95352",
+          "source": "stickers/straight-cut-designed/pdf/02_cs_branch_A4.pdf"
+        },
+        {
+          "path": "stickers/straight-cut-designed/pdf/03_pixel_tux_A4.pdf",
+          "title": "الصفحة 3: Pixel وTux ورموز الجمعيات",
+          "description": "48 ملصقًا · A4 عمودي.",
+          "pages": 1,
+          "bytes": 3395418,
+          "sha256": "beccbdb8f5783eb07f3bc29928056bb4f53e229de995312de930adcdfc639e18",
+          "source": "stickers/straight-cut-designed/pdf/03_pixel_tux_A4.pdf"
+        },
+        {
+          "path": "stickers/straight-cut-designed/pdf/04_playful_computers_A4.pdf",
+          "title": "الصفحة 4: حواسيب ليلة المسابقة",
+          "description": "48 ملصقًا · A4 عمودي.",
+          "pages": 1,
+          "bytes": 91193,
+          "sha256": "ac697314e75ba5b955d4b7f57fa0997096fd6a5767c9878bf4de26520f19ac29",
+          "source": "stickers/straight-cut-designed/pdf/04_playful_computers_A4.pdf"
+        }
+      ],
+      "instructions": "stickers/straight-cut-designed/PRINTING-ar.txt"
+    },
+    {
+      "id": "booth",
+      "title": "لوحات البوث والتحديات",
+      "description": "لوحتا QR منفصلتان، ومواد جاهزة للتفاعل والتنظيم.",
+      "files": [
+        {
+          "path": "printables/registration-qr-ar.pdf",
+          "title": "QR التسجيل",
+          "description": "كود واحد يفتح قسم التسجيل في الدليل: vTools ونماذج التنسيق المحلية.",
+          "pages": 1,
+          "bytes": 19621,
+          "sha256": "9a5894e3c116a085c22a37ffde66ad1b1c76203ac6e7bde4a949730403d4efbf",
+          "source": "printables/registration-qr-ar.pdf"
+        },
+        {
+          "path": "printables/resources-qr-ar.pdf",
+          "title": "QR الموارد",
+          "description": "كود واحد يفتح هذه الصفحة: دليل المكتبة والبروشور وكل المطبوعات.",
+          "pages": 1,
+          "bytes": 16614,
+          "sha256": "a8386e1252ce5a32f88f367d6428ca826fb859abc12b3e312db31114917393cd",
+          "source": "printables/resources-qr-ar.pdf"
+        },
+        {
+          "path": "printables/booth-front-ar.pdf",
+          "title": "لوحة «بتحلّها بدقيقة؟»",
+          "description": "دعوة لتجربة تحدّي البوث مع Pixel.",
+          "pages": 1,
+          "bytes": 200098,
+          "sha256": "96da6abc209aeb1c4e1f1687e39cf8c82070969ccd8a1ea930a04cb9dfe0157a",
+          "source": "printables/booth-front-ar.pdf"
+        },
+        {
+          "path": "printables/activity-cards-ar.pdf",
+          "title": "بطاقات تحديات البوث",
+          "description": "ست بطاقات؛ الإجابات في خطة البوث.",
+          "pages": 1,
+          "bytes": 29369,
+          "sha256": "a98352f5a2e354cc482f1c7d16fbca4b66501eb7890cac718d00f598a9e2cdd7",
+          "source": "printables/activity-cards-ar.pdf"
+        },
+        {
+          "path": "printables/booth-strategy-ar.pdf",
+          "title": "خطة البوث للمنظّمين",
+          "description": "طرق جذب الزوار، تنظيم الأنشطة، وإجابات التحديات.",
+          "pages": 8,
+          "bytes": 71869,
+          "sha256": "6df2e47c2759e02411219827d219a6522c5ed33e32460d2072d1620a1ecabe4f",
+          "source": "printables/booth-strategy-ar.pdf"
+        }
+      ]
+    },
+    {
+      "id": "plain-stickers",
+      "title": "نسخة بديلة: قص مستقيم بخلفيات فاتحة",
+      "description": "134 ملصقًا ضمن شبكة مربعات ومستطيلات. هذه النسخة تسبق الإطارات والمشاهد.",
+      "collapsed": true,
+      "files": [
+        {
+          "path": "stickers/straight-cut/PRINT_ALL_A4_STRAIGHT_CUT.pdf",
+          "title": "الحزمة كاملة — أربع صفحات",
+          "description": "134 ملصقًا. اطبع الحزمة أو اختار الصفحات الفردية أدناه.",
+          "pages": 4,
+          "bytes": 1930186,
+          "sha256": "a09aba356a62aac516e4a130760cf6f591563647c9c403e00777b7e7d2756e72",
+          "source": "stickers/straight-cut/PRINT_ALL_A4_STRAIGHT_CUT.pdf"
+        },
+        {
+          "path": "stickers/straight-cut/pdf/01_ieee_xtreme_A4.pdf",
+          "title": "الصفحة 1: IEEE وXtreme",
+          "description": "32 ملصقًا · A4 عمودي.",
+          "pages": 1,
+          "bytes": 1116195,
+          "sha256": "1e28026ab34d1fa90fc6bf798d1bae43c1bde254fdc76e8b293f0f8a66126b36",
+          "source": "stickers/straight-cut/pdf/01_ieee_xtreme_A4.pdf"
+        },
+        {
+          "path": "stickers/straight-cut/pdf/02_cs_branch_A4.pdf",
+          "title": "الصفحة 2: Computer Society والفرع ورموز البرمجة",
+          "description": "32 ملصقًا · A4 عمودي.",
+          "pages": 1,
+          "bytes": 6168991,
+          "sha256": "8ce0371276e382560ec6cd7f39fba21487b373b5177cbdb1f33a6f38dd479a83",
+          "source": "stickers/straight-cut/pdf/02_cs_branch_A4.pdf"
+        },
+        {
+          "path": "stickers/straight-cut/pdf/03_pixel_tux_A4.pdf",
+          "title": "الصفحة 3: Pixel وTux ورموز الجمعيات",
+          "description": "35 ملصقًا · A4 عمودي.",
+          "pages": 1,
+          "bytes": 2763314,
+          "sha256": "307188f750f84c08043dc25b89e5b6e481dd4dce32bb6d146d3db0e3513f567c",
+          "source": "stickers/straight-cut/pdf/03_pixel_tux_A4.pdf"
+        },
+        {
+          "path": "stickers/straight-cut/pdf/04_playful_computers_A4.pdf",
+          "title": "الصفحة 4: حواسيب ليلة المسابقة",
+          "description": "35 ملصقًا · A4 عمودي.",
+          "pages": 1,
+          "bytes": 72369,
+          "sha256": "871f2dc0ab78868735446780e6c87d1807b9eef7c39f05fc4276e5fd8a012cc4",
+          "source": "stickers/straight-cut/pdf/04_playful_computers_A4.pdf"
+        }
+      ],
+      "instructions": "stickers/straight-cut/PRINTING-ar.txt"
+    },
+    {
+      "id": "contour",
+      "title": "نسخة بديلة: قص حول الأشكال",
+      "description": "134 ملصقًا بمسارات تتبع حدود الرسومات، وتحتاج قصًا حول كل ملصق.",
+      "collapsed": true,
+      "files": [
+        {
+          "path": "stickers/PRINT_ALL_A4.pdf",
+          "title": "الحزمة كاملة — أربع صفحات",
+          "description": "134 ملصقًا. اطبع الحزمة أو اختار الصفحات الفردية أدناه.",
+          "pages": 4,
+          "bytes": 1931412,
+          "sha256": "cf86c7fb012bd324a9aa8ca073976b20e6a78cdf761f36aac95ae23ac007a496",
+          "source": "stickers/PRINT_ALL_A4.pdf"
+        },
+        {
+          "path": "stickers/pdf/01_ieee_xtreme_A4.pdf",
+          "title": "الصفحة 1: IEEE وXtreme",
+          "description": "32 ملصقًا · A4 عمودي.",
+          "pages": 1,
+          "bytes": 1114841,
+          "sha256": "9df9c2c080031e283474b96ff0803d5a9df6eb4767ed14b026eb007086246a78",
+          "source": "stickers/pdf/01_ieee_xtreme_A4.pdf"
+        },
+        {
+          "path": "stickers/pdf/02_cs_branch_A4.pdf",
+          "title": "الصفحة 2: Computer Society والفرع ورموز البرمجة",
+          "description": "32 ملصقًا · A4 عمودي.",
+          "pages": 1,
+          "bytes": 6171472,
+          "sha256": "9ccd651c4b92eff87f986384258b48eabb03e1c0f40683cbaadee0f06553063f",
+          "source": "stickers/pdf/02_cs_branch_A4.pdf"
+        },
+        {
+          "path": "stickers/pdf/03_pixel_tux_A4.pdf",
+          "title": "الصفحة 3: Pixel وTux ورموز الجمعيات",
+          "description": "35 ملصقًا · A4 عمودي.",
+          "pages": 1,
+          "bytes": 2759454,
+          "sha256": "893f2fe885e0ec72e2829a02e795b58390398cc8eec0846887d2cf3adf168b46",
+          "source": "stickers/pdf/03_pixel_tux_A4.pdf"
+        },
+        {
+          "path": "stickers/pdf/04_playful_computers_A4.pdf",
+          "title": "الصفحة 4: حواسيب ليلة المسابقة",
+          "description": "35 ملصقًا · A4 عمودي.",
+          "pages": 1,
+          "bytes": 76328,
+          "sha256": "a44babc372ec578b02f5fb2070a70ff691e51c6d38fa76af9b22b31517bce269",
+          "source": "stickers/pdf/04_playful_computers_A4.pdf"
+        },
+        {
+          "path": "printables/sticker-printing-ar.pdf",
+          "title": "تعليمات نسخة القص حول الأشكال",
+          "description": "تخص الحزمة الأصلية ذات 134 ملصقًا؛ للنسخ المستقيمة تعليماتها الخاصة.",
+          "pages": 1,
+          "bytes": 29062,
+          "sha256": "47d7005b983aa0625d3d793cdd630dc90b01c3840730a8aba1f149571959118b",
+          "source": "printables/sticker-printing-ar.pdf"
+        }
+      ]
+    }
+  ]
+}

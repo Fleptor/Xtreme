@@ -1,0 +1,12 @@
+// Educational preparation example, AI-assisted; not an official contest library.
+// gcd_nonnegative(a, b): Euclidean algorithm for 0 <= a,b <= LLONG_MAX.
+// O(log(max(a,b))) time for nonzero inputs; O(1) space. Convention: gcd(0,0)=0.
+// Tests: (18,24)->6; (0,7)->7; (0,0)->0; (17,13)->1.
+long long gcd_nonnegative(long long a, long long b) {
+    while (b != 0) {
+        long long r = a % b;
+        a = b;
+        b = r;
+    }
+    return a;
+}

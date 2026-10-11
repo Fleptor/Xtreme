@@ -1,0 +1,40 @@
+Additional key emblems — 8 October 2026
+
+Ruby
+Copyright (c) 2006 Yukihiro Matsumoto.
+Creative Commons Attribution-ShareAlike 2.5:
+https://creativecommons.org/licenses/by-sa/2.5/
+Official attribution: https://www.ruby-lang.org/en/about/logo/
+SVG source: https://github.com/devicons/devicon/blob/master/icons/ruby/ruby-original.svg
+Artwork retained without changes; uniformly scaled and rasterized for PDF rendering.
+
+Rust
+Rust logo artwork owned by the Rust Foundation.
+Creative Commons Attribution 4.0:
+https://creativecommons.org/licenses/by/4.0/
+SVG source: https://github.com/rust-lang/rust-artwork/blob/main/logo/rust-logo-single-path.svg
+License: https://github.com/rust-lang/rust-artwork/blob/main/logo/README.md
+Trademark reference: https://rustfoundation.org/policy/rust-trademark-policy/
+Artwork retained without changes; uniformly scaled and rasterized for PDF rendering.
+See RUST-LOGO-LICENSE.txt for the repository's license notice.
+
+Lua
+Copyright (c) 1998 Lua.org. Graphic design by Alexandre Nakonechnyj.
+Source and permission: https://www.lua.org/images/
+SVG source: https://github.com/devicons/devicon/blob/master/icons/lua/lua-original.svg
+Permission is granted to use, copy and distribute the logo for any purpose,
+including commercial applications, with its origin correctly attributed.
+The permitted modification is adapting orbiting text to a product name;
+the relative proportions of its elements must be maintained when scaling.
+No modifications made here; uniformly scaled and rasterized for PDF rendering.
+
+STMicroelectronics
+ST symbol via Simple Icons:
+https://github.com/simple-icons/simple-icons/blob/develop/icons/stmicroelectronics.svg
+Company trademark reference:
+https://www.st.com/content/st_com/en/about/st-trademark-list.html
+The ST symbol identifies STMicroelectronics; it is not an assembly-language logo.
+Artwork retained without changes; uniformly scaled and rasterized for PDF rendering.
+
+The existing DEVICON-LICENSE.txt and SIMPLE-ICONS-LICENSE.txt accompany these
+assets. Trademark rights remain with the respective owners.

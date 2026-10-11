@@ -189,3 +189,14 @@ Axe-core 4.10.3 detected no A/AA violations in the reviewed desktop/mobile home 
 - Added six visible links on the index page directly before the footer, reusing the existing URL placeholders: vTools, CS Academy practice, workspace setup, HTU registration, BAU coordination and the official rules. The BAU description retains the distinction between coordination and registration.
 - The compact list uses three columns on desktop, two on tablet and one on phones. Its “all resources” link opens the full directory in the FAQ on the same page.
 - `npm run check` and `git diff --check` pass. Chromium checks at 320, 390, 768 and 1440 px confirmed all six destinations, default visibility, placement immediately before the footer and no horizontal overflow. The full-directory link opens its disclosure correctly. Visually reviewed phone and desktop screenshots saved as `output/essential-links-{390,1440}.png` in the parent workspace.
+
+## Booth downloads and split QR sheets — 11 October 2026
+
+- `npm run check` passes with 67 FAQs, 19 resources and three HTML pages. Local links, anchors, shared IEEE identity and SHA-256 hashes of all 23 printable PDFs pass.
+- The 23 PDFs and final ZIP in the website match the updated local print pack byte-for-byte. The archive passes CRC checks and excludes the retired `links-ar.pdf`; the original brochure and sticker PDFs remain unchanged.
+- All PDF pages measure A4 (including the landscape brochure, within 1 mm). The newest sticker edition has four pages and 177 stickers. The three guide PDFs retain their layouts, with public link annotations replacing machine-local file URLs; all links to locally hosted supplemental files resolve in the repository.
+- Both new QR signs are single-page A4 PDFs. Decoding rendered pages at 72 and 101 dpi returns exactly one QR per sheet: the guide's registration section and its new printables page. Their Arabic layouts were visually inspected. No physical printer test was performed.
+- Chromium: no horizontal overflow at 320, 390, 768 or 1440 px; self-hosted Cairo loads; no page exceptions. Desktop and mobile downloads layouts were visually inspected.
+- All 23 PDF downloads and the ZIP return HTTP 200 with correct PDF/ZIP content types in the local server. A real browser download of `registration-qr-ar.pdf` completes with the expected filename.
+- Alternate editions expand normally and their fragment links open the relevant disclosure. At 320 px with JavaScript disabled, all 23 download links remain present, native disclosures work and there is no horizontal overflow.
+- Home-page and shared footer links lead to the downloads page. Existing chapter and navigation order remains intact.

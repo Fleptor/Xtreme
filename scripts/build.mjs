@@ -21,20 +21,41 @@ export async function build() {
   const faqMarkup = faqs.map(([cat,q,a,source,label],i) => `<details class="faq-item" data-category="${cat}" data-keywords="${keywords[cat]}" id="question-${i+1}"><summary><span>${escape(q)}</span></summary><div class="faq-answer"><p>${escape(a)}</p><a href="${escape(links[source])}" ${fileAttributes(source)}>${escape(label || 'المصدر الرسمي')}${source === 'htuRules' ? ' (TXT، 2 KB، نافذة جديدة)' : ''} ↗</a></div></details>`).join('\n');
   const categoryMarkup = categories.map(([key,label]) => `<button data-faq-category="${key}" aria-pressed="${key==='all'}">${label}<span>${key==='all'?faqs.length:faqs.filter(item=>item[0]===key).length}</span></button>`).join('');
   const resourceGroups = [
-    ['practice', 'مساحة التدريب', 'جرّب المنصة وجهّز أدواتك قبل المنافسة.'],
-    ['registration', 'التسجيل والتجهيز', 'كل خطوة إلها رابطها.'],
-    ['official', 'الأدلة والمراجع', 'ارجع للمصدر وقت ما تحتاج التفاصيل.']
+    ['registration', 'التسجيل', 'التسجيل والتجهيز', 'كل خطوة إلها رابطها.'],
+    ['downloads', 'أدلة وإعلانات', 'أدلة وإعلانات PDF', 'اقرأها على موبايلك، أو شاركها مع فريقك.'],
+    ['practice', 'التدريب', 'مساحة التدريب', 'جرّب المنصة وجهّز أدواتك قبل المنافسة.'],
+    ['official', 'المراجع', 'الأدلة والمراجع', 'ارجع للمصدر وقت ما تحتاج التفاصيل.']
   ];
-  const resourceMarkup = resourceGroups.map(([category,title,description]) => {
-    const items = resources.filter(resource => resource[4] === category).map(([,name,detail,key]) => `<li><a class="resource-link" href="${escape(links[key])}" ${fileAttributes(key)}><div><h4>${escape(name)}</h4><p>${escape(detail)}${key === 'htuRules' ? ' (TXT، 2 KB، نافذة جديدة)' : ''}</p></div><span class="resource-link-arrow" aria-hidden="true">↗</span></a></li>`).join('');
-    return `<section class="resource-group" data-resource-group="${category}" aria-labelledby="resource-${category}-title"><div class="resource-group-heading"><h3 id="resource-${category}-title">${escape(title)}</h3><p>${escape(description)}</p></div><ul class="resource-list">${items}</ul></section>`;
-  }).join('');
+  const fileSize = bytes => bytes >= 1024 * 1024 ? `${(bytes / (1024 * 1024)).toFixed(1)} MB` : `${Math.ceil(bytes / 1024)} KB`;
+  // A short label tells mobile visitors whether a tap opens a site, a form, a video or a file.
+  const resourceKind = async url => {
+    if (/\.pdf$/i.test(url)) return ['pdf', `PDF · ${fileSize((await stat(path.join(root, url))).size)}`];
+    if (/\.txt$/i.test(url)) return ['file', 'TXT · 2 KB · نافذة جديدة'];
+    if (/forms\.gle/.test(url)) return ['form', 'نموذج Google'];
+    if (/youtu\.?be/.test(url)) return ['video', 'فيديو'];
+    if (url.startsWith('mailto:')) return ['mail', 'بريد إلكتروني'];
+    if (/maps\.app/.test(url)) return ['map', 'خرائط Google'];
+    if (!/^https?:/.test(url)) return ['page', 'صفحة بالدليل'];
+    return ['site', new URL(url).hostname.replace(/^www\./, '')];
+  };
+  const visibleResources = 3;
+  const resourceMarkup = (await Promise.all(resourceGroups.map(async ([category,,title,description]) => {
+    const groupItems = resources.filter(resource => resource[4] === category);
+    const items = (await Promise.all(groupItems.map(async ([,name,detail,key]) => {
+      const [kind, label] = await resourceKind(links[key]);
+      return `<li><a class="resource-link" href="${escape(links[key])}" ${fileAttributes(key)}><div class="resource-body"><h4>${escape(name)}</h4><p><bdi class="resource-kind" data-kind="${kind}">${escape(label)}</bdi> · ${escape(detail)}</p></div><span class="resource-link-arrow" aria-hidden="true">${kind === 'pdf' ? '↓' : kind === 'page' ? '←' : '↗'}</span></a></li>`;
+    }))).join('');
+    const more = groupItems.length > visibleResources ? `<button class="resource-more enhanced-control" type="button" aria-expanded="false" aria-controls="resource-${category}-list">اعرض الكل (${groupItems.length})</button>` : '';
+    return `<section class="resource-group" data-resource-group="${category}" aria-labelledby="resource-${category}-title"><div class="resource-group-heading"><h3 id="resource-${category}-title">${escape(title)} <span class="resource-count">${groupItems.length}</span></h3><p>${escape(description)}</p></div><ul class="resource-list" id="resource-${category}-list">${items}</ul>${more}</section>`;
+  }))).join('');
+  const resourceFilters = [['all','الكل',resources.length], ...resourceGroups.map(([category,label]) => [category,label,resources.filter(resource => resource[4] === category).length])]
+    .map(([key,label,count]) => `<button type="button" data-resource-filter="${key}" aria-pressed="${key === 'all'}">${label}<span>${count}</span></button>`).join('');
   const socialMarkup = socials.map(([title,description,handle,url]) => `<a class="social-link" href="${url}"><bdi>${escape(title)}</bdi><span>${escape(description)}</span><bdi class="handle">@${handle}</bdi></a>`).join('\n');
   const ambassadorOptions = ambassadors.map(([university,name,id,source,originalUniversity]) => {
     const aliases = originalUniversity.startsWith('University of Jordan') ? 'UJ JU' : originalUniversity.startsWith('Al-Balqa') ? 'BAU' : '';
     return `<option value="${escape(id)}" data-name="${escape(name)}" data-university="${escape(university)}" data-search="${escape(originalUniversity + ' ' + aliases)}"${id === facts.ambassadorId ? ' selected' : ''}>${escape(university)} - ${escape(name)}</option>`;
   }).join('');
-  const html = template.replace('{{AMBASSADOR_OPTIONS}}', ambassadorOptions).replace('{{FAQ}}', faqMarkup).replace('{{CATEGORIES}}',categoryMarkup).replace('{{RESOURCES}}',resourceMarkup).replace('{{SOCIALS}}',socialMarkup).replaceAll('{{FAQ_COUNT}}',String(faqs.length)).replace(/\{\{link:(\w+)\}\}/g,(_,key) => { if(!links[key]) throw new Error(`Unknown link ${key}`); return escape(links[key]); });
+  const html = template.replace('{{AMBASSADOR_OPTIONS}}', ambassadorOptions).replace('{{FAQ}}', faqMarkup).replace('{{CATEGORIES}}',categoryMarkup).replace('{{RESOURCES}}',resourceMarkup).replace('{{RESOURCE_FILTERS}}',resourceFilters).replace('{{SOCIALS}}',socialMarkup).replaceAll('{{FAQ_COUNT}}',String(faqs.length)).replace(/\{\{link:(\w+)\}\}/g,(_,key) => { if(!links[key]) throw new Error(`Unknown link ${key}`); return escape(links[key]); });
   await writeFile(path.join(dist,'index.html'),versionAssets(interpolate(html)));
   await cp(path.join(root,'assets'),path.join(dist,'assets'),{recursive:true});
   for (const file of ['styles.css','ieee.css','app.js','shell.js']) await cp(path.join(root,'src',file),path.join(dist,file));

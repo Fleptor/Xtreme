@@ -1,11 +1,20 @@
 {
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "groups": [
     {
       "id": "student-resources",
       "title": "للمتسابقين",
-      "description": "دليل المكتبة والبروشور؛ اقرأهما على جهازك أو نزّلهما للطباعة.",
+      "description": "أدلة العضوية والمكتبة والبروشور؛ اقرأها على جهازك أو نزّلها للطباعة.",
       "files": [
+        {
+          "path": "guides/ieee-cs-student-membership-guide-ar.pdf",
+          "title": "دليل العضوية: IEEE مع Computer Society للطلاب",
+          "description": "خطوة بخطوة بصور حقيقية من ieee.org، مع كود الخصم CSIEEEDAYSTU26 لعضوية Computer Society. العرض لغاية 17 أكتوبر 2026.",
+          "pages": 3,
+          "bytes": 816875,
+          "sha256": "49be8614f7f70be3c993ac1fbb29a7a3956bc95ab4cb5bacea8aa9bd9e0bb2aa",
+          "source": "membership-guide/ieee-cs-student-membership-guide-ar.pdf"
+        },
         {
           "path": "printables/csacademy-library-guide-ar.pdf",
           "title": "دليل مكتبة CS Academy",
@@ -23,6 +32,58 @@
           "bytes": 10306154,
           "sha256": "09c77f0c57c0606978d854397432f6d3b246ef05ab243c37fd80922c0474d459",
           "source": "IEEEXtreme Brochures.pdf"
+        }
+      ]
+    },
+    {
+      "id": "posters",
+      "title": "إعلانات A4",
+      "description": "إعلانات A4 بهوية IEEE الرسمية، جاهزة للطباعة أو للمشاركة.",
+      "files": [
+        {
+          "path": "posters/03_IEEEXtreme_20_A4.pdf",
+          "title": "إعلان IEEEXtreme 20.0",
+          "description": "A4 عمودي: 24 ساعة يوم 31 أكتوبر، والتسجيل لغاية 17 أكتوبر، مع كود QR لخطوات التسجيل.",
+          "pages": 1,
+          "bytes": 297216,
+          "sha256": "9cd65e7b1b31f40d112f3999930e07564354bdfaae482bc794609c011c16aef1",
+          "source": "a4-booth-designs/03_IEEEXtreme_20_A4.pdf"
+        },
+        {
+          "path": "posters/02_Computer_Society_Free_Membership_A4.pdf",
+          "title": "إعلان عضوية Computer Society المجانية",
+          "description": "A4 عمودي: سجّل بـ IEEE وأضف Computer Society ببلاش لغاية 17 أكتوبر 2026.",
+          "pages": 1,
+          "bytes": 384099,
+          "sha256": "a024cafc99a166cc17e06d6d7e45864427013c90d61b2c7c692b69afae808f76",
+          "source": "a4-booth-designs/02_Computer_Society_Free_Membership_A4.pdf"
+        },
+        {
+          "path": "posters/04_IEEE_A4.pdf",
+          "title": "إعلان عضوية IEEE",
+          "description": "A4 عمودي مع QR لصفحة الانضمام ieee.org/join.",
+          "pages": 1,
+          "bytes": 136290,
+          "sha256": "bd73d0df4ba03eebd724ccc4969e2d6c5664ce251bc85d3dbcad06a7cae5b54c",
+          "source": "a4-booth-designs/04_IEEE_A4.pdf"
+        },
+        {
+          "path": "posters/01_BAU_Instagram_A4.pdf",
+          "title": "QR إنستغرام الفرع",
+          "description": "A4 عمودي: كود يفتح حساب @ieeebalqa.",
+          "pages": 1,
+          "bytes": 136187,
+          "sha256": "9db86f3960a692988d28a547f5e22d3d9695c59bfd07211c7df6b4fc2d8c3af7",
+          "source": "a4-booth-designs/01_BAU_Instagram_A4.pdf"
+        },
+        {
+          "path": "posters/PRINT_ALL_4_A4.pdf",
+          "title": "الإعلانات الأربعة بملف واحد",
+          "description": "نفس الإعلانات الأربعة بالترتيب، للطباعة مرة وحدة.",
+          "pages": 4,
+          "bytes": 586360,
+          "sha256": "291036febc663cd6631ba5b8d3003cdc8f4224fdc03b80125dcf4e0af824bdf3",
+          "source": "a4-booth-designs/PRINT_ALL_4_A4.pdf"
         }
       ]
     },

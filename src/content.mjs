@@ -29,7 +29,13 @@ export const links = {
   support: 'mailto:IEEEXtreme@ieee.org',
   htuRules: 'assets/htu-regulations.txt',
   htuPrizes: 'assets/htu-prizes.png',
-  bau: 'https://www.instagram.com/ieeebalqa/'
+  bau: 'https://www.instagram.com/ieeebalqa/',
+  membershipGuide: 'assets/printables/guides/ieee-cs-student-membership-guide-ar.pdf',
+  libraryGuide: 'assets/printables/printables/csacademy-library-guide-ar.pdf',
+  brochure: 'assets/printables/ieeextreme-20-htu-brochure.pdf',
+  xtremeAd: 'assets/printables/posters/03_IEEEXtreme_20_A4.pdf',
+  csAd: 'assets/printables/posters/02_Computer_Society_Free_Membership_A4.pdf',
+  posters: 'printables.html#posters'
 };
 
 export const categories = [
@@ -136,7 +142,12 @@ export const resources = [
   ['16', 'دعم التسجيل الرسمي', 'IEEEXtreme@ieee.org', 'support', 'registration'],
   ['17', 'موقع جامعة الحسين التقنية', 'افتح موقع الاستضافة على خرائط Google', 'htuMap', 'registration'],
   ['18', 'إعداد مساحة العمل', `مكتبات حتى ${facts.libraryKB} KB · كود البداية والملفات المسبقة`, 'workspace', 'practice'],
-  ['19', 'موارد البوث والمطبوعات', 'دليل المكتبة والبروشور والستيكرات ولوحات QR بصيغة PDF', 'printables', 'official'],
+  ['20', 'دليل العضوية: IEEE مع Computer Society', 'بالصور · كود خصم الجمعية لغاية 17 أكتوبر', 'membershipGuide', 'downloads'],
+  ['21', 'دليل مكتبة CS Academy', 'إضافة المكتبة وتجهيز مساحة العمل خطوة بخطوة', 'libraryGuide', 'downloads'],
+  ['22', 'إعلان IEEEXtreme 20.0', 'A4 · شاركه مع فريقك أو اطبعه', 'xtremeAd', 'downloads'],
+  ['23', 'إعلان Computer Society المجانية', 'A4 · مع عضوية IEEE لغاية 17 أكتوبر', 'csAd', 'downloads'],
+  ['25', 'بروشور استضافة HTU', 'بالإنجليزية · وجهان A4 أفقي', 'brochure', 'downloads'],
+  ['26', 'كل المطبوعات', 'الستيكرات ولوحات البوث وحزمة ZIP كاملة', 'printables', 'downloads'],
 ];
 
 export const socials = [

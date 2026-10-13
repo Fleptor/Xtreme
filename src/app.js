@@ -106,6 +106,12 @@ $$('[data-resource-filter]').forEach(button => button.addEventListener('click', 
   $$('[data-resource-group]').forEach(group => { group.hidden = button.dataset.resourceFilter !== 'all' && group.dataset.resourceGroup !== button.dataset.resourceFilter; });
   $('.resource-directory').classList.toggle('is-filtered', button.dataset.resourceFilter !== 'all');
 }));
+$$('.resource-more').forEach(button => button.addEventListener('click', () => {
+  const expanded = button.getAttribute('aria-expanded') !== 'true';
+  button.setAttribute('aria-expanded', String(expanded));
+  button.closest('.resource-group').classList.toggle('is-expanded', expanded);
+  button.textContent = expanded ? 'اعرض أقل' : `اعرض الكل (${$$('li', button.closest('.resource-group')).length})`;
+}));
 
 // Fold Arabic diacritics and common letter variants for forgiving Arabic search.
 const normalize = value => value.toLowerCase().normalize('NFKD').replace(/[\u064B-\u065F\u0670\u0640]/g, '').replace(/[أإآٱ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه');
@@ -195,5 +201,10 @@ document.addEventListener('guide:reveal', ({ detail: { target } }) => {
     visibleLimit = Math.max(8, siblings.indexOf(question) + 1);
     filterFaq();
   }
-  if (target.closest('[data-resource-group]')) $('[data-resource-filter="all"]').click();
+  const resourceGroup = target.closest('[data-resource-group]');
+  if (resourceGroup) {
+    $('[data-resource-filter="all"]').click();
+    const more = $('.resource-more', resourceGroup);
+    if (more && more.getAttribute('aria-expanded') !== 'true') more.click();
+  }
 });

@@ -55,7 +55,8 @@ for (const file of ['index.html','sources.html','printables.html']) {
 const html = await readFile(path.join(dist,'index.html'),'utf8');
 const catalog = JSON.parse(await readFile(path.join(root,'src/printables.json'),'utf8'));
 const printables = catalog.groups.flatMap(group => group.files);
-assert.equal(printables.length,24,'Expected all 24 current printable PDFs');
+assert.equal(printables.length,30,'Expected all 30 current printable PDFs');
+assert.ok(!printables.some(file => /pixel-wants-you/i.test(file.path)),'Pixel poster must not be offered');
 assert.equal(new Set(printables.map(file => file.path)).size,printables.length,'Duplicate printable');
 const downloads = await readFile(path.join(dist,'printables.html'),'utf8');
 assert.ok(!downloads.includes('links-ar.pdf'),'Retired QR sheet must not be offered');
@@ -96,4 +97,4 @@ assert.match(calendar,/DTEND:20261101T000000Z/);
 const jordan = new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Amman',hour:'2-digit',hourCycle:'h23'}).format(new Date('2026-10-31T00:00:00Z'));
 assert.equal(jordan,'03');
 console.log(`PASS: ${faqs.length} sourced FAQs; all local links, assets, anchors, ARIA targets, resource URLs, protected identifiers, calendar and Jordan time checked.`);
-console.log('PASS: shared IEEE identity, official favicon, administrative footer and link targets on all three pages; 24 printable PDF checksums and downloads verified.');
+console.log('PASS: shared IEEE identity, official favicon, administrative footer and link targets on all three pages; 30 printable PDF checksums and downloads verified.');
